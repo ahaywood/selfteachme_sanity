@@ -11,6 +11,7 @@ import { fullWidthImage } from "./FullWidthImage";
 import { H1 } from "./H1";
 import { H2 } from "./H2";
 import { H3 } from "./H3";
+import { H4 } from "./H4";
 import { Blockquote } from "./Blockquote";
 import { P } from "./P";
 import { InternalLink as internalLink } from "./InternalLink";
@@ -35,6 +36,10 @@ const serializers = {
 
       if (style === "h3") {
         return <H3 {...props} />;
+      }
+
+      if (style === "h4") {
+        return <H4 {...props} />;
       }
 
       if (style === "blockquote") {

@@ -3,6 +3,7 @@ import client from "utils/client";
 import groq from "groq";
 
 import { Page } from "modules/shared/layout/Page";
+import { LegalPage } from "modules/legal";
 
 const Legal = (props) => {
   return (
@@ -10,7 +11,9 @@ const Legal = (props) => {
       <Head>
         <title>SelfTeach.me | {props.name}</title>
       </Head>
-      <h1>{props.name}</h1>
+      <Page>
+        <LegalPage {...props} />
+      </Page>
     </div>
   );
 };

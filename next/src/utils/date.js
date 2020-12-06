@@ -1,4 +1,11 @@
-import { getYear } from "date-fns";
+import { format, getYear } from "date-fns";
+
+const formatISO = (date) => {
+  const newDate = new Date(date);
+  return format(newDate, "MMMM d, yyyy");
+};
+
+export { formatISO };
 
 const getCurrentYear = () => {
   return getYear(new Date());
