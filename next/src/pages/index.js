@@ -1,15 +1,18 @@
 import Head from "next/head";
+import { HomePage } from "modules/home";
+import { Page } from "modules/shared/layout/Page";
 
 const Home = (props) => {
   return (
-    <div>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>SelfTeach.me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <h1>Hello World</h1>
-    </div>
+      <Page>
+        <HomePage />
+      </Page>
+    </>
   );
 };
 

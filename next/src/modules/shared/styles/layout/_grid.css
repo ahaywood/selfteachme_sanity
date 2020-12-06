@@ -1,0 +1,24 @@
+.content-grid {
+  @apply grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+    "hero hero hero"
+    ". main .";
+}
+
+.content-grid.move-content-up {
+  grid-template-areas:
+    "hero hero hero"
+    "hero main hero"
+    ". main .";
+  grid-template-rows: 14rem auto auto;
+}
+
+.content-grid .hero {
+  grid-area: hero;
+}
+
+.content-grid .main {
+  @apply bg-white relative z-30 p-12;
+  grid-area: main;
+}

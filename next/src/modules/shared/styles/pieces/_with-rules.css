@@ -1,0 +1,22 @@
+.with-rules {
+  @apply inline-block font-condensed uppercase text-4xl relative;
+}
+
+.with-rules::before,
+.with-rules::after {
+  display: block;
+  height: 1px;
+  border-top: 2px solid var(--white);
+  width: 150px;
+  position: absolute;
+  content: "";
+  top: 15px;
+}
+
+.with-rules::before {
+  left: -160px;
+}
+
+.with-rules::after {
+  right: -160px;
+}

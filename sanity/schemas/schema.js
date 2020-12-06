@@ -23,6 +23,7 @@ import affiliateButton from "./affiliateButton";
 // custom documents
 import almanac from "./almanac";
 import ama from "./ama";
+import brandsWorkedWith from "./brandsWorkedWith";
 import category from "./postCategory";
 import codeSnippet from "./codeSnippet";
 import glossary from "./glossary";
@@ -49,6 +50,7 @@ export default createSchema({
     ama,
     box,
     blockContent,
+    brandsWorkedWith,
     category,
     codepen,
     codeSnippet,

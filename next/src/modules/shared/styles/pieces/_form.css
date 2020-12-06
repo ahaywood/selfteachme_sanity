@@ -1,0 +1,36 @@
+label {
+  @apply font-sans text-sapphire uppercase tracking-wide font-bold mb-2;
+}
+
+input[type="email"],
+input[type="text"],
+.textarea {
+  @apply w-full h-14 px-4 mb-9 border-2 border-gray-200 rounded-md;
+}
+
+.textarea {
+  @apply h-32;
+}
+
+input[type="email"].error,
+input[type="text"].error,
+textarea.error {
+  @apply border-candyAppleRed;
+}
+
+.form-error {
+  @apply font-sans text-candyAppleRed text-sm absolute left-0 bottom-4;
+}
+
+input[type="checkbox"] {
+  @apply hidden;
+}
+
+input[type="checkbox"] + label {
+  @apply h-9 pl-12 min-h-9 block pt-2 mb-8;
+  background: url("/img/unchecked.svg") left center no-repeat;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url("/img/checkbox.svg") left center no-repeat;
+}

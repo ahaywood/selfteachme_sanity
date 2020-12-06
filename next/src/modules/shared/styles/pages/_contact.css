@@ -1,0 +1,29 @@
+/* Google Map */
+.google-img div {
+  @apply h-full;
+}
+
+.google-map img {
+  @apply align-middle h-full w-full object-cover;
+}
+
+/* Elsewhere Online */
+.elsewhere-online {
+  @apply my-10;
+}
+
+.elsewhere-online li {
+  @apply font-condensed uppercase text-xl text-center flex-1 tracking-wide;
+}
+
+.elsewhere-online li > a {
+  @apply text-brightPink;
+}
+
+.elsewhere-online li > a:hover {
+  @apply text-sapphire;
+}
+
+.elsewhere-online li svg {
+  @apply max-w-20 w-9/12 h-auto mx-auto mb-4;
+}

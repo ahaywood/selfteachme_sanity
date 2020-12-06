@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "northwell";
+    src: url("/fonts/northwell/northwell-webfont.woff2") format("woff2"),
+      url("/fonts/northwell/northwell-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+/* ----------- VARIABLES ----------------- */
+:root {
+  --almostWhite: #efefef;
+  --baliHai: #7f98ac;
+  --black: #000;
+  --brightPink: #f40082;
+  --brightTurquoise: #44facd;
+  --bunting: #161743;
+  --candyAppleRed: #ee0e01;
+  --gold: #ffd200;
+  --java: #26c9c3;
+  --pistachio: #95cf00;
+  --sapphire: #3452a5;
+  --serenade: #ffe3d4;
+  --white: #fff;
+}
+
+/* ----------- TAGS ---------------------- */
+@import "./pieces/_form.css";
+
+svg {
+  fill: currentColor;
+}
+
+/* ----------- COMPONENTS ------------------ */
+@import "./pieces/_button.css";
+@import "./pieces/_with-rules.css";
+
+/* ----------- LAYOUT ---------------------- */
+@import "./layout/_typography.css";
+@import "./layout/_grid.css";
+@import "./layout/_footer.css";
+
+.vertical-pluses {
+  background: url("/img/pluses--vertical.svg") 5px 5px no-repeat,
+    url("/img/pluses--vertical.svg") calc(100% - 5px) calc(100% - 5px) no-repeat,
+    var(--serenade);
+}
+
+/* ----------- PAGE SPECIFIC --------------- */
+@import "./pages/_home.css";
+@import "./pages/_contact.css";

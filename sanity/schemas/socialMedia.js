@@ -62,6 +62,11 @@ export default {
       type: "url",
     },
     {
+      name: "twitch",
+      title: "Twitch",
+      type: "url",
+    },
+    {
       name: "devTo",
       title: "Dev.to",
       type: "url",
@@ -74,6 +79,11 @@ export default {
     {
       name: "hashnode",
       title: "Hashnode",
+      type: "url",
+    },
+    {
+      name: "soundcloud",
+      title: "Soundcloud",
       type: "url",
     },
   ],

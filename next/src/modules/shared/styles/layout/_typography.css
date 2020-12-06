@@ -1,0 +1,26 @@
+h2.highlight {
+  @apply inline;
+  background: linear-gradient(
+    transparent 0,
+    transparent 40%,
+    var(--gold) 40%,
+    var(--gold) 75%,
+    transparent 75%,
+    transparent 100%
+  );
+}
+
+a:hover h2.highlight {
+  background: linear-gradient(
+    transparent 0,
+    transparent 40%,
+    var(--serenade) 40%,
+    var(--serenade) 75%,
+    transparent 75%,
+    transparent 100%
+  );
+}
+
+.large-body-copy {
+  @apply text-2xl;
+}

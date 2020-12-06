@@ -1,0 +1,53 @@
+/* HOME */
+.three-up {
+  @apply flex list-none;
+  counter-reset: big-numbers;
+}
+
+.three-up li {
+  @apply flex-1 relative pl-28;
+  counter-increment: big-numbers;
+}
+
+.three-up li::before {
+  background: var(--serenade);
+  border-radius: 9999px;
+  color: white;
+  content: counter(big-numbers);
+  display: block;
+  font-family: "bodoni-urw", sans-serif;
+  font-size: 7rem;
+  left: 0;
+  line-height: 145px;
+  position: absolute;
+  text-align: center;
+  top: -50px;
+  width: 145px;
+  height: 145px;
+  z-index: -1;
+}
+
+.three-up li h3 {
+  @apply font-sans text-2xl font-bold mb-4;
+}
+
+.three-up li p {
+  @apply mb-4;
+}
+
+.three-up li a {
+  @apply font-sans text-brightPink uppercase flex;
+}
+
+.three-up li a:hover {
+  @apply text-sapphire;
+}
+
+.three-up li svg {
+  @apply mr-2 relative left-0;
+  transition: left 0.25s ease-in-out;
+}
+
+.three-up li a:hover svg {
+  @apply left-1;
+}

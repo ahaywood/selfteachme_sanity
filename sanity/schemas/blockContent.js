@@ -1,13 +1,37 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { BiLink } from "react-icons/bi";
+import { FaRegKeyboard } from "react-icons/fa";
 
 const highlightRender = (props) => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 );
 
 const simpleNumberRender = (props) => (
-  <div style={{ backgroundColor: "purple" }}>{props.children}</div>
+  <div style={{ backgroundColor: "#ffd200" }}>{props.children}</div>
+);
+
+const subtitleStyle = (props) => (
+  <div className="subtitle" style={{ fontSize: "24px", fontWeight: "800" }}>
+    {props.children}
+  </div>
+);
+
+const keyboardStyle = (props) => (
+  <span
+    className="keyboard-shortcut"
+    style={{
+      fontFamily: "monospace",
+      backgroundColor: "#ccc",
+      color: "black",
+      padding: "2px 5px",
+      display: "inline-block",
+      border: "#ccc",
+      borderRadius: "2px",
+    }}
+  >
+    {props.children}
+  </span>
 );
 
 /**
@@ -29,7 +53,7 @@ export default {
       title: "Block",
       type: "block",
       // Styles let you set what your user can mark up blocks with. These
-      // corrensponds with HTML tags, but you can set any title or value
+      // correspond with HTML tags, but you can set any title or value
       // you want and decide how you want to deal with it where you want to
       // use your content.
       styles: [
@@ -38,6 +62,11 @@ export default {
         { title: "H2", value: "h2" },
         { title: "H3", value: "h3" },
         { title: "H4", value: "h4" },
+        {
+          title: "Subtitle",
+          value: "subtitle",
+          blockEditor: { render: subtitleStyle },
+        },
         { title: "Quote", value: "blockquote" },
       ],
       lists: [
@@ -61,6 +90,14 @@ export default {
             },
           },
           { title: "Code", value: "code" },
+          {
+            title: "Keyboard Shortcut",
+            value: "keyboard",
+            blockEditor: {
+              icon: FaRegKeyboard,
+              render: keyboardStyle,
+            },
+          },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [

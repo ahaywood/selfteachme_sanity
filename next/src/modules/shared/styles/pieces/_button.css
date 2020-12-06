@@ -1,0 +1,66 @@
+.button {
+  @apply uppercase font-sans font-bold rounded-lg  h-14 inline-flex items-center justify-center px-8 relative cursor-pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button .outline {
+  @apply absolute w-full h-full border-4 rounded-lg -top-2 -left-2;
+  transition: top 0.1s ease-in-out, left 0.1s ease-in-out;
+}
+
+.button:hover .outline {
+  @apply top-0 left-0;
+}
+
+.button .content {
+  @apply relative -top-1;
+  transition: top 0.1s ease-in-out;
+}
+
+.button:hover .content {
+  @apply top-0;
+}
+
+/* primary */
+.button.primary {
+  @apply bg-white text-brightPink;
+}
+
+.button.primary span[role="img"] {
+  @apply text-xl;
+}
+
+.button.primary .outline {
+  @apply border-brightPink;
+}
+
+/* alt */
+.button.alt {
+  @apply bg-java text-white;
+}
+
+.button.alt .outline {
+  @apply border-sapphire;
+}
+
+/* with emoji */
+.button.with-emoji {
+  @apply bg-brightPink text-white pl-8 h-20 pl-20 w-full;
+}
+
+.button.with-emoji span[role="img"] {
+  @apply absolute;
+}
+
+.button.with-emoji .outline {
+  @apply border-black;
+}
+
+/* light */
+.button.light {
+  @apply bg-serenade text-black;
+}
+
+.button.light .outline {
+  border-color: #ffa879;
+}

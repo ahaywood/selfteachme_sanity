@@ -33,6 +33,11 @@ export default {
       },
     },
     {
+      name: "content",
+      title: "Content",
+      type: "blockContent",
+    },
+    {
       name: "postDetails",
       title: "Details",
       type: "postDetails",
@@ -51,11 +56,6 @@ export default {
       name: "video",
       title: "Video",
       type: "youtube",
-    },
-    {
-      name: "content",
-      title: "Content",
-      type: "blockContent",
     },
   ],
   preview: {
