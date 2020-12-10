@@ -8,7 +8,7 @@ const Post = (props) => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>SelfTeach.me | {props.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

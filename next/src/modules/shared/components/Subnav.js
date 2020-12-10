@@ -1,0 +1,56 @@
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import client from "utils/client";
+import groq from "groq";
+import { useRouter } from "next/router";
+
+const Subnav = () => {
+  const [categories, setCategories] = useState();
+  const router = useRouter();
+
+  useEffect(() => {
+    const query = groq`*[_type == "category"]{name, slug, _id}`;
+    client.fetch(query).then((res) => {
+      setCategories(res);
+    });
+  }, []);
+
+  return (
+    <div className="bg-sapphire w-full absolute top-64">
+      <ul className="flex justify-center">
+        <li className="font-condensed uppercase mx-4 text-xl tracking-wide">
+          <Link href="/blog">
+            <a
+              className={
+                router.pathname == "/blog" ? "text-gold" : "text-white"
+              }
+            >
+              All
+            </a>
+          </Link>
+        </li>
+        {categories &&
+          categories.map((item) => (
+            <li
+              className="font-condensed uppercase mx-4 text-xl tracking-wide"
+              key={item._id}
+            >
+              <Link href={`/blog/c/${item.slug.current}`}>
+                <a
+                  className={
+                    router.pathname == item.slug.current
+                      ? "text-gold"
+                      : "text-white"
+                  }
+                >
+                  {item.name}
+                </a>
+              </Link>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
+};
+
+export { Subnav };

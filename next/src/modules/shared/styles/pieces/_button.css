@@ -43,6 +43,15 @@
   @apply border-sapphire;
 }
 
+/* tertiary */
+.button.tertiary {
+  @apply bg-brightPink text-white;
+}
+
+.button.tertiary .outline {
+  @apply border-bunting;
+}
+
 /* with emoji */
 .button.with-emoji {
   @apply bg-brightPink text-white pl-8 h-20 pl-20 w-full;

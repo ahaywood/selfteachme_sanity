@@ -22,3 +22,7 @@
   @apply bg-white relative z-30 p-12;
   grid-area: main;
 }
+
+.content-grid .full-width {
+  grid-column: 1 / -1;
+}

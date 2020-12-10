@@ -1,6 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ----------- TAGS ---------------------- */
+@import "./tags/_form.css";
+
+/* ----------- COMPONENTS ------------------ */
+@import "./pieces/_button.css";
+@import "./pieces/_with-rules.css";
+@import "./pieces/_full-width-blog-card.css";
+
+/* ----------- LAYOUT ---------------------- */
+@import "./layout/_typography.css";
+@import "./layout/_grid.css";
+@import "./layout/_footer.css";
+
+/* ----------- PAGE SPECIFIC --------------- */
+@import "./pages/_home.css";
+@import "./pages/_contact.css";
+
+
 
 @layer base {
   @font-face {
@@ -29,28 +48,12 @@
   --white: #fff;
 }
 
-/* ----------- TAGS ---------------------- */
-@import "./pieces/_form.css";
-
 svg {
   fill: currentColor;
 }
-
-/* ----------- COMPONENTS ------------------ */
-@import "./pieces/_button.css";
-@import "./pieces/_with-rules.css";
-
-/* ----------- LAYOUT ---------------------- */
-@import "./layout/_typography.css";
-@import "./layout/_grid.css";
-@import "./layout/_footer.css";
 
 .vertical-pluses {
   background: url("/img/pluses--vertical.svg") 5px 5px no-repeat,
     url("/img/pluses--vertical.svg") calc(100% - 5px) calc(100% - 5px) no-repeat,
     var(--serenade);
 }
-
-/* ----------- PAGE SPECIFIC --------------- */
-@import "./pages/_home.css";
-@import "./pages/_contact.css";

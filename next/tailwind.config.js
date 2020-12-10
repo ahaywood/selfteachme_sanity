@@ -44,6 +44,10 @@ module.exports = {
         2.5: "2.5 2.5 0%",
         3: "3 3 0%",
       },
+      gridColumnEnd: {
+        "-1": "-1",
+        "-2": "-2",
+      },
       inset: {
         "-screen": "-100vw",
         15: "3.75rem",
@@ -60,7 +64,7 @@ module.exports = {
         24: "6rem",
       },
       maxWidth: {
-        20: '5rem',
+        20: "5rem",
       },
       minHeight: {
         9: "2.25rem",
@@ -69,7 +73,7 @@ module.exports = {
         15: "3.75rem",
       },
       spacing: {
-        102: '25.5rem'
+        102: "25.5rem",
       },
       transitionProperty: {
         transform: "transform",

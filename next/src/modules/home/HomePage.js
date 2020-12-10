@@ -19,13 +19,9 @@ const HomePage = () => {
             />
           </div>
           <h1 className="mb-8">
-            <div className="text-9xl font-modern uppercase text-white">
-              Code
-            </div>
+            <div className="hero-title">Code</div>
             <div className="with-rules text-white">with</div>
-            <div className="text-9xl font-modern uppercase text-white">
-              Confidence
-            </div>
+            <div className="hero-title ">Confidence</div>
           </h1>
           <p className="text-white large-body-copy mb-10">
             I teach designers how to code.{" "}
