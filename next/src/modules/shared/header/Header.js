@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Nav } from "./Nav";
 import { Search } from "./Search";
+import { ProgressBar } from "./ProgressBar";
 import { Icon } from "modules/shared/components/icon";
 
 const Header = () => {
@@ -16,7 +17,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-black flex justify-between items-center p-3 fixed left-0 top-0 w-full z-50">
+    <header className="bg-black flex justify-between items-center p-3 fixed left-0 w-full z-50">
+      <ProgressBar />
       <button
         className="flex flex-1 hover:text-brightPink text-white focus:outline-none items-center"
         onClick={toggleNav}

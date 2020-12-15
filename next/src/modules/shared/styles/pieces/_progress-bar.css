@@ -1,0 +1,24 @@
+.progress-bar {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: var(--brightPink);
+  height: 2px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  &::-webkit-progress-bar {
+    background-color: transparent;
+  }
+
+  &::-webkit-progress-value {
+    background-color: var(--brightPink);
+  }
+
+  &::-moz-progress-bar {
+    background-color: var(--brightPink);
+  }
+}

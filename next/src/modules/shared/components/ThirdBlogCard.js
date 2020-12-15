@@ -3,7 +3,7 @@ import { getPostMonth, getPostDate, getPostYear } from "utils/date";
 
 const ThirdBlogCard = ({ content }) => {
   return (
-    <Link href={`blog/${content.slug.current}`}>
+    <Link href={`/post/${content.slug.current}`}>
       <a>
         <div className="relative flex h-64">
           <img

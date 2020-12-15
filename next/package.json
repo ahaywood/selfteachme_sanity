@@ -5,14 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@asbjorn/eslint-plugin-groq": "^1.0.0",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.0.9",
     "@sanity/image-url": "^0.140.19",
     "autoprefixer": "^10.0.4",
     "date-fns": "^2.16.1",
+    "eslint-import-resolver-alias": "^1.1.2",
     "groq": "^2.0.9",
     "next": "10.0.2",
     "postcss": "^8.1.10",
@@ -23,5 +27,19 @@
     "react-dom": "17.0.1",
     "react-hook-form": "^6.12.2",
     "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-wesbos": "1.0.1",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.1"
   }
 }

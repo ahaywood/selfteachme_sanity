@@ -4,11 +4,15 @@
 
 /* ----------- TAGS ---------------------- */
 @import "./tags/_form.css";
+@import "./tags/_svg.css";
 
-/* ----------- COMPONENTS ------------------ */
+/* ----------- PIECES & COMPONENTS -------- */
 @import "./pieces/_button.css";
-@import "./pieces/_with-rules.css";
 @import "./pieces/_full-width-blog-card.css";
+@import "./pieces/_large-numbers.css";
+@import "./pieces/_vertical-pluses.css";
+@import "./pieces/_with-rules.css";
+@import "./pieces/_progress-bar.css";
 
 /* ----------- LAYOUT ---------------------- */
 @import "./layout/_typography.css";
@@ -17,9 +21,8 @@
 
 /* ----------- PAGE SPECIFIC --------------- */
 @import "./pages/_home.css";
+@import "./pages/_about.css";
 @import "./pages/_contact.css";
-
-
 
 @layer base {
   @font-face {
@@ -31,8 +34,13 @@
   }
 }
 
-/* ----------- VARIABLES ----------------- */
+/* ----------- VARIABLES -----------------
+ *   I'm using CSS variables for
+ *      - highlight background color has a specific linear-gradient
+ *      - :before and :after psuedo element styling
+*/
 :root {
+  /* colors */
   --almostWhite: #efefef;
   --baliHai: #7f98ac;
   --black: #000;
@@ -46,14 +54,12 @@
   --sapphire: #3452a5;
   --serenade: #ffe3d4;
   --white: #fff;
-}
 
-svg {
-  fill: currentColor;
-}
-
-.vertical-pluses {
-  background: url("/img/pluses--vertical.svg") 5px 5px no-repeat,
-    url("/img/pluses--vertical.svg") calc(100% - 5px) calc(100% - 5px) no-repeat,
-    var(--serenade);
+  /* typography */
+  --sans: "Nunito", Helvetica, Arial, sans-serf;
+  --serif: "ff-tisa-web-pro", serif;
+  --condensed: "alternate-gothic-no-1-d", sans-serif;
+  --modern: "bodoni-urw", serif;
+  --handwriting: "northwell", sans-serif;
+  --mono: "ui-monospace", monospace;
 }

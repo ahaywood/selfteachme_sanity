@@ -8,7 +8,7 @@ const encode = (data) => {
     .join("&");
 };
 
-const EmailNewsletter = () => {
+const EmailNewsletter = ({className}) => {
   const { emailSignup, setEmailSignup } = useState();
 
   const { register, handleSubmit, watch, errors } = useForm();
@@ -28,7 +28,7 @@ const EmailNewsletter = () => {
   };
 
   return (
-    <div className="pt-20 pb-10 vertical-pluses">
+    <div className={`pt-20 pb-10 vertical-pluses ${className}`}>
       <div className="max-w-7xl mx-auto grid grid-cols-2 gap-28">
         <div>
           <h2 className="font-condensed relative text-9xl uppercase leading-24 mb-4">

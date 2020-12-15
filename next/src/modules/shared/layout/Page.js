@@ -1,5 +1,6 @@
 import { Header } from "../header";
 import { Footer } from "../footer";
+import { ProgressBar } from "../footer";
 
 const Page = ({ children }) => {
   return (

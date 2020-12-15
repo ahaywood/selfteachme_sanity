@@ -1,0 +1,5 @@
+.vertical-pluses {
+  background: url("/img/pluses--vertical.svg") 5px 5px no-repeat,
+    url("/img/pluses--vertical.svg") calc(100% - 5px) calc(100% - 5px) no-repeat,
+    var(--serenade);
+}

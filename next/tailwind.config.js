@@ -14,11 +14,14 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
+        believe: "url('/img/about__truly-believe.jpg')",
         checkbox: "url('/img/checkbox.svg')",
+        callout: "url('/img/about__callout.jpg')",
         unchecked: "url('/img/unchecked.svg')",
         hero: "url('/img/bg__home.jpg')",
+        hrShort: "url('/img/hr--short.png')",
         map: "url('/img/contact__google-map.jpg')",
-        pluses: "url('/img/pluses--vertical.svg')",
+        horizontalPluses: "url('/img/pluses--horizontal.svg')",
         underline: "url('/img/horizontal-line.svg')",
       }),
       borderWidth: {
@@ -57,6 +60,7 @@ module.exports = {
         28: "7rem",
       },
       lineHeight: {
+        'stacked': ".75",
         14: "3.5rem",
         16: "4rem",
         17: "4.25rem",
@@ -65,12 +69,15 @@ module.exports = {
       },
       maxWidth: {
         20: "5rem",
+        "2/3": "60%"
       },
       minHeight: {
         9: "2.25rem",
+
       },
       padding: {
         15: "3.75rem",
+        18: "4.5rem",
       },
       spacing: {
         102: "25.5rem",

@@ -1,0 +1,7 @@
+.why-should-i-care p {
+  @apply pl-8 relative;
+}
+
+.why-should-i-care span[role="image"] {
+  @apply left-0 absolute;
+}

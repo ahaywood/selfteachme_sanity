@@ -24,3 +24,16 @@ a:hover h2.highlight {
 .large-body-copy {
   @apply text-2xl;
 }
+
+li,
+p {
+  @apply text-xl leading-relaxed mb-8;
+}
+
+p a {
+  @apply text-brightPink font-bold underline;
+}
+
+blockquote  {
+  @apply font-modern italic font-bold text-4xl;
+}

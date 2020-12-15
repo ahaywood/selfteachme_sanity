@@ -1,4 +1,4 @@
-import { format, getYear } from "date-fns";
+import { format, getYear, differenceInYears } from "date-fns";
 
 const formatISO = (date) => {
   const newDate = new Date(date);
@@ -50,8 +50,8 @@ const getPostMonth = (dateToFormat) => {
     "December",
   ];
 
-  // const [year, month, date] = formatDate(dateToFormat);
-  return months[2];
+  const [year, month, date] = formatDate(dateToFormat);
+  return months[month];
 };
 
 export { getPostMonth };
@@ -86,3 +86,13 @@ const getPostYear = (dateToFormat) => {
 };
 
 export { getPostYear };
+
+/**
+ * Get Age
+ */
+const getAge = (birthday) => {
+  const formattedDate = formatDate(birthday);
+  return differenceInYears(new Date(), new Date(formattedDate[0]), Number(formattedDate[1]) - 1, Number(formattedDate[2]));
+}
+
+export { getAge };
