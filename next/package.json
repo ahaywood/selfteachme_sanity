@@ -18,7 +18,7 @@
     "date-fns": "^2.16.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "groq": "^2.0.9",
-    "next": "10.0.2",
+    "next": "^10.0.4",
     "postcss": "^8.1.10",
     "postcss-import": "^13.0.0",
     "postcss-nested": "^5.0.3",
