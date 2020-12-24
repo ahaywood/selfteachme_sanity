@@ -1,2 +1,2 @@
-const P = (props) => <p className="bg-red-500">{props.children}</p>;
+const P = (props) => <div className="col-start-4 col-span-6"><p>{props.children}</p></div>;
 export { P };

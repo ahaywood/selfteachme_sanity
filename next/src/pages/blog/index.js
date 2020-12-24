@@ -31,6 +31,7 @@ const query = groq`*[_type == "post" && postDetails.published == true] | order(p
     title,
     slug,
     "hero": hero.asset->url,
+    titleWithinHero,
     postDetails,
     "category": postDetails.category->name,
     "categorySlug": postDetails.category->slug
@@ -38,7 +39,7 @@ const query = groq`*[_type == "post" && postDetails.published == true] | order(p
 
 Blog.getInitialProps = async function (context) {
   const endingNumber = Constants.PER_PAGE;
-  return await client.fetch(query, {endingNumber});
+  return await client.fetch(query, { endingNumber });
 }
 
 export default Blog;

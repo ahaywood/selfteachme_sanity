@@ -7,6 +7,10 @@ const highlightRender = (props) => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 );
 
+const hrRender = () => (
+  <hr />
+);
+
 const simpleNumberRender = (props) => (
   <div style={{ backgroundColor: "#ffd200" }}>{props.children}</div>
 );
@@ -174,5 +178,11 @@ export default {
     {
       type: "box",
     },
+    {
+      type: "blockquote"
+    }
+    // {
+    //   type: "bigNumbers",
+    // }
   ],
 };

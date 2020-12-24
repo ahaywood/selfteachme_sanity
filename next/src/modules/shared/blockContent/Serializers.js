@@ -16,6 +16,7 @@ import { Blockquote } from "./Blockquote";
 import { P } from "./P";
 import { InternalLink as internalLink } from "./InternalLink";
 import { ExternalLink as link } from "./ExternalLink";
+import { Subtitle } from "./Subtitle";
 
 const serializers = {
   types: {
@@ -46,6 +47,10 @@ const serializers = {
         return <Blockquote {...props} />;
       }
 
+      if (style === "subtitle") {
+        return <Subtitle {...props} />;
+      }
+
       return BlockContent.defaultSerializers.types.block(props);
     },
     box,
@@ -70,5 +75,6 @@ const serializers = {
     link,
     internalLink,
   },
+  container: ({ children }) => <>{children}</> /* removes the wrapping div */
 };
 export { serializers };

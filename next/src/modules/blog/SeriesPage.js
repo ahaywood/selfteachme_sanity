@@ -7,11 +7,9 @@ import { LeadMagnet } from "modules/shared/components/LeadMagnet";
 
 const SeriesPage = (props) => {
   const { content } = props;
-  console.log(content);
 
   const seriesIntro = () => {
     if (content.customIntroVideo.useCustomIntroVideo) {
-      console.log('use custom intro');
       return (<div>
         <div className="col-start-2">
           <YouTubeVideo videoId="gwskGoK9qJw" />
@@ -23,10 +21,8 @@ const SeriesPage = (props) => {
         </div>
       </div>);
     } else if (existingIntroVideo) {
-      console.log('use an existing intro video');
       return <div></div>;
     } else {
-      console.log('no intro found');
       return <div></div>;
     }
   }

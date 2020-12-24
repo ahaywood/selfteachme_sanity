@@ -2,8 +2,19 @@ ol.large-numbers {
   @apply p-0 m-0 list-none;
   counter-reset: ordered-list;
 
+  &.small {
+    margin-bottom: 2.75rem;
+  }
+
   li {
     @apply relative pl-18 py-8 min-h-9 border-b-1 border-almostWhite mb-0;
+  }
+
+  &.small li {
+    border: none;
+    padding-bottom: 0;
+    padding-top: .75rem;
+    padding-left: 2.5rem;
   }
 
   li:last-child {
@@ -16,9 +27,14 @@ ol.large-numbers {
     counter-increment: ordered-list;
     font-family: var(--modern);
     font-size: 6rem;
+    font-weight: 700;
     left: 0;
     line-height: 1;
     position: absolute;
     top: 0.75rem;
+  }
+
+  &.small li:before {
+    font-size: 2.5rem;
   }
 }

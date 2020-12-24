@@ -7,9 +7,8 @@ const Search = ({ isSearchOpen, toggleSearch }) => {
 
   return (
     <div
-      className={`bg-gradient-to-b from-black via-brightPink w-screen h-screen fixed left-0 z-40 p-10 transition-inset duration-500 ${
-        isSearchOpen ? "top-0" : "-top-screen"
-      }`}
+      className={`bg-gradient-to-b from-black via-brightPink w-screen h-screen fixed left-0 z-40 p-10 transition-inset duration-500 ${isSearchOpen ? "top-0" : "-top-screen"
+        }`}
     >
       <div className="text-center w-full absolute top-8">
         <button onClick={toggleSearch} className="focus:outline-none">
@@ -17,17 +16,17 @@ const Search = ({ isSearchOpen, toggleSearch }) => {
         </button>
       </div>
       <form
-        className="flex max-w-5xl mx-auto mt-24"
+        className="flex max-w-5xl mx-auto mt-24 items-center"
         onSubmit={handleSubmit(onSubmit)}
       >
         <label
-          className="font-condensed text-gold uppercase text-5xl block mr-4"
+          className="font-condensed text-gold uppercase text-5xl block mr-4 font-normal leading-14 mb-0 h-12"
           htmlFor="search"
         >
           Search
         </label>
         <input
-          className="bg-transparent border-b-2 border-gold w-full h-10 text-white mr-4 outline-none focus:outline-none"
+          className="search-input"
           id="search"
           name="search"
           type="text"

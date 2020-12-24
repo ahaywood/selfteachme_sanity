@@ -13,10 +13,13 @@
 @import "./pieces/_vertical-pluses.css";
 @import "./pieces/_with-rules.css";
 @import "./pieces/_progress-bar.css";
+@import "./pieces/_search.css";
+@import "./pieces/_retina.css";
 
 /* ----------- LAYOUT ---------------------- */
 @import "./layout/_typography.css";
 @import "./layout/_grid.css";
+@import "./layout/_header.css";
 @import "./layout/_footer.css";
 
 /* ----------- PAGE SPECIFIC --------------- */

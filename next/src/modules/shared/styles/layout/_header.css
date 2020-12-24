@@ -1,0 +1,7 @@
+ul.navigation {
+  @apply list-none text-brightPink font-condensed uppercase mt-10;
+
+  li {
+    @apply text-6xl;
+  }
+}

@@ -21,12 +21,18 @@ const formatDate = (date) => {
   return dateArray;
 };
 
+const prettyDate = (date) => {
+  return `${getPostMonth(date)} ${getPostDate(date)}, ${getPostYear(date)}`;
+}
+
+export { prettyDate };
+
 /**
  * Get the Post Date
  */
 const getPostDate = (dateToFormat) => {
-  // const [year, month, date] = formatDate(dateToFormat);
-  return "13";
+  const [year, month, date] = formatDate(dateToFormat);
+  return Number(date);
 };
 
 export { getPostDate };
@@ -51,7 +57,7 @@ const getPostMonth = (dateToFormat) => {
   ];
 
   const [year, month, date] = formatDate(dateToFormat);
-  return months[month];
+  return months[Number(month) - 1];
 };
 
 export { getPostMonth };
@@ -81,8 +87,8 @@ export { getPostMonthAbbrev };
  * Get the Post Year
  */
 const getPostYear = (dateToFormat) => {
-  // const [year, month, date] = formatDate(dateToFormat);
-  return "2003";
+  const [year, month, date] = formatDate(dateToFormat);
+  return year;
 };
 
 export { getPostYear };

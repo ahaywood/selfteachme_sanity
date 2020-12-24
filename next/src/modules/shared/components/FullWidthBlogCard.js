@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Icon } from "./icon";
 import { ButtonLink } from "./ButtonLink";
-import {getPostMonth, getPostDate} from "utils/date";
+import { getPostMonth, getPostDate } from "utils/date";
 
 const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
   return (
@@ -37,7 +37,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
         </div>
 
         {/* title */}
-        <Link href={`/post/${content.slug.current}`}>
+        <Link href={`/blog/${content.slug.current}`}>
           <a>
             <h2 className="font-modern text-6xl highlight">{content.title}</h2>
           </a>
@@ -49,7 +49,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
 
         {/* read post link */}
         <ButtonLink
-          href={`/post/${content.slug.current}`}
+          href={`/blog/${content.slug.current}`}
           className={buttonStyle}
         >
           <Icon className="float-left mr-2" name="arrow" /> Read Article

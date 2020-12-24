@@ -12,7 +12,7 @@ const Nav = ({ className }) => {
             <a className="h-6 hover:text-sapphire">Start Here</a>
           </Link>
         </li>
-        <li>
+        <li className="mb-0">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">
@@ -20,7 +20,7 @@ const Nav = ({ className }) => {
             <a className="h-6 hover:text-sapphire">About</a>
           </Link>
         </li>
-        <li>
+        <li className="mb-0">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">
@@ -28,7 +28,7 @@ const Nav = ({ className }) => {
             <a className="h-6 hover:text-sapphire">Blog</a>
           </Link>
         </li>
-        <li>
+        <li className="mb-0">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">
@@ -36,7 +36,7 @@ const Nav = ({ className }) => {
             <a className="h-6 hover:text-sapphire">Newsletter</a>
           </Link>
         </li>
-        <li>
+        <li className="mb-0">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">

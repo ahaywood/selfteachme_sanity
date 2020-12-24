@@ -28,7 +28,7 @@ const Header = () => {
           <div className="h-0.5 bg-white inline-block w-8 my-2"></div>
           <div className="h-0.5 bg-white inline-block w-8"></div>
         </div>
-        <div className="uppercase font-sans">Menu</div>
+        <div className="uppercase font-sans font-bold">Menu</div>
       </button>
       <Nav isNavOpen={isNavOpen} toggleNav={toggleNav} />
       <div className="flex-1 text-right">

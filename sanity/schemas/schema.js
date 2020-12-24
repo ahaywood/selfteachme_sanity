@@ -5,7 +5,9 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // custom schemas
+// import bigNumbers from "./bigNumbers";
 import blockContent from "./blockContent";
+import blockquote from "./blockquote";
 import box from "./box";
 import codepen from "./codepen";
 import fullWidthImage from "./fullWidthImage";
@@ -13,6 +15,7 @@ import youtube from "./youtube";
 import tableOfContents from "./tableOfContents";
 import timecode from "./timecode";
 import twoColumnText from "./twoColumnText";
+import horizontalDivider from "./horizontalDivider";
 
 // field groups
 import postDetails from "./postDetails";
@@ -48,8 +51,10 @@ export default createSchema({
     affiliateButton,
     almanac,
     ama,
-    box,
+    // bigNumbers,
+    blockquote,
     blockContent,
+    box,
     brandsWorkedWith,
     category,
     codepen,
@@ -57,6 +62,7 @@ export default createSchema({
     customIntroVideo,
     fullWidthImage,
     glossary,
+    horizontalDivider,
     landingPage,
     livestream,
     legal,

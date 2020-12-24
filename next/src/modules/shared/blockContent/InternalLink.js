@@ -16,7 +16,7 @@ const InternalLink = (props) => {
   const buildUrl = () => {
     switch (internalSection) {
       case "post":
-        setUrl(`/post/${current}`);
+        setUrl(`/blog/${current}`);
         break;
       case "legal":
         setUrl(`/legal/${current}`);

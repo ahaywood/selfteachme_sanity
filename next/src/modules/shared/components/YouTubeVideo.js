@@ -8,7 +8,6 @@ const YouTubeVideo = ({ videoId }) => {
   */
   useEffect(() => {
     const url = `https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`;
-    console.log(url);
     fetch(url).then(response => response.json()).then(data => setVideo(data));
   }, []);
 
@@ -24,9 +23,9 @@ const YouTubeVideo = ({ videoId }) => {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen>
-        </iframe>
+      </iframe>
     </div>
   )
 }
 
-export {YouTubeVideo}
+export { YouTubeVideo }

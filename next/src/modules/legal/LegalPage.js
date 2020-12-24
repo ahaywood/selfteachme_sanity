@@ -4,7 +4,6 @@ import { serializers } from "modules/shared/blockContent/Serializers";
 import { formatISO } from "utils/date";
 
 const LegalPage = (props) => {
-  console.log(props);
   return (
     <div className="content-grid move-content-up">
       <Hero title={props.name} src="/img/bg__terms.jpg" />

@@ -33,6 +33,11 @@ export default {
       },
     },
     {
+      name: "video",
+      title: "Video",
+      type: "youtube",
+    },
+    {
       name: "content",
       title: "Content",
       type: "blockContent",
@@ -52,22 +57,41 @@ export default {
       title: "Hero",
       type: "image",
     },
+    { name: "titleWithinHero", title: "Title within Hero", type: "string" },
+  ],
+  orderings: [
     {
-      name: "video",
-      title: "Video",
-      type: "youtube",
+      title: "Title",
+      name: "title",
+      by: [
+        { field: 'title', direction: 'asc' }
+      ]
+    }, {
+      title: 'Post ID Ascending',
+      name: 'postId',
+      by: [
+        { field: 'postId', direction: 'asc' }
+      ]
+    }, {
+      title: 'Post ID Descending',
+      name: 'postId',
+      by: [
+        { field: 'postId', direction: 'desc' }
+      ]
     },
   ],
   preview: {
     select: {
+      postId: "postId",
       title: "title",
       media: "hero",
       subtitle: "subtitle",
       published: "postDetails.published",
+      video: "video",
     },
-    prepare: ({ title, media, subtitle, published }) => {
+    prepare: ({ title, media, subtitle, postId, published, video }) => {
       return {
-        title: `${published ? "✅" : ""} ${title}`,
+        title: `${published ? "✅" : ""} ${video ? "📹" : "✍️"} ${postId ? postId : ""} :: ${title}`,
         media,
         subtitle: subtitle,
       };

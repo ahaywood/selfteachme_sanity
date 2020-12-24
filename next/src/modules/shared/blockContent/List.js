@@ -1,11 +1,21 @@
 const List = (props) => {
   if (props.type === "bullet") {
-    return <ol className="bg-purple-600">{props.children}</ol>;
+    return (
+      <div className="col-start-4 col-span-6">
+        <ul>{props.children}</ul>
+      </div>
+    );
   }
   if (props.type === "number") {
-    return <ul className="bg-blue-400">{props.children}</ul>;
+    return (
+      <div className="col-start-4 col-span-6">
+        <ol className="large-numbers small">{props.children}</ol>
+      </div>
+    );
   }
-  return props.children;
+  return (
+    <div className="col-start-4 col-span-6">{props.children}</div>
+  );
 };
 
 export { List };

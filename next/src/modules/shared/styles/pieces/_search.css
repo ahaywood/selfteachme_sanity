@@ -1,0 +1,7 @@
+input[type=text].search-input {
+  @apply mb-0 bg-transparent border-b-2 border-gold w-full h-16 text-white mr-4 outline-none;
+}
+
+.search-input:focus {
+  @apply outline-none;
+}

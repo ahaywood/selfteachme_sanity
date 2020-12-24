@@ -14,6 +14,10 @@
   grid-template-rows: 14rem auto auto;
 }
 
+.content-grid.no-title {
+  grid-template-rows: 7rem auto auto;
+}
+
 .content-grid .hero {
   grid-area: hero;
 }
