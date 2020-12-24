@@ -1,8 +1,0 @@
-{
-  "name": "selfteachme",
-  "version": "1.0.0",
-  "license": "MIT",
-  "scripts": {
-    "build:next": "yarn --prefix next run build"
-  }
-}
