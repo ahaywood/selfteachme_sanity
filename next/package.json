@@ -1,14 +1,4 @@
 {
-  "name": "next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
   "dependencies": {
     "@asbjorn/eslint-plugin-groq": "^1.0.0",
     "@sanity/block-content-to-react": "^2.0.7",
@@ -42,5 +32,16 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "prettier": "^2.1.1"
-  }
+  },
+  "name": "next",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "export": "next build && next export",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "next start"
+  },
+  "version": "0.1.0"
 }
