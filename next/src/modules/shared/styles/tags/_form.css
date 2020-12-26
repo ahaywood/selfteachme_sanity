@@ -9,7 +9,7 @@ input[type="text"],
 }
 
 .textarea {
-  @apply h-32;
+  @apply h-32 pt-10;
 }
 
 input[type="email"].error,
