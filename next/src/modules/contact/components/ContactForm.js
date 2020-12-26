@@ -23,7 +23,8 @@ const ContactForm = () => {
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      action="https://getform.io/f/c552a7ca-ac22-4809-b668-f134ab9190d0"
+      method="POST"
       className="grid grid-cols-2 gap-x-8"
     >
       <div className="relative">
