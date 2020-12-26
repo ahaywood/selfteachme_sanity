@@ -7,9 +7,7 @@ const contact = () => (
     <Head>
       <title>SelfTeach.me | About</title>
     </Head>
-    <Page>
-      <ContactPage />
-    </Page>
+    <ContactPage />
   </>
 );
 
