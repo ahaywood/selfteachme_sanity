@@ -17,6 +17,7 @@ export { getCurrentYear };
  * Format the Date
  */
 const formatDate = (date) => {
+  if (!date) return;
   const dateArray = date.split("-");
   return dateArray;
 };
@@ -31,6 +32,7 @@ export { prettyDate };
  * Get the Post Date
  */
 const getPostDate = (dateToFormat) => {
+  if (!dateToFormat) return;
   const [year, month, date] = formatDate(dateToFormat);
   return Number(date);
 };
@@ -41,6 +43,8 @@ export { getPostDate };
  * Get the Post Month
  */
 const getPostMonth = (dateToFormat) => {
+  if (!dateToFormat) return;
+
   const months = [
     "January",
     "February",
@@ -87,6 +91,7 @@ export { getPostMonthAbbrev };
  * Get the Post Year
  */
 const getPostYear = (dateToFormat) => {
+  if (!dateToFormat) return;
   const [year, month, date] = formatDate(dateToFormat);
   return year;
 };
