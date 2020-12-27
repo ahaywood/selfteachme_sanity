@@ -1,4 +1,3 @@
-import { Page } from "modules/shared/layout/Page";
 import { Hero } from "modules/shared/components/Hero";
 import { ContactForm } from "./components/ContactForm";
 import { ElsewhereOnline } from "./components/ElsewhereOnline";
@@ -6,7 +5,7 @@ import { Map } from "./components/Map";
 
 const ContactPage = () => {
   return (
-    <Page>
+    <>
       <div className="content-grid move-content-up">
         <Hero title="Contact" src="/img/bg__contact.jpg" className="hero" />
         <div className="main">
@@ -26,7 +25,7 @@ const ContactPage = () => {
       </div>
       <Map />
       <ElsewhereOnline />
-    </Page>
+    </>
   );
 };
 
