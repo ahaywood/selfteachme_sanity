@@ -1,0 +1,15 @@
+/*------------------------------------*\
+  STYLES FOR COMMENTO
+  https://docs.commento.io/configuration/frontend/
+\*------------------------------------*/
+
+/* submit button */
+.commento-button.commento-submit-button {
+  background: #f40082; /* bright pink */
+  box-shadow: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  margin-right: 0;
+  padding: 10px 30px;
+  text-transform: none;
+}

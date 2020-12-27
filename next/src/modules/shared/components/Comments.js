@@ -1,26 +1,13 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import styled from "styled-components";
-import { Hr } from "modules/modules/shared/components/Hr";
-
-/** -------------------------------------------------
-* STYLES
----------------------------------------------------- */
-const StyledComments = styled.section`
-  grid-column: 4 / -4;
-
-  h2 {
-    text-transform: uppercase;
-  }
-`;
+import Head from 'next/head'
+import { Hr } from "modules/shared/components/Hr";
 
 /** -------------------------------------------------
 * COMPONENT
 ---------------------------------------------------- */
-export const Comments = () => {
+export const Comments = ({ className }) => {
   return (
-    <StyledComments>
-      <Helmet>
+    <div className={className}>
+      <Head>
         <script
           defer
           src="https://cdn.commento.io/js/commento.js"
@@ -28,10 +15,10 @@ export const Comments = () => {
           data-auto-init="true"
           type="text/javascript"
         ></script>
-      </Helmet>
+      </Head>
       <Hr />
-      <h2>Comments</h2>
+      <h2 className="font-condensed text-brightPink uppercase text-6xl">Comments</h2>
       <div id="commento" />
-    </StyledComments>
+    </div>
   );
 };
