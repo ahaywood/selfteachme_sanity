@@ -8,7 +8,7 @@ const encode = (data) => {
     .join("&");
 };
 
-const EmailNewsletter = ({className}) => {
+const EmailNewsletter = ({ className }) => {
   const { emailSignup, setEmailSignup } = useState();
 
   const { register, handleSubmit, watch, errors } = useForm();
@@ -36,7 +36,7 @@ const EmailNewsletter = ({className}) => {
             <span className="font-handwriting lowercase leading-10">but</span>{" "}
             you can stay up to date:
           </h2>
-          <p className="text-xl">
+          <p className="text-xl font-serif">
             Receive a weekly email of the Internet's best from articles, to
             tutorials, to pro tips.
           </p>
