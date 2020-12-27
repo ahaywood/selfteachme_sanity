@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import { Hr } from "../components/Hr";
+import { Hr } from "modules/modules/shared/components/Hr";
 
 /** -------------------------------------------------
 * STYLES
