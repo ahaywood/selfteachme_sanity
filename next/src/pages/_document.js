@@ -18,6 +18,17 @@ class MyDocument extends Document {
           {/* google adsense */}
           <script data-ad-client="ca-pub-8562034122116462" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+          {/* GoSquared */}
+          <script dangerouslySetInnerHTML={{
+            __html: `
+            !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+            arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+            d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+            insertBefore(d,q)}(window,document,'script','_gs');
+
+            _gs('GSN-691345-T');
+            _gs('set', 'anonymizeIP', true);`}} />
+
           {/* right message */}
           <script dangerouslySetInnerHTML={{
             __html: `
