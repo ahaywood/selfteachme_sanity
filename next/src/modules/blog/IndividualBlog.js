@@ -6,6 +6,7 @@ import { YouTubeVideo } from "modules/shared/components/YouTubeVideo";
 import { serializers } from "modules/shared/blockContent/Serializers";
 import { prettyDate } from "utils/date";
 import { getYouTubeId } from "utils/youtube";
+import { Comments } from "modules/shared/components/Comments";
 
 const IndividualBlog = (props) => {
   const { content, hero, postDetails, title, titleWithinHero, video } = props;
@@ -37,6 +38,7 @@ const IndividualBlog = (props) => {
       </div>
 
       {/* comments */}
+      <Comments />
 
       {/* pagination */}
     </>
