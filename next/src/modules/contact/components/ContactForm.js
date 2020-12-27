@@ -4,22 +4,7 @@ import { ButtonSubmit } from "modules/shared/components/ButtonSubmit";
 
 const ContactForm = () => {
   const { contactForm, setContactForm } = useState();
-
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    // setContactForm(data);
-
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({ "form-name": "Contact Form", ...contactForm }),
-    // })
-    //   .then(() => alert("Success!"))
-    //   .catch((error) => alert(error));
-
-    // e.preventDefault();
-  };
 
   return (
     <form
