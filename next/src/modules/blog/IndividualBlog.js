@@ -7,6 +7,7 @@ import { serializers } from "modules/shared/blockContent/Serializers";
 import { prettyDate } from "utils/date";
 import { getYouTubeId } from "utils/youtube";
 import { Comments } from "modules/shared/components/Comments";
+import { PaginationForIndividual } from "./components/PaginationForIndividual";
 
 const IndividualBlog = (props) => {
   const { content, hero, postDetails, title, titleWithinHero, video } = props;
@@ -42,12 +43,15 @@ const IndividualBlog = (props) => {
 
       <div className="grid grid-cols-12">
         <BlockContent blocks={content} serializers={serializers} />
+
+        {/* comments */}
+        <Comments className="col-start-4 col-span-6" />
       </div>
 
-      {/* comments */}
-      <Comments />
-
       {/* pagination */}
+      <div className="mt-8">
+        <PaginationForIndividual />
+      </div>
     </>
   )
 }
