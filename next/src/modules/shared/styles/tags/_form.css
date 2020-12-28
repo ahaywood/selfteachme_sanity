@@ -1,5 +1,5 @@
 label {
-  @apply font-sans text-sapphire uppercase tracking-wide font-bold mb-2;
+  @apply font-sans uppercase tracking-wide font-bold mb-2 text-sapphire;
 }
 
 input[type="email"],
@@ -9,7 +9,7 @@ input[type="text"],
 }
 
 .textarea {
-  @apply h-32 pt-10;
+  @apply h-32 pt-3;
 }
 
 input[type="email"].error,
