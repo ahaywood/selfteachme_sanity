@@ -40,7 +40,7 @@
 }
 
 .three-up li a {
-  @apply font-sans text-brightPink uppercase flex;
+  @apply font-sans text-brightPink uppercase flex font-bold;
 }
 
 .three-up li a:hover {
