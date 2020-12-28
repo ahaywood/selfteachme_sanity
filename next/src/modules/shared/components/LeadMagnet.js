@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { ButtonSubmit } from "./ButtonSubmit";
 
-const LeadMagnet = ({ buttonLabel, children, className, content, heading }) => {
+const LeadMagnet = ({ action, buttonLabel, children, className, content, heading }) => {
   const { register, handleSubmit, watch, errors } = useForm();
 
   return (
