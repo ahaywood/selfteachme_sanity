@@ -10,22 +10,7 @@ const encode = (data) => {
 
 const EmailNewsletter = ({ className }) => {
   const { emailSignup, setEmailSignup } = useState();
-
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    setEmailSignup(data);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Email Newsletter", ...emailSignup }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
-  };
 
   return (
     <div className={`pt-20 pb-10 vertical-pluses ${className}`}>
@@ -42,7 +27,7 @@ const EmailNewsletter = ({ className }) => {
           </p>
         </div>
         <div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form action="https://getform.io/f/4a4b1de4-c339-4798-8e51-968aea3f8b10" method="POST">
             <label htmlFor="emailSignupFirstName">First Name</label>
             <input
               type="text"
