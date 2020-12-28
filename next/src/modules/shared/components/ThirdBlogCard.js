@@ -13,7 +13,7 @@ const ThirdBlogCard = ({ content }) => {
           <div className="bg-white text-center relative m-2 px-2 py-6 w-full mt-auto">
             <h4 className="font-condensed uppercase text-baliHai text-2xl">
               {content?.postDetails?.datePublished &&
-                getPostMonth(content.postDetails.datePublished)}
+                getPostMonth(content.postDetails.datePublished)}&nbsp;
               {content?.postDetails?.datePublished &&
                 getPostDate(content.postDetails.datePublished)}
             </h4>
