@@ -2,14 +2,13 @@ import React from "react";
 import { FaRegImage } from "react-icons/fa";
 
 const imagePreview = ({ value }) => {
-  const { actualImage } = value;
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", borderBottom: "1px solid #dee2e9", height: "45px", padding: "6px 6px 6px 12px" }}>
         <div style={{ fontSize: "32px", position: "relative", top: "5px", marginRight: "10px" }}><FaRegImage /></div>
         <h2 style={{ color: "#63758f", fontSize: "16px", lineHeight: "20px", textTransform: "uppercase", fontWeight: "normal" }}>Image</h2>
       </div>
-      {actualImage && <img src={actualImage} style={{ maxWidth: "100%" }} />}
+      {value?.actualImage && <img src={value.actualImage} style={{ maxWidth: "100%" }} />}
     </div>
   );
 };
