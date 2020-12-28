@@ -1,9 +1,18 @@
+import Head from "next/head";
+import { Page } from "modules/shared/layout/Page";
+import { StartHerePage } from "modules/startHere";
+
 const startHere = () => {
   return (
-    <div>
-      Start Here
-    </div>
-  )
-}
+    <>
+      <Head>
+        <title>SelfTeach.me | Start Here</title>
+      </Head>
+      <Page>
+        <StartHerePage />
+      </Page>
+    </>
+  );
+};
 
-export default startHere
+export default startHere;
