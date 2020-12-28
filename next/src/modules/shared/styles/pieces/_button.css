@@ -58,7 +58,7 @@
 
 /* with emoji */
 .button.with-emoji {
-  @apply bg-brightPink text-white pl-8 h-20 pl-20 w-full;
+  @apply bg-brightPink text-white h-20 pl-20 w-full;
 }
 
 .button.with-emoji span[role="img"] {
