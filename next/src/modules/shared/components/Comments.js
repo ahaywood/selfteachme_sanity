@@ -18,7 +18,7 @@ export const Comments = ({ className }) => {
       </Head>
       <Hr />
       <h2 className="font-condensed text-brightPink uppercase text-6xl">Comments</h2>
-      <div id="commento" />
+      <div id="commento"></div>
     </div>
   );
 };
