@@ -11,7 +11,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
         {content.category && (
           <div className="blog-category block py-4 px-6 absolute">
             <Link href={`/blog/c/${content?.categorySlug?.current}`}>
-              <a className="font-condensed uppercase text-brightPink text-xl">
+              <a className="font-condensed uppercase text-brightPink text-2xl">
                 {content.category}
               </a>
             </Link>
@@ -31,9 +31,16 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
       </div>
       <div className="content pt-15">
         {/* type of post */}
-        <div className="font-condensed text-xl uppercase text-baliHai mb-2">
-          <Icon className="float-left mr-4" name="video" />
-          Video
+        <div className="font-condensed text-2xl uppercase text-baliHai mb-2">
+          {content.postDetails.video ? (
+            <>
+              <Icon className="float-left mr-4" name="video" /> Video
+            </>
+          ) : (
+              <>
+                <Icon className="float-left mr-4" name="video" /> Post
+            </>
+            )}
         </div>
 
         {/* title */}
