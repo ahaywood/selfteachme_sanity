@@ -20,6 +20,7 @@ import horizontalDivider from "./horizontalDivider";
 // field groups
 import postDetails from "./postDetails";
 import postMeta from "./postMeta";
+import blogPagination from "./blogPagination";
 import customIntroVideo from "./customIntroVideo";
 import affiliateButton from "./affiliateButton";
 
@@ -54,6 +55,7 @@ export default createSchema({
     // bigNumbers,
     blockquote,
     blockContent,
+    blogPagination,
     box,
     brandsWorkedWith,
     category,

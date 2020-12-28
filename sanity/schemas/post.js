@@ -43,6 +43,11 @@ export default {
       type: "blockContent",
     },
     {
+      name: "pagination",
+      title: "Pagination",
+      type: "blogPagination"
+    },
+    {
       name: "postDetails",
       title: "Details",
       type: "postDetails",
