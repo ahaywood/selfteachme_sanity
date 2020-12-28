@@ -4,22 +4,27 @@ import { Subnav } from "modules/shared/components/Subnav";
 import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 import { YouTubeVideo } from "modules/shared/components/YouTubeVideo";
 import { LeadMagnet } from "modules/shared/components/LeadMagnet";
+import BlockContent from "@sanity/block-content-to-react";
+import { serializers } from "modules/shared/blockContent/Serializers";
+import { getYouTubeId } from "utils/youtube";
 
 const SeriesPage = (props) => {
   const { content } = props;
 
   const seriesIntro = () => {
     if (content.customIntroVideo.useCustomIntroVideo) {
-      return (<div>
-        <div className="col-start-2">
-          <YouTubeVideo videoId="gwskGoK9qJw" />
-        </div>
+      return (
+        <>
+          <div className="col-start-2">
+            <YouTubeVideo videoId={getYouTubeId(content.customIntroVideo.introVideo.url)} />
+          </div>
 
-        {/* intro content */}
-        <div className="col-start-2 mb-8 mt-8 px-20">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>);
+          {/* intro content */}
+          <div className="col-start-2 mb-8 mt-8 px-20">
+            <BlockContent blocks={content.customIntroVideo.introContent} serializers={serializers} />
+          </div>
+        </>
+      );
     } else if (existingIntroVideo) {
       return <div></div>;
     } else {
@@ -36,6 +41,7 @@ const SeriesPage = (props) => {
 
       {/* lead magnet */}
       <LeadMagnet
+        action={content.leadMagnet}
         buttonLabel={<>
           <span
             role="img"
@@ -44,11 +50,11 @@ const SeriesPage = (props) => {
           >🙋‍♀️</span>
           I want to be in the know.</>}
         className="col-start-1 col-span-3 my-10"
-        heading={<>FREE Git Cheatsheet
+        heading={<>FREE Git Cheat sheet
           <span className="leading-10 relative -top-10">👏</span></>
         }
       >
-        <p>Since we're friends (right?!) I made you a FREE git cheatsheet. –-Just let me know what email address I need to send it to.</p>
+        <p>Since we're friends (right?!) I made you a FREE git cheat sheet. –-Just let me know what email address I need to send it to.</p>
         <p>I'll also send you a weekly email of the internet's best on web design and development chalked full of articles, tutorials, and pro tips to help you stay up to date.</p>
       </LeadMagnet>
 
