@@ -21,6 +21,10 @@
   @apply top-0;
 }
 
+.button:focus {
+  @apply outline-none;
+}
+
 /* primary */
 .button.primary {
   @apply bg-white text-brightPink;
