@@ -5,7 +5,7 @@ import groq from "groq";
 import { Page } from "modules/shared/layout/Page";
 import { BlogPage } from "modules/blog/";
 import { Constants } from "utils/constants";
-import { PaginationForIndex } from "modules/shared/components/PaginationForIndex";
+// import { PaginationForIndex } from "modules/blog/components/PaginationForIndex";
 
 const Category = (props) => {
   const content = Object.values(props);
@@ -17,10 +17,10 @@ const Category = (props) => {
       </Head>
       <Page>
         <BlogPage content={content} />
-        <PaginationForIndex
+        {/* <PaginationForIndex
           section="blog"
           previousPageNumber="2"
-        />
+        /> */}
       </Page>
     </>
   );

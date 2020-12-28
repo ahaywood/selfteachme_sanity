@@ -21,9 +21,7 @@ const BlogPage = (props) => {
         })}
       </div>
       {/* pagination */}
-      <div className="full-width">
 
-      </div>
     </div>
   );
 };
