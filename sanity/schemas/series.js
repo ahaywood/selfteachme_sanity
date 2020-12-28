@@ -28,6 +28,11 @@ export default {
       type: "postMeta",
     },
     {
+      name: "leadMagnet",
+      title: "Lead Magnet",
+      type: "leadMagnet",
+    },
+    {
       name: "existingIntroVideo",
       title: "Existing Intro Video",
       type: "reference",

@@ -11,6 +11,7 @@ import blockquote from "./blockquote";
 import box from "./box";
 import codepen from "./codepen";
 import fullWidthImage from "./fullWidthImage";
+import leadMagnet from "./leadMagnet";
 import youtube from "./youtube";
 import tableOfContents from "./tableOfContents";
 import timecode from "./timecode";
@@ -66,6 +67,7 @@ export default createSchema({
     glossary,
     horizontalDivider,
     landingPage,
+    leadMagnet,
     livestream,
     legal,
     podcast,

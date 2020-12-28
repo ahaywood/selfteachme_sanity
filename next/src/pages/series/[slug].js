@@ -25,6 +25,7 @@ const query = groq`*[_type == "Series" && slug.current == 'git']{
     existingIntroVideo->,
     customIntroVideo,
     customIntroVideo,
+    leadMagnet,
 		postsAndVideos[]->{
       _id,
       title,
