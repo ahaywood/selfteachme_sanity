@@ -2,30 +2,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { ButtonSubmit } from "./ButtonSubmit";
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
-
 const LeadMagnet = ({ buttonLabel, children, className, content, heading }) => {
-  const { emailSignup, setEmailSignup } = useState();
-
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    setEmailSignup(data);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Email Newsletter", ...emailSignup }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
-  };
 
   return (
     <div className={`pt-10 pb-10 vertical-pluses ${className}`}>
@@ -39,7 +17,7 @@ const LeadMagnet = ({ buttonLabel, children, className, content, heading }) => {
           {children && children}
         </div>
         <div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form action={action} method="POST">
             <label htmlFor="emailSignupFirstName">First Name</label>
             <input
               type="text"

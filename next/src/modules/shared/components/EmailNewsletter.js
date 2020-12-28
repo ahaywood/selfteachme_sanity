@@ -2,14 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { ButtonSubmit } from "./ButtonSubmit";
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
-
 const EmailNewsletter = ({ className }) => {
-  const { emailSignup, setEmailSignup } = useState();
   const { register, handleSubmit, watch, errors } = useForm();
 
   return (
