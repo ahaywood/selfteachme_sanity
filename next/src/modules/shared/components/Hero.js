@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = ({ className, src, title, subtitle }) => {
   return (
     <div className={`col-span-3 ${className}`}>
-      <div className="w-full text-center h-64 w-full relative pt-4 bg-black">
+      <div className="text-center h-64 w-full relative pt-4 bg-black">
         {src && (
           <img
             src={src}
