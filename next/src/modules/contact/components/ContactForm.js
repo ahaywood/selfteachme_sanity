@@ -8,9 +8,9 @@ const ContactForm = () => {
 
   return (
     <form
-      action="https://getform.io/f/c552a7ca-ac22-4809-b668-f134ab9190d0"
+      action="https://kwes.io/api/foreign/forms/Wd53JDA3MuydTlHhmgv9"
       method="POST"
-      className="grid grid-cols-2 gap-x-8"
+      className="kwes-form grid grid-cols-2 gap-x-8"
     >
       <div className="relative">
         <label htmlFor="">First Name</label>
@@ -18,6 +18,7 @@ const ContactForm = () => {
           className={errors.firstName && `error`}
           type="text"
           name="firstName"
+          rules="required"
           ref={register({ required: true })}
         />
         {errors.firstName && (
@@ -33,7 +34,7 @@ const ContactForm = () => {
       </div>
       <div className="relative col-span-full">
         <label htmlFor="">Email Address</label>
-        <input type="email" name="email" ref={register({ required: true })} />
+        <input type="email" name="email" ref={register({ required: true })} rules="required" />
         {errors.email && <div className="form-error">Email is required</div>}
       </div>
       <div className="relative col-span-full">
@@ -54,6 +55,7 @@ const ContactForm = () => {
           name="message"
           id="message"
           ref={register({ required: true })}
+          rules="required"
         ></textarea>
         {errors.message && (
           <div className="form-error">Message is required</div>
