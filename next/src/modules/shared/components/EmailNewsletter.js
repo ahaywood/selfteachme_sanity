@@ -20,7 +20,7 @@ const EmailNewsletter = ({ className }) => {
           </p>
         </div>
         <div>
-          <form action="https://getform.io/f/4a4b1de4-c339-4798-8e51-968aea3f8b10" method="POST">
+          <form className="kwes-form" action="https://kwes.io/api/foreign/forms/STZ38ateA8uxnhml9xfi" method="POST">
             <div className="flex flex-col sm:flex-row lg:flex-col">
               <div className="sm:mr-4 lg:mr-0">
                 <label htmlFor="emailSignupFirstName">First Name</label>
@@ -29,6 +29,7 @@ const EmailNewsletter = ({ className }) => {
                   id="emailSignupFirstName"
                   name="firstName"
                   ref={register({ required: true })}
+                  rules="required"
                 />
               </div>
 
@@ -39,6 +40,7 @@ const EmailNewsletter = ({ className }) => {
                   id="emailSignupEmail"
                   name="email"
                   ref={register({ required: true })}
+                  rules="required"
                 />
               </div>
             </div>
