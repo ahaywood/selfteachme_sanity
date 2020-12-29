@@ -1,12 +1,10 @@
 /* default */
-.full-width-card {
-  & > .content {
-    @apply pr-12 col-start-1 md:col-start-7 -col-end-1;
-  }
+.full-width-card > .content {
+  @apply pr-12 col-start-1 md:col-start-7 -col-end-1;
+}
 
-  & > .image {
-    @apply md:col-span-6;
-  }
+.full-width-card > .image {
+  @apply md:col-span-6;
 }
 
 /* latest posts */

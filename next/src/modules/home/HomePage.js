@@ -72,7 +72,7 @@ const HomePage = () => {
           you.
         </p>
         <ul className="list-none flex justify-between items-center max-w-6xl mx-auto">
-          <li className="px-2 md:px-0">
+          <li className="px-2 md:px-6 lg:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__janet-jackson@2x.png"
@@ -81,7 +81,7 @@ const HomePage = () => {
               height="52"
             />
           </li>
-          <li className="px-2 md:px-0">
+          <li className="px-2 md:px-6 lg:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__counting-crows@2x.png"
@@ -90,7 +90,7 @@ const HomePage = () => {
               height="107"
             />
           </li>
-          <li className="px-2 md:px-0">
+          <li className="px-2 md:px-6 lg:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__ice-cube@2x.png"
@@ -99,7 +99,7 @@ const HomePage = () => {
               height="72"
             />
           </li>
-          <li className="px-2 md:px-0">
+          <li className="px-2 md:px-6 lg:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__kelly-clarkson@2x.png"

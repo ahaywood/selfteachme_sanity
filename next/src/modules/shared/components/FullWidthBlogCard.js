@@ -5,7 +5,7 @@ import { getPostMonth, getPostDate } from "utils/date";
 
 const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
   return (
-    <div className="full-width-card grid md:grid-cols-12 md:gap-28 mb-12">
+    <div className="full-width-card grid md:grid-cols-12 md:gap-8 xl:gap-28 mb-12">
       <div className="image relative">
         {/* blog category */}
         {content.category && (

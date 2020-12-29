@@ -16,7 +16,7 @@ const LatestPosts = () => {
 
   return (
     <div className="latest-posts bg-almostWhite relative pt-20 pb-16">
-      <div className="container mx-auto">
+      <div className="container md:max-w-max lg:container mx-auto">
         <h2 className="text-center font-handwriting text-6xl md:text-8xl absolute -top-4 w-full left-0">
           Latest Posts
         </h2>
