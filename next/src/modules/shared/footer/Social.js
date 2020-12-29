@@ -13,7 +13,7 @@ const Social = ({ className, ...props }) => {
   }, []);
 
   return (
-    <ul className={`text-white flex justify-center list-none ${className}`}>
+    <ul className={`text-white flex flex-wrap md:flex-nowrap justify-center list-none ${className}`}>
       {/* youtube */}
       {social?.youtube && (
         <li className="px-3">

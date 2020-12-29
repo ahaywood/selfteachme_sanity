@@ -7,16 +7,35 @@
   display: block;
   height: 1px;
   border-top: 2px solid var(--white);
-  width: 150px;
+  width: 5rem;
   position: absolute;
   content: "";
   top: 15px;
 }
 
+@media (min-width: 640px) {
+  .with-rules::before,
+  .with-rules::after {
+    width: 8rem;
+  }
+}
+
 .with-rules::before {
-  left: -160px;
+  left: -6rem;
+}
+
+@media (min-width: 640px) {
+  .with-rules::before {
+    left: -9rem;
+  }
 }
 
 .with-rules::after {
-  right: -160px;
+  right: -6rem;
+}
+
+@media (min-width: 640px) {
+  .with-rules::after {
+    right: -9rem;
+  }
 }

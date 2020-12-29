@@ -52,7 +52,7 @@ module.exports = {
         "-2": "-2",
       },
       inset: {
-        "-screen": "-100vw",
+        "-screen": "-100vh",
         15: "3.75rem",
         20: "5rem",
         24: "6rem",

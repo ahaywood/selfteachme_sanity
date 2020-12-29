@@ -6,13 +6,13 @@ const Nav = ({ className }) => {
     <div
       className={`bg-gold font-condensed uppercase text-2xl font-normal ${className}`}
     >
-      <ul className="list-none flex justify-center items-center">
+      <ul className="list-none flex flex-col md:flex-row justify-center items-center">
         <li className="footer-nav-item">
           <Link href="/start-here">
             <a className="h-6 hover:text-sapphire">Start Here</a>
           </Link>
         </li>
-        <li className="mb-0">
+        <li className="mb-0 hidden md:block">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">
@@ -20,7 +20,7 @@ const Nav = ({ className }) => {
             <a className="h-6 hover:text-sapphire">About</a>
           </Link>
         </li>
-        <li className="mb-0">
+        <li className="mb-0 hidden md:block">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">
@@ -28,7 +28,7 @@ const Nav = ({ className }) => {
             <a className="h-6 hover:text-sapphire">Blog</a>
           </Link>
         </li>
-        <li className="mb-0">
+        <li className="mb-0 hidden md:block">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">
@@ -36,7 +36,7 @@ const Nav = ({ className }) => {
             <a className="h-6 hover:text-sapphire">Newsletter</a>
           </Link>
         </li>
-        <li className="mb-0">
+        <li className="mb-0 hidden md:block">
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">

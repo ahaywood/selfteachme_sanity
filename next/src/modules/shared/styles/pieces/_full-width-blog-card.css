@@ -1,11 +1,11 @@
 /* default */
 .full-width-card {
   & > .content {
-    @apply pr-12 col-start-7 -col-end-1;
+    @apply pr-12 col-start-1 md:col-start-7 -col-end-1;
   }
 
   & > .image {
-    @apply col-span-6;
+    @apply md:col-span-6;
   }
 }
 
@@ -23,11 +23,11 @@
 /* odd */
 .ping-pong .stripe:nth-child(odd) .full-width-card  {
   & > .content {
-    @apply pr-12 col-start-6 -col-end-2;
+    @apply pr-12 col-start-1 md:col-start-6 -col-end-2;
   }
 
   & > .image {
-    @apply col-span-5;
+    @apply col-span-12 md:col-span-5;
   }
 
   @at-root .full-width-card .blog-category,
@@ -37,7 +37,7 @@
 
   @at-root .full-width-card .blog-date,
   .blog-date {
-    @apply top-15 -right-12;
+    @apply top-16 -right-12;
   }
 }
 
@@ -46,19 +46,19 @@
 .ping-pong .stripe:nth-child(even) .full-width-card {
 
   & > .image {
-    @apply row-span-1 row-start-1 col-start-8 -col-end-1;
+    @apply row-span-1 row-start-1 col-start-1 md:col-start-8 -col-end-1;
   }
 
   & > .content {
-    @apply pl-12 row-span-1 row-start-1 col-start-2 col-span-6;
+    @apply pl-12 row-span-1 row-start-1 col-start-1 md:col-start-2 col-span-6;
   }
 
   .blog-date {
-    @apply top-15 -left-12;
+    @apply top-15 left-0 md:-left-12;
   }
 
   .blog-category {
-    @apply left-0 top-0 right-auto;
+    @apply left-0 top-0 md:right-auto;
   }
 }
 

@@ -8,15 +8,17 @@ const HomePage = () => {
   return (
     <>
       {/* hero */}
-      <section className="text-center min-h-screen bg-hero bg-top flex justify-center">
+      <section className="text-center min-h-9 md:min-h-screen bg-hero bg-no-repeat bg-cover bg-top flex justify-center">
         <div className="pt-10">
           <div className="mb-8">
-            <Image
-              src="/img/logo.svg"
-              width="267"
-              height="70"
-              alt="SelfTeach.me"
-            />
+            <div className="w-48 h-10 md:w-64 md:h-16 mx-auto">
+              <Image
+                alt="SelfTeach.me"
+                height="70"
+                src="/img/logo.svg"
+                width="267"
+              />
+            </div>
           </div>
           <h1 className="mb-8">
             <div className="hero-title">Code</div>
@@ -33,18 +35,20 @@ const HomePage = () => {
               🎨
             </span>
           </p>
-          <Image
-            alt="Amy Dutton"
-            height="167"
-            width="167"
-            src="/img/avatar@2x.jpg"
-            className="rounded-full"
-          />
+          <div className="w-28 md:w-auto h-28 md:h-auto mx-auto">
+            <Image
+              alt="Amy Dutton"
+              height="167"
+              width="167"
+              src="/img/avatar@2x.jpg"
+              className="rounded-full"
+            />
+          </div>
         </div>
       </section>
       {/*  */}
-      <section className="bg-black text-center text-white py-10">
-        <p className="text-xl">
+      <section className="bg-black text-center text-white py-10 px-1 md:px-0">
+        <p className="text-lg md:text-xl">
           Want to code your own website, but not sure where to start?
           <br />
           Or maybe, you've tried to learn before, but nothing seems to stick?
@@ -58,17 +62,17 @@ const HomePage = () => {
 
         <ButtonLink href="/plan">
           Not sure where to begin?{" "}
-          <span className="ml-1 underline">Start Here!</span>
+          <span className="ml-1 underline block md:inline">Start Here!</span>
         </ButtonLink>
       </section>
       {/* past websites */}
-      <section className="bg-brightPink text-white text-center py-16">
-        <p className="mb-8">
+      <section className="bg-brightPink text-white text-center pt-10 pb-8 md:py-16 mb-20 md:mb-0">
+        <p className="mb-10 md:mb-8 px-1 md:px-0 text-lg md:text-xl">
           Over the past 20 years, I've built hundreds of websites. I can teach
           you.
         </p>
         <ul className="list-none flex justify-between items-center max-w-6xl mx-auto">
-          <li>
+          <li className="px-2 md:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__janet-jackson@2x.png"
@@ -77,7 +81,7 @@ const HomePage = () => {
               height="52"
             />
           </li>
-          <li>
+          <li className="px-2 md:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__counting-crows@2x.png"
@@ -86,7 +90,7 @@ const HomePage = () => {
               height="107"
             />
           </li>
-          <li>
+          <li className="px-2 md:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__ice-cube@2x.png"
@@ -95,7 +99,7 @@ const HomePage = () => {
               height="72"
             />
           </li>
-          <li>
+          <li className="px-2 md:px-0">
             <Image
               className="blend-screen"
               src="/img/logo__kelly-clarkson@2x.png"

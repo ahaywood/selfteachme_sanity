@@ -6,15 +6,15 @@ const EmailNewsletter = ({ className }) => {
   const { register, handleSubmit, watch, errors } = useForm();
 
   return (
-    <div className={`pt-20 pb-10 vertical-pluses ${className}`}>
-      <div className="max-w-7xl mx-auto grid grid-cols-2 gap-28">
+    <div className={`pt-10 md:pt-20 pb-5 md:pb-10 px-2 md:px-0 bg-serenade md:vertical-pluses ${className}`}>
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 md:gap-28">
         <div>
-          <h2 className="font-condensed relative text-9xl uppercase leading-24 mb-4">
+          <h2 className="font-condensed relative text-6xl md:text-9xl uppercase leading-12 md:leading-24 mb-4">
             This industry moves fast,{" "}
             <span className="font-handwriting lowercase leading-10">but</span>{" "}
             you can stay up to date:
           </h2>
-          <p className="text-xl font-serif">
+          <p className="text-lg md:text-xl font-serif">
             Receive a weekly email of the Internet's best from articles, to
             tutorials, to pro tips.
           </p>
@@ -37,7 +37,7 @@ const EmailNewsletter = ({ className }) => {
               ref={register({ required: true })}
             />
 
-            <ButtonSubmit className="with-emoji mb-8 mt-8">
+            <ButtonSubmit className="with-emoji mb-8 mt-8 mx-1 md:mx-0">
               <span
                 role="img"
                 aria-label="raise hand"

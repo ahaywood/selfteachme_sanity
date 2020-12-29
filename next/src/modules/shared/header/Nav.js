@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Nav = ({ isNavOpen, toggleNav }) => {
@@ -8,10 +9,10 @@ const Nav = ({ isNavOpen, toggleNav }) => {
     >
       <div className="max-w-5xl mx-auto text-center">
         <button
-          className="text-5xl text-bunting pr-2 pb-8 hover:text-gold focus:outline-none"
+          className="pr-2 pb-8 focus:outline-none w-10 h-10 md:w-auto md:h-auto"
           onClick={toggleNav}
         >
-          <img src="/img/x--thin.svg" alt="" />
+          <Image src="/img/x--thin.svg" alt="Close Navigation" width="36" height="37" />
         </button>
         <ul className="navigation">
           <li>

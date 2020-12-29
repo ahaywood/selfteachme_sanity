@@ -13,20 +13,20 @@ const Footer = () => {
 
       <div className="bg-brightPink h-2 my-2" />
 
-      <div className="bg-bunting text-white pb-16 pt-20">
-        <Social className="pb-16" />
-        <ul className="font-sans uppercase tracking-widest text-sm flex justify-center pb-14 font-bold">
-          <li className="border-r-1 border-white px-6 leading-5 text-sm">
+      <div className="bg-bunting text-white pb-16 pt-20 px-1 md:px-0">
+        <Social className="pb-8 md:pb-16" />
+        <ul className="font-sans uppercase tracking-widest text-sm flex justify-center pb-14 font-bold flex-col md:flex-row text-center">
+          <li className="md:border-r-1 border-white px-6 mb-2 md:leading-5 text-sm md:mb-5">
             <Link href="/legal/privacy-policy">
               <a className="hover:text-gold">Privacy Policy</a>
             </Link>
           </li>
-          <li className="border-r-1 border-white px-6 leading-5 text-sm">
+          <li className="md:border-r-1 border-white px-6 mb-2 md:leading-5 text-sm md:mb-5">
             <Link href="/legal/terms-and-conditions">
               <a className="hover:text-gold">Terms and Conditions</a>
             </Link>
           </li>
-          <li className="px-6  leading-5 text-sm">
+          <li className="px-6 md:leading-5 text-sm mb-2 md:mb-5">
             <Link href="/legal/disclaimers">
               <a className="hover:text-gold">Disclaimers</a>
             </Link>
@@ -38,11 +38,11 @@ const Footer = () => {
           <a
             href="http://ahhacreative.com"
             target="_blank"
-            className="hover:underline hover:text-gold"
+            className="hover:underline hover:text-gold block md:inline"
           >
-            Ah Ha Creative, LLC
+            Ah Ha Creative, LLC.
           </a>
-          . All Rights Reserved.
+          &nbsp;All Rights Reserved.
         </p>
       </div>
     </footer>

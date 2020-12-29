@@ -3,7 +3,7 @@ import { Icon } from "modules/shared/components/icon";
 
 const ThreeUp = () => {
   return (
-    <div className="container mx-auto my-24">
+    <div className="container mx-auto my-12 md:my-24 px-2 md:px-0">
       <ol className="three-up">
         <li>
           <h3>Not sure where to start?</h3>

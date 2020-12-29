@@ -22,12 +22,12 @@ a:hover h2.highlight {
 }
 
 .large-body-copy {
-  @apply text-2xl;
+  @apply text-xl md:text-2xl;
 }
 
 li,
 p {
-  @apply text-xl leading-relaxed mb-8;
+  @apply text-lg md:text-xl leading-relaxed mb-8;
 }
 
 p a {

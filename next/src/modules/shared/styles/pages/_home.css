@@ -1,15 +1,15 @@
 /* HOME */
 .hero-title {
-  @apply text-6xl md:text-8xl lg:text-9xl font-modern uppercase text-white;
+  @apply text-5xl md:text-8xl lg:text-9xl font-modern uppercase text-white;
 }
 
 .three-up {
-  @apply flex list-none;
+  @apply flex list-none flex-col md:flex-row;
   counter-reset: big-numbers;
 }
 
 .three-up li {
-  @apply flex-1 relative pl-28;
+  @apply flex-1 relative pl-14 md:pl-28 pb-10 md:pb-0;
   counter-increment: big-numbers;
 }
 
@@ -20,8 +20,8 @@
   content: counter(big-numbers);
   display: block;
   font-family: "bodoni-urw", sans-serif;
-  font-size: 7rem;
-  left: 0;
+  font-size: 5rem;
+  left: -3rem;
   line-height: 145px;
   position: absolute;
   text-align: center;
@@ -29,6 +29,13 @@
   width: 145px;
   height: 145px;
   z-index: -1;
+}
+
+@media (min-width: 640px) {
+  .three-up li::before {
+    font-size: 7rem;
+    left: 0;
+  }
 }
 
 .three-up li h3 {
@@ -40,7 +47,7 @@
 }
 
 .three-up li a {
-  @apply font-sans text-brightPink uppercase flex font-bold;
+  @apply font-sans text-brightPink uppercase flex font-black;
 }
 
 .three-up li a:hover {
