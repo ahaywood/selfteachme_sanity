@@ -45,7 +45,7 @@ const AboutPage = () => {
       </div>
       <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 px-4 md:px-8 mt-4">
         <h2 className="font-handwriting text-6xl sm:text-7xl md:text-8xl relative md:-ml-10 my-8">Learn to Code & Level Up</h2>
-        <h3 className="font-condensed text-baliHai uppercase text-3xl text-4xl md:text-6xl leading-stacked">...in a way that makes sense to you.</h3>
+        <h3 className="font-condensed text-baliHai uppercase text-4xl md:text-6xl leading-stacked">...in a way that makes sense to you.</h3>
         <p>Meaning, you can absorb the content in a variety of formats: articles, emails, videos, hands-on projects, and webinars with demos and live Q&A.</p>
         <p>It’s my dream that you’ll find a community of learners that challenge and help each other succeed. We're  on this journey together.</p>
         <h3 className="font-condensed uppercase text-5xl sm:text-6xl text-bunting leading-stacked pt-4 sm:pt-8">I've been in  your place.</h3>
@@ -56,7 +56,7 @@ const AboutPage = () => {
         <div className="max-w-3xl mx-auto text-bunting">I care about helping more people understand code without all the overwhelm.</div>
       </div>
       <div className="col-span-3 w-full grid grid-cols-12">
-        <div className="col-start-2 sm:col-start-1 lg:col-start-2 sm:pl-4 sm:pl-0 col-span-8 col-span-9 md:col-span-8 pb-8">
+        <div className="col-start-1 sm:col-start-1 lg:col-start-2 px-4 col-span-10 md:col-span-8 pb-8">
           <h3 className="font-condensed uppercase text-bunting text-5xl sm:text-6xl">I truly believe:</h3>
           <ol className="large-numbers">
             <li><strong>Anyone can learn how to code.</strong> Yes, sometimes you want to pull your hair out and, yes, some days are easier than others. But, I believe you can.</li>
@@ -79,9 +79,9 @@ const AboutPage = () => {
             <p className="font-sans text-white mb-0 md:max-w-2/3">All these experiences, can help me translate where you are to where you want to be and determine the best way to get there.</p>
           </div>
         </div>
-        <div className="why-should-i-care col-span-12 md:col-span-6 col-start-1 md:col-start-5 md:row-start-1 md:row-span-2 bg-white px-4 md:px-10 md:px-16 pt-14 pb-8 md:py-14 md:mt-32">
+        <div className="why-should-i-care col-span-12 md:col-span-6 col-start-1 md:col-start-5 md:row-start-1 md:row-span-2 bg-white px-4 md:px-16 pt-14 pb-8 md:py-14 md:mt-32">
           <hr className="border-none bg-hrShort bg-half h-9 bg-no-repeat relative -left-6 mb-4" />
-          <h3 className="uppercase font-condensed text-5xl sm:text-6xl leading-stacked mb-2">WHY SHOULD I CARE ABOUT READING YOUR WEBSITE?</h3>
+          <h3 className="uppercase font-condensed text-5xl sm:text-7xl leading-stacked sm:leading-stacked mb-2">WHAT'S DIFFERENT?</h3>
           <h4 className="text-baliHai font-condensed text-3xl sm:text-4xl mb-4">I write from a wide variety of experiences. </h4>
 
           <p>
@@ -160,7 +160,7 @@ const AboutPage = () => {
         <div><p>After college, I went and worked for a web company on Music Row (in Nashville, TN) called echo (owned by Ticketmaster). We built websites for artists and entertainers. It’s still fun to name drop in conversations. (*Cough* Janet Jackson, Taylor Swift, Kelly Clarkson, Counting Crows, Ice Cube, and Kanye West — just to name a few). I worked there for a year, before going to LifeWay. It was a good thing, too, because two months after I left, Ticketmaster dissolved echo.</p></div>
       </div>
       <div className="col-span-3 mb-12">
-        <img className="w-full" src="/img/about__instagram-grid.jpg" alt="ahaywood Instagram Pictures" />
+        <img className="w-full" src="/img/about__instagram-grid.jpg" alt="Instagram Pictures" />
       </div>
       <div className="col-span-3 grid grid-cols-12 mb-8">
         <div className="col-start-1 md:col-start-2 col-span-12 md:col-span-6 pt-0 md:pt-8 px-4 md:px-0 sm:mb-10 lg:mb-0">
