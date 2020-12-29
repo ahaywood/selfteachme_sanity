@@ -1,3 +1,12 @@
+/* Contact Form - Kwes Forms */
+.kwes-form .kw-field-error-message {
+  @apply text-candyAppleRed font-sans relative -top-8;
+}
+
+.kwes-form .kw-alert {
+  @apply font-sans text-xl text-candyAppleRed col-span-2;
+}
+
 /* Google Map */
 .google-img div {
   @apply h-full;
