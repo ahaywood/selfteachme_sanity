@@ -5,6 +5,7 @@ module.exports = {
       {
         ignoreAtRules: [
           "at-root",
+          'layer',
           "tailwind",
           "apply",
           "variants",
