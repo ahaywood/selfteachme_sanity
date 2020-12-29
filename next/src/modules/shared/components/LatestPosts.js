@@ -20,7 +20,12 @@ const LatestPosts = () => {
         <h2 className="text-center font-handwriting text-6xl md:text-8xl absolute -top-4 w-full left-0">
           Latest Posts
         </h2>
-        {posts && <FullWidthBlogCard content={posts.slice(0, 1)[0]} />}
+        {posts && (
+          <>
+            <FullWidthBlogCard content={posts.slice(0, 1)[0]} />
+            <div className="text-center w-full col-span-3 relative md:hidden mb-8"><Image src="/img/pluses--horizontal.svg" width="165" height="9" /></div>
+          </>
+        )}
         <div className="grid grid-cols-3 gap-6">
           {posts &&
             posts

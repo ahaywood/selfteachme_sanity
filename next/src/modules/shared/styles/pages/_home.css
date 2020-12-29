@@ -9,7 +9,7 @@
 }
 
 .three-up li {
-  @apply flex-1 relative pl-14 md:pl-28 pb-10 md:pb-0;
+  @apply flex-1 relative pl-14 sm:pl-28 pb-10 md:pb-0;
   counter-increment: big-numbers;
 }
 

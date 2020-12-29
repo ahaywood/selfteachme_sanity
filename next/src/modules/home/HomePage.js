@@ -62,7 +62,7 @@ const HomePage = () => {
 
         <ButtonLink href="/plan">
           Not sure where to begin?{" "}
-          <span className="ml-1 underline block md:inline">Start Here!</span>
+          <span className="ml-1 underline block sm:inline">Start Here!</span>
         </ButtonLink>
       </section>
       {/* past websites */}

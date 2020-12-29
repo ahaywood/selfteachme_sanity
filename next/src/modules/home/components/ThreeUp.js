@@ -6,7 +6,7 @@ const ThreeUp = () => {
     <div className="container mx-auto my-12 md:my-24 px-2 md:px-0">
       <ol className="three-up">
         <li>
-          <h3>Not sure where to start?</h3>
+          <h3>Just getting started?</h3>
           <p>
             You want to learn, but there’s so many languages and so many tools.
           </p>
