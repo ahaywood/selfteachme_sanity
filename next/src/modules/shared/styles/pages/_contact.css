@@ -1,10 +1,18 @@
 /* Contact Form - Kwes Forms */
 .kwes-form .kw-field-error-message {
-  @apply text-candyAppleRed font-sans relative -top-8;
+  @apply text-candyAppleRed font-sans relative -top-8 font-bold;
 }
 
 .kwes-form .kw-alert {
-  @apply font-sans text-xl text-candyAppleRed col-span-2;
+  @apply font-sans text-xl col-span-2;
+}
+
+.kwes-form .kw-alert.kw-alert-error {
+  @apply text-candyAppleRed;
+}
+
+.kwes-form .kw-alert.kw-alert-success {
+  @apply text-pistachio;
 }
 
 /* Google Map */
