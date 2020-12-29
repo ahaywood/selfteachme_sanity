@@ -9,9 +9,19 @@
 .content-grid.move-content-up {
   grid-template-areas:
     "hero hero hero"
-    "hero main hero"
+    "hero hero hero"
     ". main .";
-  grid-template-rows: 14rem auto auto;
+  grid-template-rows: 14rem 0 auto;
+}
+
+@media (min-width: 640px) {
+  .content-grid.move-content-up {
+    grid-template-areas:
+      "hero hero hero"
+      "hero main hero"
+      ". main .";
+    grid-template-rows: 14rem auto auto;
+  }
 }
 
 .content-grid.no-title {

@@ -13,6 +13,9 @@ module.exports = {
       mono: ["ui-monospace", "monospace"],
     },
     extend: {
+      backgroundSize: {
+        'half': '50%'
+      },
       backgroundImage: (theme) => ({
         believe: "url('/img/about__truly-believe.jpg')",
         checkbox: "url('/img/checkbox.svg')",
@@ -69,6 +72,7 @@ module.exports = {
       },
       maxWidth: {
         20: "5rem",
+        48: "12rem",
         "2/3": "60%"
       },
       minHeight: {
