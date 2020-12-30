@@ -13,6 +13,7 @@ import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 const IndividualBlog = (props) => {
   const { blogPagination, content, hero, postDetails, title, titleWithinHero, video } = props;
 
+  // determine date to show
   const ShowPostDate = () => {
     if (postDetails.dateUpdated) {
       return (<h3 className="uppercase text-baliHai font-condensed tracking-wider text-2xl text-center mb-12">Last Updated: {prettyDate(postDetails.dateUpdated)}</h3>)
@@ -26,8 +27,6 @@ const IndividualBlog = (props) => {
   return (
     <>
       <div className={`content-grid move-content-up ${titleWithinHero ? '' : 'no-title'}`}>
-        {/* <Head><script async data-uid="26c48e83f3" src="https://selfteachme.ck.page/26c48e83f3/index.js"></script></Head> */}
-
         <Hero title={titleWithinHero} src={hero} className="hero" />
 
         {/* content */}
