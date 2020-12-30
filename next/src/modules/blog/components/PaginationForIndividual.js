@@ -1,16 +1,16 @@
-const PaginationForIndividual = ({ previousPost, nextPost }) => {
+const PaginationForIndividual = ({ blogPagination }) => {
   return (
-    <div>
+    <div className="flex">
       {/* next post */}
-      {nextPost && (
-        <div>
+      {blogPagination?.nextPost && (
+        <div className="flex-1">
           Next Post
         </div>
       )}
 
       {/* previous post */}
-      {previousPost && (
-        <div>
+      {blogPagination?.previousPost && (
+        <div className="flex-1">
           Previous Post
         </div>
       )}

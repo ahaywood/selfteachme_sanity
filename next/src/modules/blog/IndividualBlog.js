@@ -11,7 +11,7 @@ import { PaginationForIndividual } from "./components/PaginationForIndividual";
 import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 
 const IndividualBlog = (props) => {
-  const { content, hero, postDetails, title, titleWithinHero, video } = props;
+  const { blogPagination, content, hero, postDetails, title, titleWithinHero, video } = props;
 
   const ShowPostDate = () => {
     if (postDetails.dateUpdated) {
@@ -51,10 +51,10 @@ const IndividualBlog = (props) => {
 
       {/* pagination */}
       <div className="mt-8">
-        <PaginationForIndividual />
+        <PaginationForIndividual blogPagination={blogPagination} />
       </div>
 
-      <div>{/* form was not displaying correctly without the wrapping div 🤷🏻‍♀️ */}
+      <div className="mt-8">{/* form was not displaying correctly without the wrapping div 🤷🏻‍♀️ */}
         <EmailNewsletter />
       </div>
     </>
