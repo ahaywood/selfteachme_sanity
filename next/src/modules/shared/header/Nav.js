@@ -4,7 +4,7 @@ import Link from "next/link";
 const Nav = ({ isNavOpen, toggleNav }) => {
   return (
     <div
-      className={`bg-black w-screen h-screen fixed left-0 z-40 p-10 transition-inset duration-500 ${isNavOpen ? "top-0" : "-top-screen"
+      className={`bg-black w-screen h-screen fixed overflow-y-scroll left-0 z-40 p-10 transition-inset duration-500 ${isNavOpen ? "top-0" : "-top-screen"
         }`}
     >
       <div className="max-w-5xl mx-auto text-center">
