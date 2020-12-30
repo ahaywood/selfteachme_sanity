@@ -21,8 +21,6 @@ const Post = (props) => {
 
 const query = groq`*[_type == "post" && slug.current == $slug]{
   ...,
-  "next": pagination.next->,
-  "previous": pagination.previous->,
   "hero": hero.asset->url,
   content[]{
     ...,

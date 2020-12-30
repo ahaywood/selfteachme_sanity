@@ -8,6 +8,7 @@ import { prettyDate } from "utils/date";
 import { getYouTubeId } from "utils/youtube";
 import { Comments } from "modules/shared/components/Comments";
 import { PaginationForIndividual } from "./components/PaginationForIndividual";
+import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 
 const IndividualBlog = (props) => {
   const { content, hero, postDetails, title, titleWithinHero, video } = props;
@@ -51,6 +52,10 @@ const IndividualBlog = (props) => {
       {/* pagination */}
       <div className="mt-8">
         <PaginationForIndividual />
+      </div>
+
+      <div>{/* form was not displaying correctly without the wrapping div 🤷🏻‍♀️ */}
+        <EmailNewsletter />
       </div>
     </>
   )

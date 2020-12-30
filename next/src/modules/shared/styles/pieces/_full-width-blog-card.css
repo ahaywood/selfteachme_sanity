@@ -17,46 +17,41 @@
   @apply bg-white;
 }
 
-/* ping pong cards */
+/* ------------------- ping pong cards ------------------- */
 /* odd */
-.ping-pong .stripe:nth-child(odd) .full-width-card  {
-  & > .content {
-    @apply pr-12 col-start-1 md:col-start-6 -col-end-2;
-  }
+.ping-pong .stripe:nth-child(odd) .full-width-card > .content {
+  @apply pr-12 col-start-1 md:col-start-6 -col-end-2;
+}
 
-  & > .image {
-    @apply col-span-12 md:col-span-5;
-  }
+.ping-pong .stripe:nth-child(odd) .full-width-card > .image {
+  @apply col-span-12 md:col-span-5;
+}
 
-  @at-root .full-width-card .blog-category,
-  .blog-category {
-    @apply right-0 top-0;
-  }
+.full-width-card .blog-category,
+.blog-category {
+  @apply right-0 top-0;
+}
 
-  @at-root .full-width-card .blog-date,
-  .blog-date {
-    @apply top-16 -right-12;
-  }
+.full-width-card .blog-date,
+.blog-date {
+  @apply top-16 -right-12;
 }
 
 
 /* even */
-.ping-pong .stripe:nth-child(even) .full-width-card {
+.ping-pong .stripe:nth-child(even) .full-width-card > .image {
+  @apply row-span-1 row-start-1 col-start-1 md:col-start-8 -col-end-1;
+}
 
-  & > .image {
-    @apply row-span-1 row-start-1 col-start-1 md:col-start-8 -col-end-1;
-  }
+.ping-pong .stripe:nth-child(even) .full-width-card > .content {
+  @apply pl-12 row-span-1 row-start-1 col-start-1 md:col-start-2 col-span-6;
+}
 
-  & > .content {
-    @apply pl-12 row-span-1 row-start-1 col-start-1 md:col-start-2 col-span-6;
-  }
+.ping-pong .stripe:nth-child(even) .full-width-card .blog-date {
+  @apply top-16 left-0 md:-left-12;
+}
 
-  .blog-date {
-    @apply top-15 left-0 md:-left-12;
-  }
-
-  .blog-category {
-    @apply left-0 top-0 md:right-auto;
-  }
+.ping-pong .stripe:nth-child(even) .full-width-card .blog-category {
+  @apply left-0 top-0 md:right-auto;
 }
 
