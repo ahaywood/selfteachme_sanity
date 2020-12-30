@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>SelfTeach.me | About</title>
+        <title>About | SelfTeach.me</title>
       </Head>
       <Page>
         <AboutPage />

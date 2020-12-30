@@ -11,7 +11,7 @@ const Blog = (props) => {
   return (
     <>
       <Head>
-        <title>SelfTeach.me | Blog</title>
+        <title>Blog | SelfTeach.me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>

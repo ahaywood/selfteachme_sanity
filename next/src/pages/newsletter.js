@@ -5,7 +5,7 @@ import { Page } from "modules/shared/layout/Page";
 const contact = () => (
   <>
     <Head>
-      <title>SelfTeach.me | Compressed: Weekly Newsletter</title>
+      <title>Compressed: Weekly Newsletter | SelfTeach.me</title>
     </Head>
     <Page>
       <NewsletterPage />

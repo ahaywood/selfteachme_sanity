@@ -9,7 +9,7 @@ const Series = (props) => {
   return (
     <>
       <Head>
-        <title>SelfTeach.me | Series</title>
+        <title>{props.name} | SelfTeach.me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>

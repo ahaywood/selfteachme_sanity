@@ -6,7 +6,7 @@ const plan = () => {
   return (
     <>
       <Head>
-        <title>SelfTeach.me | Get a Plan</title>
+        <title>Get a Plan | SelfTeach.me</title>
       </Head>
       <Page>
         <PlanPage />

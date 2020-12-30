@@ -5,7 +5,7 @@ import { Page } from "modules/shared/layout/Page";
 const contact = () => (
   <>
     <Head>
-      <title>SelfTeach.me | Contact Us</title>
+      <title>Contact Us | SelfTeach.me</title>
     </Head>
     <Page>
       <ContactPage />

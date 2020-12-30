@@ -12,7 +12,7 @@ const Category = (props) => {
   return (
     <>
       <Head>
-        <title>SelfTeach.me | Blog</title>
+        <title>{props.category} | SelfTeach.me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>

@@ -6,7 +6,7 @@ const startHere = () => {
   return (
     <>
       <Head>
-        <title>SelfTeach.me | Start Here</title>
+        <title>Start Here | SelfTeach.me</title>
       </Head>
       <Page>
         <StartHerePage />

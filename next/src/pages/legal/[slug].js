@@ -8,7 +8,7 @@ import { LegalPage } from 'modules/legal';
 const Legal = (props) => (
   <div>
     <Head>
-      <title>SelfTeach.me | {props.name}</title>
+      <title>{props.name} | SelfTeach.me</title>
     </Head>
     <Page>
       <LegalPage {...props} />
