@@ -1,7 +1,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  purge: ["./src/modules/**/*.js"],
+  purge: ["./src/**/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
