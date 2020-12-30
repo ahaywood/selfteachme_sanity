@@ -64,6 +64,7 @@ module.exports = {
       },
       lineHeight: {
         'stacked': ".75",
+        'handwriting': "0.25",
         14: "3.5rem",
         16: "4rem",
         17: "4.25rem",

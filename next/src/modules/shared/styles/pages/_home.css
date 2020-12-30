@@ -1,8 +1,10 @@
 /* HOME */
+/* hero */
 .hero-title {
   @apply text-5xl md:text-8xl lg:text-9xl font-modern uppercase text-white;
 }
 
+/* three-up */
 .three-up {
   @apply flex list-none flex-col lg:flex-row;
   counter-reset: big-numbers;
