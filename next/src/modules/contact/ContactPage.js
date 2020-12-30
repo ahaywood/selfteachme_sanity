@@ -8,7 +8,7 @@ const ContactPage = () => {
     <>
       <div className="content-grid move-content-up">
         <Hero title="Contact" src="/img/bg__contact.jpg" className="hero" />
-        <div className="main">
+        <div className="main p-12">
           <div className="flex items-center">
             <h2 className="font-handwriting text-8xl mr-2">Leave a Note</h2>
             <h3 className="font-condensed text-brightPink uppercase text-3xl bg-underline bg-left-bottom bg-no-repeat pb-6 pr-12">

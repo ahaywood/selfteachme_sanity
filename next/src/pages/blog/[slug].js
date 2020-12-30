@@ -4,13 +4,14 @@ import client from "utils/client";
 import groq from "groq";
 import { Page } from "modules/shared/layout/Page";
 import { IndividualBlog } from "modules/blog/IndividualBlog";
+import { Meta } from "modules/shared/header/Meta";
 
 const Post = (props) => {
   return (
     <div>
       <Head>
-        <title>SelfTeach.me | {props.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{props.meta?.seoTitle && `${props.meta.seoTitle} | `}SelfTeach.me</title>
+        <Meta />
       </Head>
       <Page>
         <IndividualBlog {...props} />

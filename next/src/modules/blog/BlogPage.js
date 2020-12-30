@@ -25,7 +25,7 @@ const BlogPage = (props) => {
         </div>
         {/* pagination */}
       </div>
-      <EmailNewsletter />
+      <div><EmailNewsletter /></div>
     </>
   );
 };

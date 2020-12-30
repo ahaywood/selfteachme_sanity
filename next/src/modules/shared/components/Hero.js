@@ -12,7 +12,7 @@ const Hero = ({ className, src, title, subtitle }) => {
           />
         )}
         <Link href="/">
-          <a className="w-40 block mx-auto">
+          <a className="w-40 block mx-auto logo">
             <Image
               src="/img/logo.svg"
               width="267"

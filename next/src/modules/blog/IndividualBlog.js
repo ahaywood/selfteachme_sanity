@@ -30,10 +30,10 @@ const IndividualBlog = (props) => {
         <Hero title={titleWithinHero} src={hero} className="hero" />
 
         {/* content */}
-        <div className="bg-white z-20 col-start-2">
+        <div className="main">
           {video && <YouTubeVideo videoId={getYouTubeId(video.url)} />}
 
-          <div className="px-8 pt-8">
+          <div className="px-12 pt-12">
             <h1 className="font-condensed text-8xl uppercase text-center leading-stacked mb-8">{title}</h1>
             <hr className="border-t-4 border-black mb-8 max-w-md mx-auto" />
             {ShowPostDate}
