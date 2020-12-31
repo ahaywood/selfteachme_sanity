@@ -8,10 +8,10 @@ const ContactPage = () => {
     <>
       <div className="content-grid move-content-up">
         <Hero title="Contact" src="/img/bg__contact.jpg" className="hero" />
-        <div className="main p-12">
-          <div className="flex items-center">
-            <h2 className="font-handwriting text-8xl mr-2">Leave a Note</h2>
-            <h3 className="font-condensed text-brightPink uppercase text-3xl bg-underline bg-left-bottom bg-no-repeat pb-6 pr-12">
+        <div className="main md:p-12 px-8 sm:px-0">
+          <div className="flex lg:items-center flex-col lg:flex-row pt-2 sm:pt-0">
+            <h2 className="font-handwriting text-7xl md:text-8xl lg:text-7xl xl:text-8xl mr-2 relative md:top-2 lg:top-0">Leave a Note</h2>
+            <h3 className="font-condensed text-brightPink uppercase text-2xl md:text-3xl bg-underline bg-left-bottom bg-no-repeat pb-6 pr-12">
               Everything starts with a hello
             </h3>
           </div>

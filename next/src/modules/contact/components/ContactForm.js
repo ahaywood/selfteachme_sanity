@@ -10,9 +10,9 @@ const ContactForm = () => {
     <form
       action="https://kwes.io/api/foreign/forms/Wd53JDA3MuydTlHhmgv9"
       method="POST"
-      className="kwes-form grid grid-cols-2 gap-x-8"
+      className="kwes-form grid grid-cols-2 gap-x-8 mb-16 md:mb-0"
     >
-      <div className="relative">
+      <div className="relative col-span-2 md:col-span-1">
         <label htmlFor="">First Name</label>
         <input
           className={errors.firstName && `error`}
@@ -25,7 +25,7 @@ const ContactForm = () => {
           <div className="form-error">Last Name is required</div>
         )}
       </div>
-      <div className="relative">
+      <div className="relative col-span-2 md:col-span-1">
         <label htmlFor="">Last Name</label>
         <input type="text" name="lastName" ref={register({ required: true })} />
         {errors.lastName && (
@@ -64,16 +64,16 @@ const ContactForm = () => {
       <div className="col-span-full">
         <ButtonSubmit className="with-emoji mt-12 light">
           <span
-            className="relative top-2 -left-24 text-8xl"
+            className="relative -top-4 md:top-2 -left-24 text-8xl"
             role="img"
             aria-label="dancing woman"
           >
             💃🏻
           </span>
-          <span className="font-handwriting normal-case text-8xl font-normal relative top-4 text-black mr-4">
+          <span className="hidden md:block lg:inline font-handwriting normal-case text-8xl font-normal relative -top-0 md:-top-2 lg:top-4 text-black mr-4">
             Submit
           </span>
-          Send this sucker into the inter webs
+          <span className="relative md:-top-8 lg:top-0"><span className="inline lg:hidden xl:inline">Send this sucker</span> into the inter webs</span>
         </ButtonSubmit>
       </div>
     </form>
