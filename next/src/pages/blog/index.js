@@ -16,10 +16,6 @@ const Blog = (props) => {
       </Head>
       <Page>
         <BlogPage content={content} />
-        {/* <PaginationForIndex
-          section="blog"
-          previousPageNumber="2"
-        /> */}
       </Page>
     </>
   );
@@ -34,11 +30,10 @@ const query = groq`*[_type == "post" && postDetails.published == true] | order(p
     postDetails,
     "category": postDetails.category->name,
     "categorySlug": postDetails.category->slug
-  }[0...$endingNumber]`;
+  }`;
 
 Blog.getInitialProps = async function (context) {
-  const endingNumber = Constants.PER_PAGE;
-  return await client.fetch(query, { endingNumber });
+  return await client.fetch(query);
 }
 
 export default Blog;

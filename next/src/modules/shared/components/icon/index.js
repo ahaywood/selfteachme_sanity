@@ -14,6 +14,7 @@ import { Map } from "./Map";
 import { Medium } from "./Medium";
 import { Patreon } from "./Patreon";
 import { Pinterest } from "./Pinterest";
+import { Post } from "./Post";
 import { Search } from "./Search";
 import { SoundCloud } from "./SoundCloud";
 import { Twitch } from "./Twitch";
@@ -50,6 +51,8 @@ const Icon = (props) => {
       return <Patreon {...props} />;
     case "pinterest":
       return <Pinterest {...props} />;
+    case "post":
+      return <Post {...props} />;
     case "search":
       return <Search {...props} />;
     case "soundcloud":

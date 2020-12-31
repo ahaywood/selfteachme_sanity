@@ -90,6 +90,9 @@ module.exports = {
       transitionProperty: {
         transform: "transform",
       },
+      width: {
+        26: "6.5rem",
+      },
       zIndex: {
         "-1": -1,
       },

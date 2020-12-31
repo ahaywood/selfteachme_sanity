@@ -2,14 +2,15 @@ import Link from "next/link";
 import { Icon } from "./icon";
 import { ButtonLink } from "./ButtonLink";
 import { getPostMonth, getPostDate } from "utils/date";
+import { slugify } from "utils/slugify";
 
 const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
   return (
     <div className="full-width-card grid md:grid-cols-12 md:gap-8 xl:gap-28 mb-12">
-      <div className="image relative">
+      <div className="image">
         {/* blog category */}
         {content.category && (
-          <div className="blog-category block py-4 px-6 absolute">
+          <div className={`blog-category block py-4 px-5 absolute w-32 xl:w-auto ${slugify(content.category)}`}>
             <Link href={`/blog/c/${content?.categorySlug?.current}`}>
               <a className="font-condensed uppercase text-brightPink text-lg md:text-2xl">
                 {content.category}
@@ -19,17 +20,17 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
         )}
 
         {/* image */}
-        <img src={content.hero} className="h-48 md:h-full w-full object-cover" />
+        <img src={content.hero} className="h-48 md:h-full w-full object-cover" loading="lazy" />
 
         {/* date */}
         {content.postDetails.datePublished && (
-          <div className="blog-date bg-bunting text-white font-condensed text-center px-6 py-8 w-24 absolute">
+          <div className="blog-date bg-bunting text-white font-condensed text-center md:px-6 py-4 md:py-8 w-32 lg:w-24 absolute">
             <div className="uppercase text-xl">{getPostMonth(content.postDetails.datePublished)}</div>
             <div className="text-7xl">{getPostDate(content.postDetails.datePublished)}</div>
           </div>
         )}
       </div>
-      <div className="content pt-8 md:pt-15 px-2 md:px-0">
+      <div className="content">
         {/* type of post */}
         <div className="font-condensed text-lg md:text-2xl uppercase text-baliHai mb-2">
           {content.postDetails.video ? (
@@ -38,7 +39,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
             </>
           ) : (
               <>
-                <Icon className="float-left mr-4" name="video" /> Post
+                <Icon className="float-left mr-4" name="post" /> Post
             </>
             )}
         </div>
