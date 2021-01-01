@@ -25,6 +25,7 @@ module.exports = {
         hrShort: "url('/img/hr--short.png')",
         map: "url('/img/contact__google-map.jpg')",
         horizontalPluses: "url('/img/pluses--horizontal.svg')",
+        pagination: "url('/img/pagination.jpg')",
         underline: "url('/img/horizontal-line.svg')",
       }),
       borderWidth: {
@@ -81,6 +82,7 @@ module.exports = {
 
       },
       padding: {
+        "mobile": "2rem",
         15: "3.75rem",
         18: "4.5rem",
       },

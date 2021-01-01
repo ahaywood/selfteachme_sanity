@@ -6,7 +6,7 @@ const EmailNewsletter = ({ className }) => {
   const { register, handleSubmit, watch, errors } = useForm();
 
   return (
-    <div className={`pt-10 md:pt-20 pb-5 md:pb-10 px-2 md:px-0 vertical-pluses ${className}`}>
+    <div className={`pt-10 md:pt-20 pb-5 md:pb-10 px-mobile md:px-0 vertical-pluses ${className}`}>
       <div className="max-w-7xl sm:container mx-auto grid lg:grid-cols-2 lg:gap-14 xl:gap-28">
         <div>
           <h2 className="font-condensed relative text-6xl sm:text-7xl md:text-8xl xl:text-9xl uppercase leading-stacked md:leading-stacked xl:leading-stacked mb-4">

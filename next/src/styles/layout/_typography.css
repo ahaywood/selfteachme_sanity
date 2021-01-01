@@ -4,7 +4,8 @@
   @apply mt-8;
 }
 
-h2.highlight {
+h2.highlight,
+h3.highlight {
   @apply inline;
   background: linear-gradient(
     transparent 0,
@@ -16,6 +17,7 @@ h2.highlight {
   );
 }
 
+a:hover h3.highlight,
 a:hover h2.highlight {
   background: linear-gradient(
     transparent 0,
@@ -42,4 +44,21 @@ p a {
 
 blockquote  {
   @apply font-modern italic font-bold text-3xl sm:text-4xl;
+}
+
+/* unordered list within posts */
+.block-content ul {
+  @apply list-none pl-8 pt-0 pb-6;
+}
+
+.block-content li {
+  @apply relative mb-4;
+}
+
+.block-content ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--brightPink);
+  display: block;
+  position: absolute;
+  left: -1rem;
 }

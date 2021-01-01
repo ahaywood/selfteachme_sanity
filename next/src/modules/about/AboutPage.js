@@ -26,7 +26,7 @@ const AboutPage = () => {
     <div className="content-grid move-content-up">
       <Hero title="About" src="/img/bg__about.jpg" className="hero" />
       <div className="bg-white z-20 col-span-3 md:col-span-2 md:col-start-2 flex flex-col sm:flex-row sm:mb-8">
-        <div className="px-4 pt-4 md:px-8 sm:pt-8 flex-1">
+        <div className="px-mobile pt-4 md:px-8 sm:pt-8 flex-1">
           <h2 className="font-condensed uppercase text-4xl sm:text-6xl md:text-7xl leading-stacked md:leading-stacked mb-8">I will teach you how to code</h2>
           <h2 className="font-handwriting text-6xl sm:text-7xl lg:text-8xl relative md:-ml-10 my-8">Let's be Honest</h2>
           <p className="large-body-copy">It’s hard.</p>
@@ -37,13 +37,13 @@ const AboutPage = () => {
           <img src="/img/about__speaking-big-idea.jpg" alt="Amy Dutton Speaking at a Conference" className="w-full h-full object-cover" />
         </div>
       </div>
-      <div className="col-span-3 md:col-span-1 md:col-start-2 px-4 md:px-8">
+      <div className="col-span-3 md:col-span-1 md:col-start-2 px-mobile md:px-8">
         <p>I know it’s not from a lack of trying or desire. Coding can be tedious. Dry. Boring.</p>
         <p><p>Coding is hard.</p></p>
         <p>I’ve been there before and I can help you.</p>
         <blockquote>How much you struggle doesn’t indicate how good of a programmer you will be, but it <span className="text-java">does</span> indicate whether you have the persistance to keep going.</blockquote>
       </div>
-      <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 px-4 md:px-8 mt-4">
+      <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 px-mobile md:px-8 mt-4">
         <h2 className="font-handwriting text-6xl sm:text-7xl lg:text-8xl relative md:-ml-10 my-8">Learn to Code & Level Up</h2>
         <h3 className="font-condensed text-baliHai uppercase text-4xl md:text-6xl leading-stacked"><span className="md:block lg:inline<p></p>">...in a way that</span> <span className="md:block lg:inline<p></p>">makes sense to you.</span></h3>
         <p>Meaning, you can absorb the content in a variety of formats: articles, emails, videos, hands-on projects, and webinars with demos and live Q&A.</p>
@@ -79,7 +79,7 @@ const AboutPage = () => {
             <p className="font-sans text-white mb-0 md:max-w-2/3">All these experiences, can help me translate where you are to where you want to be and determine the best way to get there.</p>
           </div>
         </div>
-        <div className="content col-span-12 md:col-span-7 lg:col-span-8 xl:col-span-7 col-start-1 md:col-start-5 lg:col-start-5 xl:col-start-5 md:row-start-1 md:row-span-2 bg-white px-4 md:px-16 pt-14 pb-8 md:py-14 md:mt-28 lg:mt-32">
+        <div className="content col-span-12 md:col-span-7 lg:col-span-8 xl:col-span-7 col-start-1 md:col-start-5 lg:col-start-5 xl:col-start-5 md:row-start-1 md:row-span-2 bg-white px-mobile md:px-16 pt-14 pb-8 md:py-14 md:mt-28 lg:mt-32">
           <hr className="border-none bg-hrShort bg-half h-9 bg-no-repeat relative -left-6 mb-4" />
           <h3 className="uppercase font-condensed text-5xl sm:text-7xl leading-stacked sm:leading-stacked mb-2">WHAT'S DIFFERENT?</h3>
           <h4 className="text-baliHai font-condensed text-3xl sm:text-4xl mb-4">I write from a wide variety of experiences. </h4>
@@ -118,7 +118,7 @@ const AboutPage = () => {
         <div className="col-span-12 md:col-span-5">
           <img src="/img/about__dutton-family.jpg" srcSet="/img/about__dutton-family.jpg 1x, /img/about__dutton-family@2x.jpg 2x" alt="Dutton Family" className="w-full" />
         </div>
-        <div className="col-span-12 md:col-span-6 lg:col-span-6 px-4 md:pl-8 md:pr-0 pt-8 sm:pt-16 md:pt-8 lg:pt-16">
+        <div className="col-span-12 md:col-span-6 lg:col-span-6 px-mobile md:pl-8 md:pr-0 pt-8 sm:pt-16 md:pt-8 lg:pt-16">
           <h2 className="font-condensed uppercase text-6xl sm:text-8xl leading-stacked sm:leading-stacked">Say Hello <span className="font-handwriting leading-handwriting lowercase">and</span> Introduce Yourself</h2>
           <p>Hello, my name is Amy (Haywood) Dutton. It’s nice to “meet” you. I’m the Senior UI/UX Designer and Frontend Developer at <a href="http://codingzeal.com" target="_blank">Zeal</a>. I LOVE creating things, which usually manifests itself in web design and development.</p>
         </div>
@@ -126,19 +126,19 @@ const AboutPage = () => {
       <div className="col-span-3 mb-8 lg:mb-16">
         <img className="w-full" src="/img/about__photo-collage.jpg" srcSet="/img/about__photo-collage.jpg 1x, /img/about__photo-collage@2x.jpg 2x" alt="Catan, Working from Starbucks, Greyhound" />
       </div>
-      <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 px-4 md:px-0">
+      <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 px-mobile md:px-0">
         <p>I currently live in Chicagoland with my husband and our three adorable (if I do say so myself) kids: Isaac ({kidsAge('isaac')}), Adele ({kidsAge('adele')}), and Emma ({kidsAge('emma')}). As if things weren’t exciting enough, we also adopted a retired racing greyhound and a King Charles Cavalier Spaniel.</p>
         <p>If I’m not sitting front of my computer, I’m hanging out with friends and family, binging on Netflix / Hulu / Prime / Disney+ / AppleTV (all the streaming!), playing Settlers or Nertz, or reading and drinking coffee.</p>
       </div>
       <div className="col-span-3 max-w-4xl mx-auto mt-8 mb-10">
-        <h2 className="font-condensed uppercase leading-stacked sm:leading-stacked text-5xl sm:text-6xl px-4 lg:px-0">With 20 years of experience, I’ve built hundreds of websites. I can teach you.</h2>
+        <h2 className="font-condensed uppercase leading-stacked sm:leading-stacked text-5xl sm:text-6xl px-mobile lg:px-0">With 20 years of experience, I’ve built hundreds of websites. I can teach you.</h2>
       </div>
       {/* logos */}
       <div className="col-span-3 mb-20 sm:mb-28 mx-auto max-w-7xl lg:px-8 xl:px-0">
         <LogoGrid />
       </div>
       <div className="col-span-3 grid grid-cols-12 mb-8">
-        <div className="col-start-1 md:col-start-2 col-span-12 md:col-span-6 md:mr-8 px-4 md:px-0">
+        <div className="col-start-1 md:col-start-2 col-span-12 md:col-span-6 md:mr-8 px-mobile md:px-0">
           <h2 className="uppercase font-condensed leading-stacked md:leading-stacked text-6xl sm:text-8xl mb-4">The Main Story</h2>
           <p>When I was in 8th grade, I built my first website, using Netscape Navigator’s web tools. I decided it would be a good idea to pull all the animated gifs on the Internet and put them in one central location. With so many animated images, my site was enough to give anyone a seizure. Let’s not even talk about file size and load times. But, I like to believe that I was before my time. Curated content and animated gifs anyone? Sounds like today’s <a href="http://giphy.com" target="_blank">Giphy</a>! -- And I still have a soft spot in my heart for a good animated gif.</p>
           <p>I graduated from college in 2006 from Middle Tennessee State University with a degree in Radio / TV Broadcasting and a concentration in Animation.</p>
@@ -148,7 +148,7 @@ const AboutPage = () => {
           <img src="/img/about__cat-typing.gif" alt="Cat Typing" />
         </div>
       </div>
-      <div className="col-span-3 max-w-4xl mx-auto mt-8 mb-4 sm:my-8 flex px-4 sm:px-0">
+      <div className="col-span-3 max-w-4xl mx-auto mt-8 mb-4 sm:my-8 flex px-2 sm:px-0">
         <div className="mr-8">
           <img className="max-w-full" src="/img/about__mtsu-logo.png" alt="Middle Tennessee State University logo" />
         </div>
@@ -156,18 +156,18 @@ const AboutPage = () => {
           <img className="max-w-full" src="/img/about__mtsu-building.jpg" alt="Middle Tennessee State University Library" />
         </div>
       </div>
-      <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 my-8 px-4 md:px-0">
+      <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 my-8 px-mobile md:px-0">
         <div><p>After college, I went and worked for a web company on Music Row (in Nashville, TN) called echo (owned by Ticketmaster). We built websites for artists and entertainers. It’s still fun to name drop in conversations. (*Cough* Janet Jackson, Taylor Swift, Kelly Clarkson, Counting Crows, Ice Cube, and Kanye West — just to name a few). I worked there for a year, before going to LifeWay. It was a good thing, too, because two months after I left, Ticketmaster dissolved echo.</p></div>
       </div>
       <div className="col-span-3 mb-12">
         <img className="w-full" src="/img/about__instagram-grid.jpg" alt="Instagram Pictures" />
       </div>
-      <div className="col-span-3 grid grid-cols-12 mb-8">
-        <div className="col-start-1 md:col-start-2 col-span-12 md:col-span-6 pt-0 md:pt-8 px-4 md:px-0 sm:mb-10 lg:mb-0">
+      <div className="col-span-3 grid grid-cols-12 mb-29 sm:mb-12">
+        <div className="col-start-1 md:col-start-2 col-span-12 md:col-span-6 pt-0 md:pt-8 px-mobile md:px-0 sm:mb-10 lg:mb-0">
           <p>I worked at LifeWay for four years in the Training and Events Production department. We did print, web, and video support for all the various events LifeWay produces across the country. I was an art director, serving five different departments, ranging in demographics from young children to senior adults</p>
           <p>In January 2013, I left LifeWay to do freelance fulltime with <a href="http://ahhacreative.com" target="_blank">Ah Ha Creative</a>.  For six and a half years, I had the privilege of partnering with a variety of clients and creative agencies to make some really cool projects.</p>
         </div>
-        <div className="row-span-1 md:row-span-2 col-start-1 md:col-start-9 col-span-12 md:col-span-4 px-4 lg:px-8 flex flex-row md:flex-col">
+        <div className="row-span-1 md:row-span-2 col-start-1 md:col-start-9 col-span-12 md:col-span-4 px-mobile lg:px-8 flex flex-row md:flex-col">
           <div className="flex-1 md:flex-none mr-2 md:mr-0 relative top-8 lg:top-0">
             <img className="mb-16 lg:mb-0 w-full" src="/img/about__screenshot__rorke-denver.jpg" alt="Screenshot of Rorke Denver's Website" />
           </div>
@@ -175,7 +175,7 @@ const AboutPage = () => {
             <img className="w-full" src="/img/about__screenshot__ginger-hardage.jpg" alt="Screenshot of Ginger Hardage's Website" />
           </div>
         </div>
-        <div className="col-span-6 md:col-span-4 md:mr-4 px-4 xl:px-8 relative -top-12 md:top-0">
+        <div className="col-span-6 md:col-span-4 md:mr-4 px-mobile xl:px-8 relative -top-12 md:top-0">
           <img className="w-full" src="/img/about__screenshot__ylm.jpg" alt="Screenshot of Yellow Leaf Marketing's Website" />
         </div>
         <div className="col-span-6 md:col-span-4 pl-2 pr-4 md:px-4 xl:px-8 md:pt-16 relative top-8 md:top-0">
@@ -183,10 +183,10 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="col-span-3 grid grid-cols-12 mb-10 md:mb-16">
-        <div className="col-start-1 lg:col-start-2 row-start-2 md:row-start-1 col-span-12 md:col-span-6 lg:col-span-7 md:pt-16 px-4 md:px-8">
+        <div className="col-start-1 lg:col-start-2 row-start-2 md:row-start-1 col-span-12 md:col-span-6 lg:col-span-7 md:pt-16 px-mobile md:px-8">
           <img src="/img/about__zeal-team.jpg" alt="Coding Zeal Team" />
         </div>
-        <div className="col-span-12 md:col-span-6 lg:col-span-3 px-4 md:px-8">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3 px-mobile md:px-8">
           <img className="float-right md:float-none mb-8 max-w-48" src="/img/about__zeal-logo-large.png" srcSet="/img/about__zeal-logo-large.png 1x, /img/about__zeal-logo-large@2x.png 2x" alt="Coding ZEAL logo" />
           <p>This brings us to now. In July 2019, I took a full job as the Senior UI/UX Designer and Frontend Developer at Zeal. So far, this has been one of the best jobs I’ve ever had. I could easily turn this into a love letter, but I’ll summarize it to say, Zeal cares about people and they care about our craft. I couldn’t ask for anything more.</p>
         </div>
