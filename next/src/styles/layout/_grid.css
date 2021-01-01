@@ -1,10 +1,16 @@
 /* default grid */
 .content-grid {
   @apply grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 0 3fr 0;
   grid-template-areas:
     "hero hero hero"
     ". main .";
+}
+
+@media (min-width: 640px) {
+  .content-grid {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
 }
 
 @media (min-width: 768px) {
@@ -23,6 +29,7 @@
 .content-grid.move-content-up {
   grid-template-rows: [hero-start] 13rem auto [hero-end main-start] auto [main-end];
 }
+
 
 /* no title */
 .content-grid.no-title {

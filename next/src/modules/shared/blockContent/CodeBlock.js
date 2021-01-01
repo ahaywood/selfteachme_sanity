@@ -16,7 +16,7 @@ const CodeBlock = ({ node }) => {
   }
 
   return (
-    <div className="font-mono col-start-4 col-span-6 mt-8 mb-12">
+    <div className="font-mono col-span-12 md:col-start-4 md:col-span-6 mt-8 mb-12">
       <CopyBlock
         codeBlock
         language={codeLang}
