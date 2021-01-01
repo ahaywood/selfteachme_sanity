@@ -1,3 +1,4 @@
 .subnav li:last-child {
-  @apply pr-5;
+  @apply pr-5 lg:pr-0;
 }
+

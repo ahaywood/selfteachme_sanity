@@ -9,7 +9,7 @@ const Subnav = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const query = groq`*[_type == "category"]{name, slug, _id}`;
+    const query = groq`*[_type == "category" && published == true]{name, slug, _id}`;
     client.fetch(query).then((res) => {
       setCategories(res);
     });
@@ -18,7 +18,7 @@ const Subnav = () => {
   return (
     <div className="subnav bg-sapphire w-full absolute top-52 md:top-64 z-20 overflow-x-scroll left-0">
       <ul className="flex md:justify-center">
-        <li className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 relative top-1">
+        <li className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 relative top-2">
           <Link href="/blog">
             <a
               className={
@@ -32,13 +32,13 @@ const Subnav = () => {
         {categories &&
           categories.map((item) => (
             <li
-              className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 whitespace-nowrap relative top-1"
+              className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 whitespace-nowrap relative top-2"
               key={item._id}
             >
               <Link href={`/blog/c/${item.slug.current}`}>
                 <a
                   className={
-                    router.pathname == item.slug.current
+                    router.asPath.includes(item.slug.current)
                       ? "text-gold"
                       : "text-white"
                   }
@@ -47,9 +47,10 @@ const Subnav = () => {
                 </a>
               </Link>
             </li>
-          ))}
+          )
+          )}
       </ul>
-    </div>
+    </div >
   );
 };
 

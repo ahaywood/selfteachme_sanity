@@ -23,6 +23,14 @@ export default {
       },
     },
     {
+      name: "published",
+      title: "Published",
+      type: "boolean",
+      options: {
+        layout: "switch"
+      }
+    },
+    {
       name: "intro",
       title: "Intro",
       type: "blockContent",
