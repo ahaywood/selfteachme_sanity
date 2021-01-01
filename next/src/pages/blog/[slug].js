@@ -23,20 +23,19 @@ const Post = (props) => {
 const query = groq`*[_type == "post" && slug.current == $slug]{
   ...,
   "hero": hero.asset->url,
+  relatedPosts[]->{_id, title, slug},
   blogPagination{
     nextPost->{
       title,
       slug,
       "datePublished": postDetails.datePublished,
       "dateUpdated": postDetails.dateUpdated,
-      "hero": hero.asset->url
 		},
     previousPost->{
       title,
       slug,
       "datePublished": postDetails.datePublished,
       "dateUpdated": postDetails.dateUpdated,
-      "hero": hero.asset->url
 		},
 	},
   content[]{

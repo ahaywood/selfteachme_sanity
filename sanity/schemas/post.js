@@ -43,6 +43,13 @@ export default {
       type: "blockContent",
     },
     {
+      name: "relatedPosts",
+      title: "Related Posts",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "post" }] }],
+      validation: (Rule) => Rule.unique(),
+    },
+    {
       name: "blogPagination",
       title: "Pagination",
       type: "blogPagination"

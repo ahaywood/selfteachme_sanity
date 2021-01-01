@@ -1,6 +1,7 @@
+// Pagination for the blog index
 import Link from "next/link";
 
-const PaginationForIndex = ({section, previousPageNumber, nextPageNumber}) => {
+const Pagination = ({ section, previousPageNumber, nextPageNumber }) => {
   return (
     <div>
       <div>
@@ -21,4 +22,4 @@ const PaginationForIndex = ({section, previousPageNumber, nextPageNumber}) => {
   )
 }
 
-export { PaginationForIndex };
+export { Pagination };

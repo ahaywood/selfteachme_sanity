@@ -7,11 +7,12 @@ import { YouTubeVideo } from "modules/shared/components/YouTubeVideo";
 import { prettyDate } from "utils/date";
 import { getYouTubeId } from "utils/youtube";
 import { Comments } from "modules/shared/components/Comments";
-import { PaginationForIndividual } from "./components/PaginationForIndividual";
+import { NextPreviousPosts } from "modules/blog/components/NextPreviousPosts";
+import { RelatedPosts } from "modules/blog/components/RelatedPosts";
 import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 
 const IndividualBlog = (props) => {
-  const { blogPagination, content, hero, postDetails, title, titleWithinHero, video } = props;
+  const { blogPagination, content, hero, postDetails, relatedPosts, title, titleWithinHero, video } = props;
 
   // determine date to show
   const ShowPostDate = () => {
@@ -34,7 +35,7 @@ const IndividualBlog = (props) => {
           {video && <YouTubeVideo videoId={getYouTubeId(video.url)} />}
 
           <div className="px-12 pt-12">
-            <h1 className="font-condensed text-8xl uppercase text-center leading-stacked mb-8">{title}</h1>
+            <h1 className="font-condensed text-6xl md:text-8xl uppercase text-center leading-stacked mb-8">{title}</h1>
             <hr className="border-t-4 border-black mb-8 max-w-md mx-auto" />
             {ShowPostDate}
           </div>
@@ -45,13 +46,14 @@ const IndividualBlog = (props) => {
         <BlockContent blocks={content} serializers={serializers} />
 
         {/* comments */}
-        <Comments className="col-start-4 col-span-6" />
+        <Comments className="col-span-12 px-8 md:px-0 md:col-start-4 md:col-span-6" />
       </div>
 
       {/* pagination */}
-      <div className="mt-8">
-        <PaginationForIndividual blogPagination={blogPagination} />
-      </div>
+      <section className="grid grid-cols-12 bg-almostWhite pb-12 md:py-12 mt-8">
+        {blogPagination && <NextPreviousPosts blogPagination={blogPagination} />}
+        {relatedPosts && <RelatedPosts relatedPosts={relatedPosts} />}
+      </section>
 
       <div className="mt-8">{/* form was not displaying correctly without the wrapping div 🤷🏻‍♀️ */}
         <EmailNewsletter />
