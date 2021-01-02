@@ -21,6 +21,10 @@ const subtitleStyle = (props) => (
   </div>
 );
 
+const codeStyle = (props) => (
+  <code style={{ color: "red" }}>{props.children}</code>
+);
+
 const keyboardStyle = (props) => (
   <span
     className="keyboard-shortcut"
@@ -93,7 +97,7 @@ export default {
               render: highlightRender,
             },
           },
-          { title: "Code", value: "code" },
+          { title: "Code", value: "code", blockEditor: { render: codeStyle } },
           {
             title: "Keyboard Shortcut",
             value: "keyboard",
