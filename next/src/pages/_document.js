@@ -10,6 +10,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* favicon */}
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="author" content="Amy Dutton"></meta>
+
           {/* custom fonts */}
           <link rel="stylesheet" href="https://use.typekit.net/tle2trn.css" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
