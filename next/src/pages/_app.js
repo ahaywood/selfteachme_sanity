@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     // Initialize Fathom when the app loads
-    Fathom.load('YOUR_FATHOM_TRACKING_CODE', {
-      includedDomains: ['YOUR_SITE_URL'],
+    Fathom.load('WOPIQSIX', {
+      includedDomains: ['https://selfteach.me'],
     })
 
     function onRouteChangeComplete() {
