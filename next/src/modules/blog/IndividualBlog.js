@@ -12,7 +12,7 @@ import { RelatedPosts } from "modules/blog/components/RelatedPosts";
 import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 
 const IndividualBlog = (props) => {
-  const { blogPagination, content, hero, postDetails, relatedPosts, title, titleWithinHero, video } = props;
+  const { blogPagination, content, hero, postDetails, relatedPosts, subheading, title, titleWithinHero, video } = props;
 
   // determine date to show
   const ShowPostDate = () => {
@@ -35,8 +35,9 @@ const IndividualBlog = (props) => {
           {video && <YouTubeVideo videoId={getYouTubeId(video.url)} />}
 
           <div className="px-12 pt-12">
-            <h1 className="font-condensed text-6xl md:text-8xl uppercase text-center leading-stacked mb-8">{title}</h1>
-            <hr className="border-t-4 border-black mb-8 max-w-md mx-auto" />
+            <h1 className="font-condensed text-6xl md:text-8xl uppercase text-center leading-stacked">{title}</h1>
+            {subheading && <h2 className="font-condensed text-4xl md:text-6xl uppercase text-center leading-stacked">{subheading}</h2>}
+            <hr className="border-t-4 border-black my-8 max-w-md mx-auto" />
             {ShowPostDate}
           </div>
         </div>
