@@ -10,7 +10,7 @@ const LatestPosts = () => {
   const [posts, setPosts] = useState();
 
   useEffect(() => {
-    const query = groq`*[_type == "post" && postDetails.published == true]{_id, title, slug, "hero": hero.asset->url, video, postDetails, "category": postDetails.category->name, "categorySlug": postDetails.category->slug}[0...4]`;
+    const query = groq`*[_type == "post" && postDetails.published == true] | order(postDetails.datePublished){_id, title, slug, "hero": hero.asset->url, video, postDetails, "category": postDetails.category->name, "categorySlug": postDetails.category->slug}[0...4]`;
     client.fetch(query).then((res) => setPosts(res));
   }, []);
 
@@ -30,13 +30,8 @@ const LatestPosts = () => {
           {posts &&
             posts
               .slice(1, 4)
-              .map((post) => (
-                <>
-                  <ThirdBlogCard className="col-span-3 md:col-span-1 mb-0" content={post} key={post._id} />
-                  <div className="text-center w-full col-span-3 relative md:hidden"><Image src="/img/pluses--horizontal.svg" width="165" height="9" /></div>
-                </>
-              )
-              )}
+              .map((post) => (<ThirdBlogCard className="col-span-3 md:col-span-1 mb-0" content={post} key={post._id} />))
+          }
         </div>
         <div className="text-center mt-12 w-full">
           <ButtonLink className="alt" href="/blog">
