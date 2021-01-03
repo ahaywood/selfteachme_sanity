@@ -20,7 +20,6 @@
     "tailwindcss": "^2.0.1"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.8.1",
     "eslint-config-airbnb": "^18.2.0",
