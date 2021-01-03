@@ -32,6 +32,15 @@ class MyDocument extends Document {
                 b.parentNode.insertBefore(c, b); return c; }; c = d('', '-hidden', ''); d('-stay-invisible', '-stay-hidden', '-stay');
             setTimeout(o.onerror = function() {c.parentNode && c.parentNode.removeChild(c); }, a); b.parentNode.insertBefore(o, b);
           })('264426316', 20000, document);`}} />
+
+          {/* commento */}
+          <script
+            defer
+            src="https://cdn.commento.io/js/commento.js"
+            data-css-override="https://selfteach.me/css/commento.css"
+            data-auto-init="true"
+            type="text/javascript"
+          ></script>
         </Head>
         <body className="font-serif">
           <Main />
