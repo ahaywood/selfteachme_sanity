@@ -36,7 +36,7 @@ const IndividualBlog = (props) => {
 
           <div className="px-12 pt-12">
             <h1 className="font-condensed text-6xl md:text-8xl uppercase text-center leading-stacked">{title}</h1>
-            {subtitle && <h2 className="font-condensed text-4xl md:text-6xl uppercase text-center leading-stacked">{subtitle}</h2>}
+            {subtitle && <h2 className="font-condensed text-4xl uppercase text-center text-baliHai">{subtitle}</h2>}
             <hr className="border-t-4 border-black my-8 max-w-md mx-auto" />
             {ShowPostDate}
           </div>
