@@ -30,7 +30,7 @@
 }
 
 .elsewhere-online li {
-  @apply font-condensed uppercase text-xl text-center flex-1 tracking-wide px-8;
+  @apply font-condensed uppercase text-xl text-center flex-1 tracking-wide px-8 md:px-4 lg:px-8;
 }
 
 .elsewhere-online li > a {

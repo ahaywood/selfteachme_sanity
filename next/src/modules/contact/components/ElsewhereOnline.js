@@ -14,7 +14,7 @@ const ElsewhereOnline = () => {
 
   return (
     <div className="elsewhere-online flex justify-between flex-col lg:flex-row">
-      <div className="flex-1">
+      <div className="flex-1 md:mr-8 lg:mr-0">
         <h3>
           <span className="font-modern uppercase text-6xl sm:text-8xl lg:pl-24 text-serenade block">Elsewhere</span>
           <span className="font-handwriting text-8xl block relative -top-2 flex">
