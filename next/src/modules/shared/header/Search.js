@@ -4,7 +4,11 @@ import { Icon } from "../components/icon";
 
 const Search = ({ isSearchOpen, toggleSearch }) => {
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data) => {
+    // redirect to the homepage, send the key words
+    router.push({ pathname: '/search', query: data });
+  }
 
   return (
     <div
@@ -30,7 +34,7 @@ const Search = ({ isSearchOpen, toggleSearch }) => {
           <input
             className="search-input"
             id="search"
-            name="search"
+            name="s"
             type="text"
             ref={register({ required: true })}
           />

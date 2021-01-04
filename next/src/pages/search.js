@@ -1,8 +1,12 @@
 import React from 'react'
 import client from "utils/client";
 import groq from "groq";
+import { withRouter } from "next/router";
+import { useFormContext } from "react-hook-form";
 
 const Search = (props) => {
+  console.log(props);
+  const methods = useFormContext();
   return (
     <div>
       Searching...
@@ -26,4 +30,4 @@ Search.getInitialProps = async function (context) {
   return await client.fetch(query);
 }
 
-export default Search
+export default withRouter(Search)

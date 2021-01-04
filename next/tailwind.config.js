@@ -45,6 +45,7 @@ module.exports = {
         black: "#000",
         white: "#fff",
         brightTurquoise: "#44FACD",
+        peach: "#ffc8ab",
       },
       flex: {
         2: "2 2 0%",
