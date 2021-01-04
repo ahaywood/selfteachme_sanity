@@ -4,18 +4,20 @@ import * as Fathom from 'fathom-client'
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
+  // Set up Fathom Analytics
+  // Reference: https://usefathom.com/support/tracking
   const router = useRouter()
 
   useEffect(() => {
     // Initialize Fathom when the app loads
     Fathom.load('WOPIQSIX', {
-      includedDomains: ['https://selfteach.me'],
+      includedDomains: ['selfteach.me'],
     })
 
     function onRouteChangeComplete() {
       Fathom.trackPageview()
     }
-    // Record a pageview when route changes
+    // Record a page view when route changes
     router.events.on('routeChangeComplete', onRouteChangeComplete)
 
     // Unassign event listener
