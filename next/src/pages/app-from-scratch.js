@@ -1,5 +1,11 @@
+import { AppFromScratchPage } from "modules/appFromScratch";
+
 const appFromScratch = () => {
-  return <div>App from Scratch</div>;
+  return (
+    <div>
+      <AppFromScratchPage />
+    </div>
+  );
 };
 
 export default appFromScratch;
