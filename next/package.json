@@ -5,6 +5,7 @@
     "@sanity/client": "^2.0.9",
     "@sanity/image-url": "^0.140.19",
     "autoprefixer": "^10.0.4",
+    "cheerio": "^1.0.0-rc.5",
     "date-fns": "^2.16.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "fathom-client": "^3.0.0",
@@ -41,7 +42,8 @@
     "export": "next build && next export",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "node ./scripts/postbuild"
   },
   "version": "0.1.0"
 }
