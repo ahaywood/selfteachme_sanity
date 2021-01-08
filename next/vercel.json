@@ -1,4 +1,7 @@
 {
+  "github": {
+    "enabled": true
+  },
   "routes": [
     {
       "src": "/sitemap.xml",
