@@ -2,7 +2,7 @@ import { Hero } from "modules/shared/components/Hero"
 import Link from "next/link";
 import { LatestPosts } from "modules/shared/components/LatestPosts";
 import { YouTubeVideo } from "modules/shared/components/YouTubeVideo";
-import { SearchBar } from "./components/SearchBar";
+import { SearchBar } from "modules/shared/components/SearchBar";
 
 const FourOFourPage = () => {
   return (
