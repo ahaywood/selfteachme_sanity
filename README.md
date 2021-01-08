@@ -12,6 +12,14 @@ The frontend is built on [Next.js](http://nextjs.org).
 
 The backend is running [Sanity](https://www.sanity.io/).
 
+# To deploy to Vercel
+
+Code should automatically deploy to Vercel when it gets pushed to GitHub. If you're having trouble getting the code to deploy, try using the Vercel CLI tool. Within the room of the project directory, run
+
+```bash
+vercel
+```
+
 ## To deploy Sanity
 
 ```bash
