@@ -12,7 +12,6 @@ const Blog = (props) => {
     <>
       <Head>
         <title>Blog | SelfTeach.me</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>
         <BlogPage content={content} />
