@@ -1,10 +1,17 @@
+import { Page } from "modules/shared/layout/Page"
 import { AppFromScratchPage } from "modules/appFromScratch";
+import Head from "next/head";
 
 const appFromScratch = () => {
   return (
-    <div>
-      <AppFromScratchPage />
-    </div>
+    <>
+      <Head>
+        <title>App from Scratch | SelfTeach.me</title>
+      </Head>
+      <Page>
+        <AppFromScratchPage />
+      </Page>
+    </>
   );
 };
 
