@@ -2,14 +2,14 @@
   "github": {
     "enabled": true
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/sitemap.xml",
-      "dest": "/_next/static/sitemap.xml"
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
     },
     {
-      "src": "/feed.json",
-      "dest": "/_next/static/feed.json"
+      "source": "/feed.json",
+      "destination": "/feed.json"
     }
   ]
 }
