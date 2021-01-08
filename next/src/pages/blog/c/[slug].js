@@ -5,22 +5,16 @@ import groq from "groq";
 import { Page } from "modules/shared/layout/Page";
 import { BlogPage } from "modules/blog/";
 import { Constants } from "utils/constants";
-// import { PaginationForIndex } from "modules/blog/components/PaginationForIndex";
 
 const Category = (props) => {
-  const content = Object.values(props);
+  const content = Object.values(props); // convert posts into array
   return (
     <>
       <Head>
         <title>{props.category} | SelfTeach.me</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>
         <BlogPage content={content} />
-        {/* <PaginationForIndex
-          section="blog"
-          previousPageNumber="2"
-        /> */}
       </Page>
     </>
   );
