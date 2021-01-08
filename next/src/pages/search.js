@@ -1,20 +1,27 @@
-import React from 'react'
+import Head from "next/head";
 import client from "utils/client";
 import groq from "groq";
-import { withRouter } from "next/router";
-import { useFormContext } from "react-hook-form";
+import { useRouter } from "next/router";
+import { Page } from "modules/shared/layout/Page";
+import { SearchPage } from "modules/search";
 
 const Search = (props) => {
-  console.log(props);
-  const methods = useFormContext();
+  const content = Object.values(props); // convert posts into array
+  const router = useRouter();
+
   return (
-    <div>
-      Searching...
-    </div>
+    <>
+      <Head>
+        <title>Search Results for {router.query.keywords} | SelfTeach.me</title>
+      </Head>
+      <Page>
+        <SearchPage content={content} />
+      </Page>
+    </>
   )
 }
 
-const query = groq`*[_type == "post" && postDetails.published == true && (title match "terminal" || text match "terminal")]  {
+const query = groq`*[_type == "post" && postDetails.published == true && (title match $keywords || postDetails.excerpt match $keywords || content match $keywords)]  {
   _id,
   title,
   slug,
@@ -26,8 +33,9 @@ const query = groq`*[_type == "post" && postDetails.published == true && (title 
 }`;
 
 Search.getInitialProps = async function (context) {
-  // const endingNumber = Constants.PER_PAGE;
-  return await client.fetch(query);
+  console.log(`Query ${context.query}`);
+  const { keywords = "" } = context.query;
+  return await client.fetch(query, { keywords });
 }
 
-export default withRouter(Search)
+export default Search;

@@ -1,9 +1,11 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { Icon } from "../components/icon";
 
 const Search = ({ isSearchOpen, toggleSearch }) => {
   const { register, handleSubmit, watch, errors } = useForm();
+  const router = useRouter();
 
   const onSubmit = (data) => {
     // redirect to the homepage, send the key words
@@ -34,7 +36,7 @@ const Search = ({ isSearchOpen, toggleSearch }) => {
           <input
             className="search-input"
             id="search"
-            name="s"
+            name="keywords"
             type="text"
             ref={register({ required: true })}
           />
