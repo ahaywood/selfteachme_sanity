@@ -7,14 +7,14 @@
   @apply col-span-12 md:col-span-6 relative;
 }
 
+/* default background color */
+.blog-category {
+  @apply bg-white;
+}
+
 /* latest posts */
 .latest-posts .blog-category {
   @apply bg-almostWhite;
-}
-
-/* blog index */
-.blog-index .blog-category {
-  @apply bg-white;
 }
 
 /* ------------------- ping pong cards ------------------- */
