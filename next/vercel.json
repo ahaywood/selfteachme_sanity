@@ -2,14 +2,16 @@
   "github": {
     "enabled": true
   },
-  "rewrites": [
+  "redirects": [
     {
       "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
+      "destination": "/_next/static/sitemap.xml",
+      "permanent": true
     },
     {
       "source": "/feed.json",
-      "destination": "/feed.json"
+      "destination": "/_next/static/feed.json",
+      "permanent": true
     }
   ]
 }
