@@ -6,7 +6,6 @@ import { Page } from "modules/shared/layout/Page"
 import { SnippetPage } from "modules/snippets/";
 import { Constants } from "utils/constants";
 
-
 const Snippets = (props) => {
   const { content } = props;
   return (
