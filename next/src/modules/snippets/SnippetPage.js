@@ -1,11 +1,17 @@
 import { Hero } from "modules/shared/components/Hero";
+import { OneSnippet } from "./components/OneSnippet";
+import { Subnav } from "./components/Subnav";
 
-const SnippetPage = () => {
+const SnippetPage = (props) => {
+  const { content } = props;
   return (
     <>
       <Hero title="Snippets" src="/img/bg__about.jpg" />
-      <div>
-        Here's a Snippet
+      <Subnav />
+      <div className="">
+        {content?.map((snippet) => (
+          <OneSnippet content={snippet} />
+        ))}
       </div>
     </>
   )

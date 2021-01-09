@@ -22,6 +22,7 @@ export default {
         maxLength: 100,
       },
     },
+    { name: "published", title: "Published?", type: "boolean" },
     {
       name: "meta",
       title: "META Data",
