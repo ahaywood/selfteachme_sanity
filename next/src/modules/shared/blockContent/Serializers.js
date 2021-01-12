@@ -53,6 +53,7 @@ const serializers = {
 
       return BlockContent.defaultSerializers.types.block(props);
     },
+    blockquote: Blockquote,
     box,
     code: CodeBlock,
     fullWidthImage,
