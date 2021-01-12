@@ -11,7 +11,7 @@ const Post = (props) => {
     <div>
       <Head>
         <title>{props.meta?.seoTitle && `${props.meta.seoTitle} | `}SelfTeach.me</title>
-        <Meta />
+        <Meta meta={props.meta} slug={`blog/${props.slug.current}`} />
       </Head>
       <Page>
         <IndividualBlog {...props} />
@@ -38,6 +38,11 @@ const query = groq`*[_type == "post" && slug.current == $slug]{
       "dateUpdated": postDetails.dateUpdated,
 		},
 	},
+  meta{
+    ...,
+    "ogImage": ogImage.asset->url,
+    "twitterImage": twitterImage.asset->url
+  },
   content[]{
     ...,
     markDefs[] {

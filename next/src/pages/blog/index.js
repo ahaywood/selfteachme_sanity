@@ -5,13 +5,25 @@ import groq from "groq";
 import { Page } from "modules/shared/layout/Page";
 import { BlogPage } from "modules/blog/";
 import { Constants } from "utils/constants";
+import { Meta } from "modules/shared/header/Meta";
 
 const Blog = (props) => {
   const content = Object.values(props);
+  const meta = {
+    // "seoDescription" : ,
+    "ogTitle": "SelfTeach.me Blog",
+    // "ogDescription" : ,
+    // "ogImage" : ,
+    "twitterTitle": "SelfTeach.me Blog",
+    // "twitterDescription" : ,
+    // "twitterImage" : ,
+    // "twitterImageAlt" :
+  }
   return (
     <>
       <Head>
         <title>Blog | SelfTeach.me</title>
+        <Meta meta={meta} slug="blog" />
       </Head>
       <Page>
         <BlogPage content={content} />
