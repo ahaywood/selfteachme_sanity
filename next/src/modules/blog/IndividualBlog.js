@@ -51,10 +51,12 @@ const IndividualBlog = (props) => {
       </div>
 
       {/* pagination */}
-      <section className="grid grid-cols-12 bg-almostWhite pb-12 md:py-12 mt-8">
-        {blogPagination && <NextPreviousPosts blogPagination={blogPagination} />}
-        {relatedPosts && <RelatedPosts relatedPosts={relatedPosts} />}
-      </section>
+      { blogPagination || relatedPosts && (
+        <section className="grid grid-cols-12 bg-almostWhite pb-12 md:py-12 mt-8">
+          {blogPagination && <NextPreviousPosts blogPagination={blogPagination} />}
+          {relatedPosts && <RelatedPosts relatedPosts={relatedPosts} />}
+        </section>
+      )}
 
       <div className="mt-8">{/* form was not displaying correctly without the wrapping div 🤷🏻‍♀️ */}
         <EmailNewsletter />
