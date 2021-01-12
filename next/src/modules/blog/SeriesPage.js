@@ -15,7 +15,7 @@ const SeriesPage = (props) => {
     if (content.customIntroVideo.useCustomIntroVideo) {
       return (
         <>
-          <div className="col-start-2">
+          <div className="col-start-2 z-20">
             <YouTubeVideo videoId={getYouTubeId(content.customIntroVideo.introVideo.url)} />
           </div>
 
