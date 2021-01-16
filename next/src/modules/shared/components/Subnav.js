@@ -18,7 +18,7 @@ const Subnav = () => {
   return (
     <div className="subnav bg-sapphire w-full absolute top-52 md:top-64 z-20 overflow-x-scroll left-0">
       <ul className="flex md:justify-center">
-        <li className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 relative top-2">
+        <li className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 relative top-1">
           <Link href="/blog">
             <a
               className={
@@ -32,7 +32,7 @@ const Subnav = () => {
         {categories &&
           categories.map((item) => (
             <li
-              className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 whitespace-nowrap relative top-2"
+              className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 whitespace-nowrap relative top-1"
               key={item._id}
             >
               <Link href={`/blog/c/${item.slug.current}`}>
