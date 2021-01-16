@@ -10,9 +10,9 @@ const insertScript = (src, id, parentElement) => {
   script.async = true;
   script.src = src;
   script.id = id;
-  // data-css-override="/css/commento.css"
-  //       data-auto-init="true"
-  //       data-no-fonts="true"
+  script.setAttribute('data-css-override', "/css/commento.css");
+  script.setAttribute('data-auto-init', 'true');
+  script.setAttribute('data-no-fonts', 'true');
   parentElement.appendChild(script);
   return script;
 };
