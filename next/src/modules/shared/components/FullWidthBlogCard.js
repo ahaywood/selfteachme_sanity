@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Icon } from "./icon";
 import { ButtonLink } from "./ButtonLink";
-import { getPostMonth, getPostDate } from "utils/date";
+import { getPostMonth, getPostDate, getPostYear } from "utils/date";
 import { slugify } from "utils/slugify";
 
 const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
@@ -24,9 +24,10 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
 
         {/* date */}
         {content.postDetails.datePublished && (
-          <div className="blog-date bg-bunting text-white font-condensed text-center md:px-6 py-4 md:py-8 w-32 lg:w-24 absolute">
+          <div className="blog-date bg-bunting text-white font-condensed text-center md:px-6 py-4 md:py-5 w-32 lg:w-24 absolute">
             <div className="uppercase text-xl">{getPostMonth(content.postDetails.datePublished)}</div>
             <div className="text-7xl">{getPostDate(content.postDetails.datePublished)}</div>
+            <div className="text-xl tracking-wider">{getPostYear(content.postDetails.datePublished)}</div>
           </div>
         )}
       </div>

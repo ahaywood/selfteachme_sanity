@@ -34,7 +34,7 @@
 
 .full-width-card .blog-date,
 .blog-date {
-  @apply top-15 md:top-16 left-0 md:left-auto md:right-0 lg:-right-12;
+  @apply top-15 md:top-15 lg:top-16 left-0 md:left-auto md:right-0 lg:-right-12;
 }
 
 
@@ -56,7 +56,11 @@
 }
 
 /* workflow & productivity category */
+.ping-pong .stripe:nth-child(even) .full-width-card .blog-category.workflow-productivity ~ .blog-date {
+  @apply top-20 sm:top-24 xl:top-16;
+}
+
 .blog-category.workflow-productivity ~ .blog-date {
-  @apply top-24;
+  @apply top-20 sm:top-24 xl:top-16;
 }
 
