@@ -44,14 +44,12 @@ export const Comments = ({ className, id }) => {
     return () => removeScript(`commento-script`, document.body);
   }, [id]);
 
-});
-
-return (
-  <div className={className}>
-    <Hr />
-    <h2 className="font-condensed text-brightPink uppercase text-6xl">Comments</h2>
-    <div id="commento" />
-    {/* <script
+  return (
+    <div className={className}>
+      <Hr />
+      <h2 className="font-condensed text-brightPink uppercase text-6xl">Comments</h2>
+      <div id="commento" />
+      {/* <script
         defer
         src="https://cdn.commento.io/js/commento.js"
         data-css-override="/css/commento.css"
@@ -59,6 +57,6 @@ return (
         data-no-fonts="true"
         type="text/javascript"
       ></script> */}
-  </div>
-);
-};
+    </div>
+  );
+}
