@@ -12,13 +12,13 @@ export const Comments = ({ className }) => {
       <Head>
         {/* commento */}
         <script
-          defer
           src="https://cdn.commento.io/js/commento.js"
           data-css-override="https://selfteach.me/css/commento.css"
           data-auto-init="true"
           type="text/javascript"
         ></script>
       </Head>
+      <div id="commento"></div>
     </div>
   );
 };
