@@ -7,6 +7,8 @@ import { Hr } from "modules/shared/components/Hr";
 export const Comments = ({ className }) => {
   return (
     <div className={className}>
+      <Hr />
+      <h2 className="font-condensed text-brightPink uppercase text-6xl">Comments</h2>
       <Head>
         {/* commento */}
         <script
@@ -17,9 +19,6 @@ export const Comments = ({ className }) => {
           type="text/javascript"
         ></script>
       </Head>
-      <Hr />
-      <h2 className="font-condensed text-brightPink uppercase text-6xl">Comments</h2>
-      <div id="commento"></div>
     </div>
   );
 };
