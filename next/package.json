@@ -6,6 +6,7 @@
     "@sanity/image-url": "^0.140.19",
     "autoprefixer": "^10.0.4",
     "cheerio": "^1.0.0-rc.5",
+    "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "fathom-client": "^3.0.0",

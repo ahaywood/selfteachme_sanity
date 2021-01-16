@@ -1,6 +1,7 @@
 import { Head } from "next/head";
 import { Hero } from "modules/shared/components/Hero";
 import BlockContent from "@sanity/block-content-to-react";
+import cx from "classnames";
 import { serializers } from "modules/shared/blockContent/Serializers";
 import { Subnav } from "modules/shared/components/Subnav";
 import { YouTubeVideo } from "modules/shared/components/YouTubeVideo";
@@ -27,7 +28,7 @@ const IndividualBlog = (props) => {
 
   return (
     <>
-      <div className={`content-grid move-content-up ${titleWithinHero ? '' : 'no-title'}`}>
+      <div className={cx('content-grid move-content-up', { 'no-title': !titleWithinHero })}>
         <Hero title={titleWithinHero} src={hero} className="hero" />
 
         {/* content */}
@@ -36,7 +37,7 @@ const IndividualBlog = (props) => {
 
           <div className="px-12 pt-12">
             <h1 className="font-condensed text-6xl md:text-8xl uppercase text-center leading-stacked">{title}</h1>
-            {subtitle && <h2 className="font-condensed text-4xl uppercase text-center text-baliHai">{subtitle}</h2>}
+            {subtitle && (<h2 className="font-condensed text-4xl uppercase text-center text-baliHai">{subtitle}</h2>)}
             <hr className="border-t-4 border-black my-8 max-w-md mx-auto" />
             {ShowPostDate}
           </div>
@@ -47,7 +48,7 @@ const IndividualBlog = (props) => {
         <BlockContent blocks={content} serializers={serializers} />
 
         {/* comments */}
-        <Comments className="col-span-12 px-8 md:px-0 md:col-start-4 md:col-span-6" />
+        <Comments className="col-span-12 px-8 md:px-0 md:col-start-4 md:col-span-6" id={props._id} />
       </div>
 
       {/* pagination */}
