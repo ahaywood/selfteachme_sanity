@@ -20,7 +20,7 @@ const Category = (props) => {
   );
 };
 
-const query = groq`*[_type == "post" && postDetails.published == true && references(* [_type == "category" && slug.current == $slug]._id)]{
+const query = groq`*[_type == "post" && postDetails.published == true && references(* [_type == "category" && slug.current == $slug]._id)]  | order(postDetails.datePublished desc) {
   _id,
   title,
   slug,
