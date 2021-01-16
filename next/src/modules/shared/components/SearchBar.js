@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Icon } from "modules/shared/components/icon";
 import { useRouter } from 'next/router'
@@ -5,12 +6,17 @@ import { useRouter } from 'next/router'
 const SearchBar = ({ className }) => {
   const { register, handleSubmit } = useForm();
   const router = useRouter();
+  const searchInput = useRef();
 
   // on form submit
   const onSubmit = (data) => {
     // redirect to the homepage, send the key words
     router.push({ pathname: '/search', query: data });
   }
+
+  useEffect(() => {
+    searchInput.current.focus();
+  }, []);
 
   return (
     <form
@@ -19,7 +25,10 @@ const SearchBar = ({ className }) => {
       <Icon className="hidden sm:block w-8 h-8 relative top-10" name="search" />
       <div className="ml-4 flex-1">
         <label htmlFor="keywords">Search <span className="hidden md:inline">(using keywords and English)</span></label>
-        <input type="text" name="keywords" ref={register({ required: true })} />
+        <input type="text" name="keywords" ref={(e) => {
+          register(e, { required: true });
+          searchInput.current = e;
+        }} />
       </div>
       <div className="ml-auto">
         <button className="bg-peach hover:bg-white relative rounded-lg block sm:top-7 w-72 sm:w-48 h-14 sm:ml-6" role="submit">

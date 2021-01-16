@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -6,6 +7,14 @@ import { Icon } from "../components/icon";
 const Search = ({ isSearchOpen, toggleSearch }) => {
   const { register, handleSubmit, watch, errors } = useForm();
   const router = useRouter();
+  const searchInput = useRef();
+
+  // once the search has been opened, focus on the input
+  useEffect(() => {
+    if (isSearchOpen) {
+      searchInput.current.focus();
+    }
+  }, [isSearchOpen]);
 
   const onSubmit = (data) => {
     // redirect to the homepage, send the key words
@@ -38,9 +47,12 @@ const Search = ({ isSearchOpen, toggleSearch }) => {
             id="search"
             name="keywords"
             type="text"
-            ref={register({ required: true })}
+            ref={(e) => {
+              searchInput.current = e
+              register(e, { required: true })
+            }}
           />
-          <button className="text-white hover:text-gold" role="submit">
+          <button className="text-white hover:text-gold" role="submit" >
             <Icon name="arrow" />
           </button>
         </div>
