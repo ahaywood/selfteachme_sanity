@@ -22,7 +22,7 @@ const Hero = ({ className, src, title, subtitle }) => {
           </a>
         </Link>
         {title && (
-          <h1 className="text-serenade uppercase text-6xl md:text-8xl relative font-modern mt-4">
+          <h1 className="text-serenade uppercase text-6xl lg:text-8xl relative font-modern mt-4">
             {title}
           </h1>
         )}
