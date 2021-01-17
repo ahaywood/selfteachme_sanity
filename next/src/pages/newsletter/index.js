@@ -2,7 +2,7 @@ import Head from "next/head";
 import { NewsletterPage } from "modules/newsletter";
 import { Page } from "modules/shared/layout/Page";
 
-const contact = () => (
+const newsletter = () => (
   <>
     <Head>
       <title>Compressed: Weekly Newsletter | SelfTeach.me</title>
@@ -13,4 +13,4 @@ const contact = () => (
   </>
 );
 
-export default contact;
+export default newsletter;
