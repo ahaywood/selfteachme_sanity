@@ -36,9 +36,6 @@ class MyDocument extends Document {
         <body className="font-serif">
           <Main />
           <NextScript />
-
-          {/* kwes */}
-          <script src="https://kwes.io/v2/kwes-script.js" defer></script>
         </body>
       </Html>
     );

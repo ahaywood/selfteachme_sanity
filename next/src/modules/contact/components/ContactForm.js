@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { ButtonSubmit } from "modules/shared/components/ButtonSubmit";
+import kwesforms from 'kwesforms';
 
 const ContactForm = () => {
-  const { contactForm, setContactForm } = useState();
   const { register, handleSubmit, watch, errors } = useForm();
+
+  useEffect(() => {
+    kwesforms.init();
+  }, []);
 
   return (
     <form

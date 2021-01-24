@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { ButtonSubmit } from "./ButtonSubmit";
+import kwesforms from 'kwesforms';
 
 const EmailNewsletter = ({ className }) => {
   const { register, handleSubmit, watch, errors } = useForm();
+
+  useEffect(() => {
+    kwesforms.init();
+  }, []);
 
   return (
     <div className={`pt-10 md:pt-20 pb-5 md:pb-10 px-mobile md:px-0 vertical-pluses ${className}`}>
