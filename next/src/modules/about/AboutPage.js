@@ -39,7 +39,7 @@ const AboutPage = () => {
       </div>
       <div className="col-span-3 md:col-span-1 md:col-start-2 px-mobile md:px-8">
         <p>I know it’s not from a lack of trying or desire. Coding can be tedious. Dry. Boring.</p>
-        <p><p>Coding is hard.</p></p>
+        <p>Coding is hard.</p>
         <p>I’ve been there before and I can help you.</p>
         <blockquote>How much you struggle doesn’t indicate how good of a programmer you will be, but it <span className="text-java">does</span> indicate whether you have the persistance to keep going.</blockquote>
       </div>
