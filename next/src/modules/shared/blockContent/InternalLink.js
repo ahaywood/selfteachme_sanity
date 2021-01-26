@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const InternalLink = (props) => {
-  const [url, setUrl] = useState();
-
   // destructure 'current' and 'internalSection'
   const {
     mark: {
@@ -12,27 +10,9 @@ const InternalLink = (props) => {
     },
   } = props;
 
-  // check which section of the site we're in
-  const buildUrl = () => {
-    switch (internalSection) {
-      case "post":
-        setUrl(`/blog/${current}`);
-        break;
-      case "legal":
-        setUrl(`/legal/${current}`);
-        break;
-      default:
-        setUrl(current);
-    }
-  };
-
-  useEffect(() => {
-    buildUrl();
-  }, []);
-
-  if (url) {
+  if (current) {
     return (
-      <Link href={url}>
+      <Link href={`/${internalSection.toLowerCase()}/${current}`}>
         <a className="font-bold text-brightPink underline hover:text-sapphire hover:no-underline">
           {props.children}
         </a>
