@@ -122,6 +122,7 @@ export default {
                 type: "reference",
                 to: [
                   { type: "post" },
+                  { type: "Series" },
                   // other types you may want to link to
                 ],
               },
