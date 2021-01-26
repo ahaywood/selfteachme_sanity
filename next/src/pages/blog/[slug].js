@@ -54,6 +54,12 @@ const query = groq`*[_type == "post" && slug.current == $slug]{
     },
     _type == "fullWidthImage" => {
       "imageUrl": @.actualImage.asset->{url}
+    },
+    _type == "tableOfContents" => {
+      table[]{
+        ...,
+        link->{slug, _type}
+      }
     }
   }
 }[0]`;

@@ -17,6 +17,7 @@ import { P } from "./P";
 import { InternalLink as internalLink } from "./InternalLink";
 import { ExternalLink as link } from "./ExternalLink";
 import { Subtitle } from "./Subtitle";
+import { TableOfContents } from "./TableOfContents";
 
 const serializers = {
   types: {
@@ -57,6 +58,7 @@ const serializers = {
     box,
     code: CodeBlock,
     fullWidthImage,
+    tableOfContents: TableOfContents
   },
   list,
   listItem,
