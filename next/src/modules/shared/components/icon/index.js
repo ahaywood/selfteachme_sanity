@@ -5,6 +5,7 @@ import { Arrow } from "./Arrow";
 import { CodePen } from "./CodePen";
 import { DevTo } from "./DevTo";
 import { Dribbble } from "./Dribbble";
+import { ExternalLink } from "./ExternalLink";
 import { Facebook } from "./Facebook";
 import { GitHub } from "./GitHub";
 import { Hashnode } from "./Hashnode";
@@ -33,6 +34,8 @@ const Icon = (props) => {
       return <DevTo {...props} />;
     case "dribbble":
       return <Dribbble {...props} />;
+    case "externallink":
+      return <ExternalLink {...props} />;
     case "facebook":
       return <Facebook {...props} />;
     case "github":

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Icon } from "../components/icon";
 
 const Nav = ({ isNavOpen, toggleNav }) => {
   return (
@@ -34,6 +35,14 @@ const Nav = ({ isNavOpen, toggleNav }) => {
             <Link href="/newsletter">
               <a className="hover:text-gold">Newsletter</a>
             </Link>
+          </li>
+          <li>
+            <a href="http://compressed.fm" className="hover:text-gold" target="_blank">
+              <span className="inline-block relative">
+                <Icon name="ExternalLink" className="-right-8 absolute" />
+                Podcast
+              </span>
+            </a>
           </li>
           <li>
             <Link href="/contact">
