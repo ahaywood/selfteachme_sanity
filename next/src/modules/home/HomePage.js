@@ -21,7 +21,7 @@ const HomePage = () => {
             </div>
           </div>
           <h1 className="mb-8">
-            <div className="hero-title">Code</div>
+            <div className="hero-title">Build</div>
             <div className="with-rules text-white">with</div>
             <div className="hero-title ">Confidence</div>
           </h1>
