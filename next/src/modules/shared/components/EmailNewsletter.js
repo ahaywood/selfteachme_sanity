@@ -6,6 +6,10 @@ import kwesforms from 'kwesforms';
 const EmailNewsletter = ({ className }) => {
   const { register, handleSubmit, watch, errors } = useForm();
 
+  const onSubmit = (data) => {
+    console.log(JSON.stringify(data))
+  };
+
   useEffect(() => {
     kwesforms.init();
   }, []);
@@ -25,7 +29,7 @@ const EmailNewsletter = ({ className }) => {
           </p>
         </div>
         <div>
-          <form className="kwes-form" action="https://kwes.io/api/foreign/forms/STZ38ateA8uxnhml9xfi" method="POST">
+          <form className="kwes-form" action="https://kwes.io/api/foreign/forms/STZ38ateA8uxnhml9xfi" method="POST" onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col sm:flex-row lg:flex-col">
               <div className="sm:mr-4 lg:mr-0">
                 <label htmlFor="emailSignupFirstName">First Name</label>
