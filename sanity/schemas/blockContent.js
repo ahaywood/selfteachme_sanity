@@ -185,6 +185,9 @@ export default {
     },
     {
       type: "blockquote"
+    },
+    {
+      type: "horizontalDivider"
     }
     // {
     //   type: "bigNumbers",
