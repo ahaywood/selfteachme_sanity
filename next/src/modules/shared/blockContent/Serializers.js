@@ -18,6 +18,7 @@ import { InternalLink as internalLink } from "./InternalLink";
 import { ExternalLink as link } from "./ExternalLink";
 import { Subtitle } from "./Subtitle";
 import { TableOfContents } from "./TableOfContents";
+import { HorizontalDivider } from "./HorizontalDivider";
 
 const serializers = {
   types: {
@@ -58,7 +59,8 @@ const serializers = {
     box,
     code: CodeBlock,
     fullWidthImage,
-    tableOfContents: TableOfContents
+    tableOfContents: TableOfContents,
+    horizontalDivider: HorizontalDivider
   },
   list,
   listItem,
