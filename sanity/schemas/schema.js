@@ -35,7 +35,6 @@ import glossary from "./glossary";
 import landingPage from "./landingPage";
 import legal from "./legal";
 import livestream from "./livestream";
-import podcast from "./podcast";
 import post from "./post";
 import series from "./series";
 import snippetCategory from "./snippetCategory";
@@ -70,7 +69,6 @@ export default createSchema({
     leadMagnet,
     livestream,
     legal,
-    podcast,
     post,
     postDetails,
     postMeta,
