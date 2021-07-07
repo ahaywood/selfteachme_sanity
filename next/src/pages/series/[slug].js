@@ -19,7 +19,7 @@ const Series = (props) => {
   )
 }
 
-const query = groq`*[_type == "Series" && slug.current == 'git']{
+const query = groq`*[_type == "Series" && slug.current == $slug]{
     _id,
     name,
     existingIntroVideo->,
