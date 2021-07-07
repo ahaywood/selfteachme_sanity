@@ -11,7 +11,14 @@ export default {
     {
       name: "postId",
       title: "ID",
+      description: "This is the Blog ID, inside Notion",
       type: "string",
+    },
+    {
+      name: "videoId",
+      title: "Video ID",
+      description: "If this is a YouTube video, the related video ID",
+      type: "number",
     },
     {
       name: "title",
