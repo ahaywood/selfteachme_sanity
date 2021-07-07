@@ -60,7 +60,7 @@ const HomePage = () => {
           I can help!
         </h5>
 
-        <ButtonLink href="/plan">
+        <ButtonLink href="https://selfteachme.ck.page/621ac7c092" target="_blank">
           Not sure where to begin?{" "}
           <span className="ml-1 underline block sm:inline">Start Here!</span>
         </ButtonLink>

@@ -10,12 +10,10 @@ const ThreeUp = () => {
           <p>
             You want to learn, but there’s so many languages and so many tools.
           </p>
-          <Link href="/plan">
-            <a>
-              <Icon name="arrow" />
-              Get a plan
-            </a>
-          </Link>
+          <a href="https://selfteachme.ck.page/621ac7c092" target="_blank" >
+            <Icon name="arrow" />
+            Get a plan
+          </a>
         </li>
 
         <li>
@@ -24,11 +22,9 @@ const ThreeUp = () => {
             You’ve dabbled in this and that, but want confidence. Intimidation
             no more!
           </p>
-          <Link href="/css-advanced-beginner">
-            <a>
-              <Icon name="arrow" /> I need this!
-            </a>
-          </Link>
+          <a href="https://selfteachme.ck.page/33458e4380" target="_blank">
+            <Icon name="arrow" /> I need this!
+          </a>
         </li>
         <li>
           <h3>Build the application you've always wanted</h3>
@@ -36,12 +32,10 @@ const ThreeUp = () => {
             Plan, code, and market your own web application. Create the software
             as a service you’ve always wanted, without the overwhelm.
           </p>
-          <Link href="/app-from-scratch">
-            <a>
-              <Icon name="arrow" />
-              Yes, count me in!
-            </a>
-          </Link>
+          <a href="https://selfteachme.ck.page/4f22b6ebd5" target="_blank">
+            <Icon name="arrow" />
+            Yes, count me in!
+          </a>
         </li>
       </ol>
     </div>
