@@ -10,7 +10,7 @@ const LatestPosts = () => {
   const [posts, setPosts] = useState();
 
   useEffect(() => {
-    const query = groq`*[_type == "post" && postDetails.published == true] | order(postDetails.datePublished){_id, title, slug, "hero": hero.asset->url, video, postDetails, "category": postDetails.category->name, "categorySlug": postDetails.category->slug}[0...4]`;
+    const query = groq`*[_type == "post" && postDetails.published == true] | order(postDetails.datePublished){_id, title, subtitle, slug, "hero": hero.asset->url, video, postDetails, "category": postDetails.category->name, "categorySlug": postDetails.category->slug}[0...4]`;
     client.fetch(query).then((res) => setPosts(res));
   }, []);
 

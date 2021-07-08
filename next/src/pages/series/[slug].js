@@ -29,6 +29,7 @@ const query = groq`*[_type == "Series" && slug.current == $slug]{
 		postsAndVideos[]->{
       _id,
       title,
+      subtitle,
       slug,
       "hero": hero.asset->url,
       postDetails,

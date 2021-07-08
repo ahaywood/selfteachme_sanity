@@ -39,16 +39,19 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
               <Icon className="float-left mr-4" name="video" /> Video
             </>
           ) : (
-              <>
-                <Icon className="float-left mr-4" name="post" /> Post
+            <>
+              <Icon className="float-left mr-4" name="post" /> Post
             </>
-            )}
+          )}
         </div>
 
         {/* title */}
         <Link href={`/blog/${content.slug.current}`}>
           <a>
             <h2 className="font-modern text-4xl md:text-6xl highlight">{content.title}</h2>
+            {content.subtitle && (
+              <h3 className="font-mono text-xl">{content.subtitle}</h3>
+            )}
           </a>
         </Link>
         <br />

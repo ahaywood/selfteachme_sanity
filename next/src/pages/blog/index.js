@@ -35,6 +35,7 @@ const Blog = (props) => {
 const query = groq`*[_type == "post" && postDetails.published == true] | order(postDetails.datePublished desc)  {
     _id,
     title,
+    subtitle,
     slug,
     "hero": hero.asset->url,
     titleWithinHero,

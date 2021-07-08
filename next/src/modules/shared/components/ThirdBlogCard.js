@@ -16,10 +16,13 @@ const ThirdBlogCard = ({ className, content }) => {
               <h4 className="font-condensed uppercase text-baliHai text-lg md:text-2xl">
                 {content?.postDetails?.datePublished &&
                   getPostMonth(content.postDetails.datePublished)}&nbsp;
-              {content?.postDetails?.datePublished &&
+                {content?.postDetails?.datePublished &&
                   getPostDate(content.postDetails.datePublished)}
               </h4>
               <h2 className="highlight font-modern text-3xl md:text-4xl">{content.title}</h2>
+              {content.subtitle && (
+                <h3 className="font-mono text-xl">{content.subtitle}</h3>
+              )}
             </div>
           </div>
         </a>
