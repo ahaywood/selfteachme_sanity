@@ -21,7 +21,7 @@ ol.large-numbers {
     border-bottom: none;
   }
 
-  li:before {
+  > li:before {
     color: var(--brightPink);
     content: counter(ordered-list);
     counter-increment: ordered-list;
