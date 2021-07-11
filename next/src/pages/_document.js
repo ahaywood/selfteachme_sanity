@@ -11,7 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* favicon */}
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
           <meta name="author" content="Amy Dutton"></meta>
 
           {/* custom fonts */}
