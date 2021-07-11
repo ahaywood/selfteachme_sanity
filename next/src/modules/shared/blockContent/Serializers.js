@@ -19,6 +19,7 @@ import { ExternalLink as link } from "./ExternalLink";
 import { Subtitle } from "./Subtitle";
 import { TableOfContents } from "./TableOfContents";
 import { HorizontalDivider } from "./HorizontalDivider";
+import { CodePen } from "./CodePen";
 
 const serializers = {
   types: {
@@ -60,7 +61,8 @@ const serializers = {
     code: CodeBlock,
     fullWidthImage,
     tableOfContents: TableOfContents,
-    horizontalDivider: HorizontalDivider
+    horizontalDivider: HorizontalDivider,
+    codepen: CodePen
   },
   list,
   listItem,
