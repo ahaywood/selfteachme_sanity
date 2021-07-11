@@ -14,7 +14,7 @@ const CodePen = (props) => {
         title="CodePen Embed"
         src={embedUrl}
         frameBorder="no"
-        allowTransparency
+        allowtransparency="true"
         allowFullScreen
       />
     </div>
