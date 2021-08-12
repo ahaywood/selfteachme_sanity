@@ -27,5 +27,10 @@ export default {
       title: "Content",
       type: "blockContent",
     },
+    {
+      name: "meta",
+      title: "META Data",
+      type: "postMeta",
+    },
   ],
 };

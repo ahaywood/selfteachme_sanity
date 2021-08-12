@@ -52,6 +52,12 @@ module.exports = {
         2.5: "2.5 2.5 0%",
         3: "3 3 0%",
       },
+      fontSize: {
+        '300xl': ['600px', {
+          letterSpacing: '0',
+          lineHeight: '500px',
+        }],
+      },
       gridColumnEnd: {
         "-1": "-1",
         "-2": "-2",

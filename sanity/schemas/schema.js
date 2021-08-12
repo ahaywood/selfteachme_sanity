@@ -32,10 +32,13 @@ import brandsWorkedWith from "./brandsWorkedWith";
 import category from "./postCategory";
 import codeSnippet from "./codeSnippet";
 import glossary from "./glossary";
+import guides from "./guides";
 import landingPage from "./landingPage";
 import legal from "./legal";
 import livestream from "./livestream";
+import newsletter from "./newsletter";
 import post from "./post";
+import resources from "./resources";
 import series from "./series";
 import snippetCategory from "./snippetCategory";
 import socialMedia from "./socialMedia";
@@ -64,14 +67,17 @@ export default createSchema({
     customIntroVideo,
     fullWidthImage,
     glossary,
+    guides,
     horizontalDivider,
     landingPage,
     leadMagnet,
     livestream,
     legal,
+    newsletter,
     post,
     postDetails,
     postMeta,
+    resources,
     series,
     snippetCategory,
     socialMedia,

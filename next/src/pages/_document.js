@@ -1,10 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
+  // static async getInitialProps(ctx) {
+  //   const initialProps = await Document.getInitialProps(ctx);
+  //   return { ...initialProps };
+  // }
 
   render() {
     return (
@@ -32,6 +32,26 @@ class MyDocument extends Document {
                 b.parentNode.insertBefore(c, b); return c; }; c = d('', '-hidden', ''); d('-stay-invisible', '-stay-hidden', '-stay');
             setTimeout(o.onerror = function() {c.parentNode && c.parentNode.removeChild(c); }, a); b.parentNode.insertBefore(o, b);
           })('264426316', 20000, document);`}} />
+
+          {/* CIRCLE SO */}
+          <script dangerouslySetInnerHTML={{
+            __html: `(function (w,d,s,o,f,js,fjs) {
+              w['circleWidget'] = o;w[o] = w[o] || function () {(w[o].q = w[o].q || []).push(arguments)};
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+              }(window, document, 'script', 'mw', 'https://selfteachme.circle.so/external/widget.js'));
+
+            mw('init', {
+              community_public_uid: '8e5e0dd4',
+            brand_color: '#F40082'
+              });
+
+              // Optional: pass in a default space slug and/or post slug
+              // mw('setDefaults', {
+              //   space_slug: '',
+              //   post_slug: ''
+              // });`}} />
+
         </Head>
         <body className="font-serif">
           <Main />

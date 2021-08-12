@@ -1,3 +1,7 @@
 svg {
   fill: currentColor;
 }
+
+.circle-widget-trigger svg {
+  fill: var(--brightPink);
+}

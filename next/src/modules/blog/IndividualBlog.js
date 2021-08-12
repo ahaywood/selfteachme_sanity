@@ -13,7 +13,7 @@ import { RelatedPosts } from "modules/blog/components/RelatedPosts";
 import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 
 const IndividualBlog = (props) => {
-  const { blogPagination, content, hero, postDetails, relatedPosts, subtitle, title, titleWithinHero, video } = props;
+  const { post: { blogPagination, content, hero, postDetails, relatedPosts, subtitle, title, titleWithinHero, video } } = props;
 
   // determine date to show
   const ShowPostDate = () => {
@@ -52,10 +52,10 @@ const IndividualBlog = (props) => {
       </div>
 
       {/* pagination */}
-      { blogPagination || relatedPosts && (
+      {blogPagination?.nextPost || blogPagination?.previousPost && (
         <section className="grid grid-cols-12 bg-almostWhite pb-12 md:py-12 mt-8">
           {blogPagination && <NextPreviousPosts blogPagination={blogPagination} />}
-          {relatedPosts && <RelatedPosts relatedPosts={relatedPosts} />}
+          {/* {relatedPosts && <RelatedPosts relatedPosts={relatedPosts} />} */}
         </section>
       )}
 

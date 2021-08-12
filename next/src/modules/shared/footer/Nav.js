@@ -40,6 +40,18 @@ const Nav = ({ className }) => {
           <Image src="/img/x--footer.svg" width="22" height="22" />
         </li>
         <li className="footer-nav-item">
+          <a href="http://compressed.fm" target="_blank" className="h-6 hover:text-sapphire">Podcast</a>
+        </li>
+        <li className="mb-0 hidden md:block">
+          <Image src="/img/x--footer.svg" width="22" height="22" />
+        </li>
+        <li className="footer-nav-item">
+          <a href="https://selfteachme.circle.so/" target="_blank" className="h-6 hover:text-sapphire">Community</a>
+        </li>
+        <li className="mb-0 hidden md:block">
+          <Image src="/img/x--footer.svg" width="22" height="22" />
+        </li>
+        <li className="footer-nav-item">
           <Link href="/contact">
             <a className="h-6 hover:text-sapphire">Contact</a>
           </Link>

@@ -45,6 +45,14 @@ const Nav = ({ isNavOpen, toggleNav }) => {
             </a>
           </li>
           <li>
+            <a href="https://selfteachme.circle.so/" className="hover:text-gold" target="_blank">
+              <span className="inline-block relative">
+                <Icon name="ExternalLink" className="-right-8 absolute" />
+                Community
+              </span>
+            </a>
+          </li>
+          <li>
             <Link href="/contact">
               <a className="hover:text-gold">Contact</a>
             </Link>

@@ -35,7 +35,7 @@ a:hover h2.highlight {
 
 li,
 p {
-  @apply text-lg md:text-xl leading-relaxed mb-8;
+  @apply text-2xl md:text-xl leading-relaxed mb-8;
 }
 
 p a {

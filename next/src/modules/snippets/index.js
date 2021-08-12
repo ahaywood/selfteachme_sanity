@@ -1,2 +1,1 @@
-import { SnippetPage } from "./SnippetPage"
-export { SnippetPage }
+export { SnippetPage } from "./SnippetPage"
