@@ -20,7 +20,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = "" }) => {
         )}
 
         {/* image */}
-        <img src={content.hero} className="h-60 sm:h-48 md:h-full w-full absolute inset-0 object-cover" loading="lazy" />
+        <img src={content.hero} className="h-60 sm:h-48 md:h-full w-full md:absolute inset-0 object-cover" loading="lazy" />
 
         {/* date */}
         {content.postDetails.datePublished && (

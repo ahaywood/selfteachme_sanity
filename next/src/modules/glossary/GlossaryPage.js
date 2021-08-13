@@ -10,9 +10,14 @@ const GlossaryPage = ({ glossary }) => {
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   const [selectedLetters, setSelectedLetters] = useState(alphabet);
 
+  // filter by a specific letter
+  // this function gets passed to the subnav component
   const filterByLetter = (letter) => {
+    // if all is selected, set the array the entire alphabet
     if (letter === 'all')
       setSelectedLetters(alphabet);
+    // otherwise, stick the individual letter into an array so that map can
+    // iterate over it
     else
       setSelectedLetters([letter]);
   }
@@ -44,17 +49,17 @@ const GlossaryPage = ({ glossary }) => {
         // otherwise, display thc content
         return (
           <div className="grid grid-cols-12 py-8" key={i}>
-            <div className="col-span-3 col-start-2 sticky top-14 font-modern text-300xl text-baliHai opacity-30 row-start-1 text-center uppercase z-0">
+            <div className="col-span-12 lg:col-span-3 col-start-1 lg:col-start-2 sticky top-14 font-modern text-300xl text-baliHai opacity-30 row-start-1 lg:text-center uppercase z-0">
               {checkAgainst}
             </div>
-            <div className="col-span-8 col-start-3 row-start-1">
+            <div className="col-span-12 col-start-1 lg:col-span-8 lg:col-start-3 px-4 lg:px-0 row-start-1">
               <dl className="grid grid-cols-8 gap-8 z-10 relative">
                 {currentGlossaryTerms.map((item) => (
                   <Fragment key={item._id}>
-                    <dt className="col-span-2 text-right uppercase">
-                      <div className="font-condensed bg-serenade py-1 px-2 text-xl tracking-wider inline-block">{item.name}</div>
+                    <dt className="col-span-12 lg:col-span-2 lg:text-right uppercase">
+                      <div className="font-condensed bg-serenade py-1 px-2 text-xl tracking-wider inline-block nowrap">{item.name}</div>
                     </dt>
-                    <dd className="col-span-6">
+                    <dd className="col-span-12 lg:col-span-6">
                       {item.description && <BlockContent blocks={item.description} serializers={serializers} />}
                     </dd>
                   </Fragment>
