@@ -52,7 +52,7 @@ const GlossaryPage = ({ glossary }) => {
             <div className="col-span-12 lg:col-span-3 col-start-1 lg:col-start-2 sticky top-14 font-modern text-300xl text-baliHai opacity-30 row-start-1 lg:text-center uppercase z-0">
               {checkAgainst}
             </div>
-            <div className="col-span-12 col-start-1 lg:col-span-8 lg:col-start-3 px-4 lg:px-0 row-start-1">
+            <div className="col-span-12 col-start-1 lg:col-span-8 lg:col-start-3 px-mobile lg:px-0 row-start-1">
               <dl className="grid grid-cols-8 gap-8 z-10 relative">
                 {currentGlossaryTerms.map((item) => (
                   <Fragment key={item._id}>
