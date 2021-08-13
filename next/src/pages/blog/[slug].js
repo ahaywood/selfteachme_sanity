@@ -7,20 +7,21 @@ import { Meta } from "modules/shared/header/Meta";
 import { queryIndividualPost, queryAllPosts } from "queries/queryPosts";
 
 const Post = (props) => {
-  const { post } = props;
+  const { post: { meta, slug } } = props;
   return (
     <div>
       <Head>
-        <title>{post.meta?.seoTitle && `${post.meta.seoTitle} | `}SelfTeach.me</title>
-        <Meta meta={post.meta} slug={`blog/${post.slug.current}`} />
+        {meta && (<title>{meta.seoTitle && `${meta.seoTitle} | `}SelfTeach.me</title>)}
+        {(mete && slug) && (<Meta meta={post.meta} slug={`blog/${post.slug.current}`} />)}
       </Head>
       <Page>
-        <IndividualBlog {...props} />
+        <IndividualBlog {...post} />
       </Page>
     </div>
   );
 };
 
+/*
 // This function gets called at build time
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
@@ -45,11 +46,12 @@ export async function getStaticProps({ params }) {
   // Pass post data to the page via props
   return { props: { post } }
 }
+*/
 
 
-// Post.getInitialProps = async function (context) {
-//   const { slug = "" } = context.query;
-//   return await client.fetch(queryIndividualPost, { slug });
-// };
+Post.getInitialProps = async function (context) {
+  const { slug = "" } = context.query;
+  return await client.fetch(queryIndividualPost, { slug });
+};
 
 export default Post;
