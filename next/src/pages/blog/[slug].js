@@ -1,31 +1,31 @@
 import Head from "next/head";
 import BlockContent from "@sanity/block-content-to-react";
-import client from "utils/client";
+import { getClient } from 'lib/sanity.server';
 import { Page } from "modules/shared/layout/Page";
 import { IndividualBlog } from "modules/blog/IndividualBlog";
 import { Meta } from "modules/shared/header/Meta";
 import { queryIndividualPost, queryAllPosts } from "queries/queryPosts";
 
 const Post = (props) => {
-  const { post: { meta, slug } } = props;
+  const { post } = props;
   return (
     <div>
       <Head>
-        {meta && (<title>{meta.seoTitle && `${meta.seoTitle} | `}SelfTeach.me</title>)}
-        {(mete && slug) && (<Meta meta={post.meta} slug={`blog/${post.slug.current}`} />)}
+        {post?.meta && (<title>{post.meta.seoTitle && `${post.meta.seoTitle} | `}SelfTeach.me</title>)}
+        {(post?.meta && post?.slug) && (<Meta meta={post.meta} slug={`blog/${post.slug.current}`} />)}
       </Head>
       <Page>
-        <IndividualBlog {...post} />
+        <IndividualBlog {...props} />
       </Page>
     </div>
   );
 };
 
-/*
+
 // This function gets called at build time
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
-  const allPosts = await client.fetch(queryAllPosts);
+  const allPosts = await getClient().fetch(queryAllPosts);
 
   // Get the paths we want to pre-render based on posts
   const paths = allPosts.map((post) => ({
@@ -41,17 +41,17 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const post = await client.fetch(queryIndividualPost, { slug: params.slug });
+  const post = await getClient().fetch(queryIndividualPost, { slug: params.slug });
 
   // Pass post data to the page via props
   return { props: { post } }
 }
-*/
 
 
-Post.getInitialProps = async function (context) {
-  const { slug = "" } = context.query;
-  return await client.fetch(queryIndividualPost, { slug });
-};
+
+// Post.getInitialProps = async function (context) {
+//   const { slug = "" } = context.query;
+//   return await client.fetch(queryIndividualPost, { slug });
+// };
 
 export default Post;

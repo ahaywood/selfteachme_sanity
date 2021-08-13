@@ -52,10 +52,10 @@ const IndividualBlog = (props) => {
       </div>
 
       {/* pagination */}
-      {blogPagination?.nextPost || blogPagination?.previousPost && (
+      {(blogPagination?.nextPost || blogPagination?.previousPost) && (
         <section className="grid grid-cols-12 bg-almostWhite pb-12 md:py-12 mt-8">
           {blogPagination && <NextPreviousPosts blogPagination={blogPagination} />}
-          {/* {relatedPosts && <RelatedPosts relatedPosts={relatedPosts} />} */}
+          {relatedPosts && <RelatedPosts relatedPosts={relatedPosts} />}
         </section>
       )}
 
