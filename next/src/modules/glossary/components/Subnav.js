@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import concat from "lodash/concat";
 
-const Subnav = ({ content }) => {
+const Subnav = ({ content, handleClick }) => {
   const [selectedSubnav, setSelectedSubnav] = useState('all');
   const subNav = concat('all', content);
 
   const filterByLetter = (item, e) => {
     e.preventDefault();
-    setSelectedSubnav(item);
+    setSelectedSubnav(item);    // set the state for the subnav display
+    handleClick(item);         // run the handleClick function as passed in
   }
 
   return (
