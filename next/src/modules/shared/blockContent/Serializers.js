@@ -20,6 +20,7 @@ import { Subtitle } from "./Subtitle";
 import { TableOfContents } from "./TableOfContents";
 import { HorizontalDivider } from "./HorizontalDivider";
 import { CodePen } from "./CodePen";
+import { ImageText } from "./ImageText";
 
 const serializers = {
   types: {
@@ -62,7 +63,8 @@ const serializers = {
     fullWidthImage,
     tableOfContents: TableOfContents,
     horizontalDivider: HorizontalDivider,
-    codepen: CodePen
+    codepen: CodePen,
+    imageText: ImageText
   },
   list,
   listItem,
