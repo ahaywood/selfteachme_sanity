@@ -45,6 +45,11 @@ export default {
       type: "youtube",
     },
     {
+      name: "originallyPosted",
+      title: "Originally Posted",
+      type: "originallyPosted"
+    },
+    {
       name: "content",
       title: "Content",
       type: "blockContent",

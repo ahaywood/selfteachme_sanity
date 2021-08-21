@@ -25,6 +25,7 @@ import postMeta from "./objects/postMeta";
 import blogPagination from "./objects/blogPagination";
 import customIntroVideo from "./objects/customIntroVideo";
 import affiliateButton from "./objects/affiliateButton";
+import originallyPosted from "./objects/originallyPosted";
 
 // custom documents
 import almanac from "./documents/almanac";
@@ -91,5 +92,6 @@ export default createSchema({
     blogPagination,
     customIntroVideo,
     affiliateButton,
+    originallyPosted
   ]),
 });
