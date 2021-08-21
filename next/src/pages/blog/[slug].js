@@ -1,5 +1,4 @@
 import Head from "next/head";
-import BlockContent from "@sanity/block-content-to-react";
 import { getClient } from 'lib/sanity.server';
 import { Page } from "modules/shared/layout/Page";
 import { IndividualBlog } from "modules/blog/IndividualBlog";
