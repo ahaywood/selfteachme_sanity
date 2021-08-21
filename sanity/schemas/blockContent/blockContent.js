@@ -188,6 +188,9 @@ export default {
     },
     {
       type: "horizontalDivider"
+    },
+    {
+      type: "imageText"
     }
     // {
     //   type: "bigNumbers",

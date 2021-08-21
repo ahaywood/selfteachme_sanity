@@ -21,6 +21,7 @@ export default {
   fields: [
     { name: "actualImage", title: "Image", type: "image" },
     { name: "alt", title: "Alt", type: "string" },
+    { name: "caption", title: "Caption", type: "string" },
     { name: "fullWidth", title: "Full Width?", type: "boolean" },
     { name: "retina", title: "Retina", type: "boolean" },
     { name: "alignment", title: "Alignment", type: "string", options: { list: ['left', 'center', 'right'], layout: "radio", direction: "horizontal" } },

@@ -11,7 +11,7 @@ import blockquote from "./blockContent/blockquote";
 import box from "./blockContent/box";
 import codepen from "./blockContent/codepen";
 import fullWidthImage from "./blockContent/fullWidthImage";
-// import imageText from "./blockContent/imageText";
+import imageText from "./blockContent/imageText";
 import leadMagnet from "./blockContent/leadMagnet";
 import youtube from "./blockContent/youtube";
 import tableOfContents from "./blockContent/tableOfContents";
@@ -58,7 +58,7 @@ export default createSchema({
     box,
     codepen,
     fullWidthImage,
-    // imageText,
+    imageText,
     leadMagnet,
     youtube,
     tableOfContents,
