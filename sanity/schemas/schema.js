@@ -11,6 +11,7 @@ import blockquote from "./blockContent/blockquote";
 import box from "./blockContent/box";
 import codepen from "./blockContent/codepen";
 import fullWidthImage from "./blockContent/fullWidthImage";
+// import imageText from "./blockContent/imageText";
 import leadMagnet from "./blockContent/leadMagnet";
 import youtube from "./blockContent/youtube";
 import tableOfContents from "./blockContent/tableOfContents";
@@ -51,40 +52,44 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    /* Your types here! */
-    affiliateButton,
+    /* block content */
+    blockContent,
+    blockquote,
+    box,
+    codepen,
+    fullWidthImage,
+    // imageText,
+    leadMagnet,
+    youtube,
+    tableOfContents,
+    timecode,
+    twoColumnText,
+    horizontalDivider,
+
+    /* documents */
     almanac,
     ama,
-    // bigNumbers,
-    blockquote,
-    blockContent,
-    blogPagination,
-    box,
     brandsWorkedWith,
     category,
-    codepen,
     codeSnippet,
-    customIntroVideo,
-    fullWidthImage,
     glossary,
     guides,
-    horizontalDivider,
     landingPage,
-    leadMagnet,
-    livestream,
     legal,
+    livestream,
     newsletter,
     post,
-    postDetails,
-    postMeta,
     resources,
     series,
     snippetCategory,
     socialMedia,
-    tableOfContents,
-    timecode,
-    twoColumnText,
     use,
-    youtube,
+
+    /* objects */
+    postDetails,
+    postMeta,
+    blogPagination,
+    customIntroVideo,
+    affiliateButton,
   ]),
 });
