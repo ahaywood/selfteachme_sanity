@@ -6,43 +6,43 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // custom schemas
 // import bigNumbers from "./bigNumbers";
-import blockContent from "./blockContent";
-import blockquote from "./blockquote";
-import box from "./box";
-import codepen from "./codepen";
-import fullWidthImage from "./fullWidthImage";
-import leadMagnet from "./leadMagnet";
-import youtube from "./youtube";
-import tableOfContents from "./tableOfContents";
-import timecode from "./timecode";
-import twoColumnText from "./twoColumnText";
-import horizontalDivider from "./horizontalDivider";
+import blockContent from "./blockContent/blockContent";
+import blockquote from "./blockContent/blockquote";
+import box from "./blockContent/box";
+import codepen from "./blockContent/codepen";
+import fullWidthImage from "./blockContent/fullWidthImage";
+import leadMagnet from "./blockContent/leadMagnet";
+import youtube from "./blockContent/youtube";
+import tableOfContents from "./blockContent/tableOfContents";
+import timecode from "./blockContent/timecode";
+import twoColumnText from "./blockContent/twoColumnText";
+import horizontalDivider from "./blockContent/horizontalDivider";
 
 // field groups
-import postDetails from "./postDetails";
-import postMeta from "./postMeta";
-import blogPagination from "./blogPagination";
-import customIntroVideo from "./customIntroVideo";
-import affiliateButton from "./affiliateButton";
+import postDetails from "./objects/postDetails";
+import postMeta from "./objects/postMeta";
+import blogPagination from "./objects/blogPagination";
+import customIntroVideo from "./objects/customIntroVideo";
+import affiliateButton from "./objects/affiliateButton";
 
 // custom documents
-import almanac from "./almanac";
-import ama from "./ama";
-import brandsWorkedWith from "./brandsWorkedWith";
-import category from "./postCategory";
-import codeSnippet from "./codeSnippet";
-import glossary from "./glossary";
-import guides from "./guides";
-import landingPage from "./landingPage";
-import legal from "./legal";
-import livestream from "./livestream";
-import newsletter from "./newsletter";
-import post from "./post";
-import resources from "./resources";
-import series from "./series";
-import snippetCategory from "./snippetCategory";
-import socialMedia from "./socialMedia";
-import use from "./use";
+import almanac from "./documents/almanac";
+import ama from "./documents/ama";
+import brandsWorkedWith from "./documents/brandsWorkedWith";
+import category from "./documents/postCategory";
+import codeSnippet from "./documents/codeSnippet";
+import glossary from "./documents/glossary";
+import guides from "./documents/guides";
+import landingPage from "./documents/landingPage";
+import legal from "./documents/legal";
+import livestream from "./documents/livestream";
+import newsletter from "./documents/newsletter";
+import post from "./documents/post";
+import resources from "./documents/resources";
+import series from "./documents/series";
+import snippetCategory from "./documents/snippetCategory";
+import socialMedia from "./documents/socialMedia";
+import use from "./documents/use";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
