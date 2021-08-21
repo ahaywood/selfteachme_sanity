@@ -4,7 +4,7 @@ import { LatestPosts } from "modules/shared/components/LatestPosts";
 import { YouTubeVideo } from "modules/shared/components/YouTubeVideo";
 import { SearchBar } from "modules/shared/components/SearchBar";
 
-const FourOFourPage = () => {
+const FourOFourPage = ({ latestPosts }) => {
   return (
     <>
       <div className="content-grid move-content-up">
@@ -26,7 +26,7 @@ const FourOFourPage = () => {
         {/* search bar */}
         <SearchBar className="col-span-3 mb-24" />
       </div>
-      <LatestPosts />
+      <LatestPosts latestPosts={latestPosts} />
     </>
   )
 }

@@ -1,5 +1,7 @@
 import groq from "groq";
 
+const queryLatestPosts = groq`*[_type == "post" && postDetails.published == true] | order(postDetails.datePublished desc){_id, title, subtitle, slug, "hero": hero.asset->url, video, postDetails, "category": postDetails.category->name, "categorySlug": postDetails.category->slug}[]`;
+
 const queryIndividualPost = groq`*[_type == "post" && slug.current == $slug]{
   ...,
   "hero": hero.asset->url,
@@ -35,6 +37,9 @@ const queryIndividualPost = groq`*[_type == "post" && slug.current == $slug]{
     _type == "fullWidthImage" => {
       "imageUrl": @.actualImage.asset->{url}
     },
+    _type == "imageText" => {
+      "imageUrl": @.image.asset->{url}
+    }
     // _type == "tableOfContents" => {
       // table[]{
       //   ...,
@@ -49,4 +54,4 @@ const queryAllPosts = groq`*[_type == "post"]{
 }`;
 
 
-export { queryIndividualPost, queryAllPosts };
+export { queryIndividualPost, queryAllPosts, queryLatestPosts };

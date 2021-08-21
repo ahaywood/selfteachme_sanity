@@ -4,7 +4,7 @@ import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
 import { LatestPosts } from "modules/shared/components/LatestPosts";
 import { ButtonLink } from "modules/shared/components/ButtonLink";
 
-const HomePage = () => {
+const HomePage = ({ latestPosts }) => {
   return (
     <>
       {/* hero */}
@@ -111,7 +111,7 @@ const HomePage = () => {
         </ul>
       </section>
       <ThreeUp />
-      <LatestPosts />
+      <LatestPosts latestPosts={latestPosts} />
       <EmailNewsletter />
     </>
   );
