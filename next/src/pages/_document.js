@@ -20,7 +20,7 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
 
           {/* google adsense */}
-          <script data-ad-client="ca-pub-8562034122116462" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <script data-ad-client="ca-pub-6967067372431081" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
           {/* right message */}
           <script dangerouslySetInnerHTML={{
