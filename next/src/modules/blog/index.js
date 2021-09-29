@@ -1,2 +1,3 @@
-import { BlogPage } from "./BlogPage";
+import { BlogPage } from './BlogPage';
+
 export { BlogPage };

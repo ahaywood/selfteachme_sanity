@@ -2,26 +2,24 @@
 // TODO: add legal pages, series, and snippets
 
 // import functions from the package
-import { SitemapStream, streamToPromise } from "sitemap";
-import client from "utils/client";
-import groq from "groq";
-import globby from "globby";
+import { SitemapStream, streamToPromise } from 'sitemap';
+import client from 'utils/client';
+import groq from 'groq';
+import globby from 'globby';
 
 // get static pages inside pages directory
 const getPages = async () => {
   const pages = await globby([
     // include
-    "src/pages/*.js",
+    'src/pages/*.js',
     // exclude
-    "!src/pages/_*.js"
+    '!src/pages/_*.js',
   ]);
   return pages;
-}
+};
 
 // format the page path (removes src/pages/)
-const formatPagePath = (page) => {
-  return page.replace("src/pages/", "");
-}
+const formatPagePath = (page) => page.replace('src/pages/', '');
 
 // query for all the blog posts
 const getPosts = async function () {
@@ -34,7 +32,7 @@ const getPosts = async function () {
   }`;
 
   return await client.fetch(blogPostQuery);
-}
+};
 
 // build the sitemap
 export default async (req, res) => {
@@ -44,20 +42,20 @@ export default async (req, res) => {
   // Create the a stream to write to with a hostname which will be used for all links
   // Your are able to add more settings to the stream. I recommend to look a the npm package for more information.
   const smStream = new SitemapStream({
-    hostname: "https://selfteach.me",
+    hostname: 'https://selfteach.me',
   });
   // Add frontpage
   smStream.write({
-    url: "/",
+    url: '/',
   });
   // Add a static url to ex: blog index page
   smStream.write({
-    url: "/blog",
-    changefreq: 'daily'
+    url: '/blog',
+    changefreq: 'daily',
   });
 
   // add all static pages from the pages directory
-  pages.forEach(element => {
+  pages.forEach((element) => {
     smStream.write({
       url: `/${formatPagePath(element)}`,
       changefreq: 'monthly',
@@ -78,7 +76,7 @@ export default async (req, res) => {
   const sitemap = await streamToPromise(smStream).then((sm) => sm.toString());
   // here is the generation of the sitemap happening
   // tell the output that we will output XML
-  res.setHeader("Content-Type", "text/xml");
+  res.setHeader('Content-Type', 'text/xml');
   // write the generate sitemap to the output
   res.write(sitemap);
   // end and send the data to the user or service.

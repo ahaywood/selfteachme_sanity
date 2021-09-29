@@ -1,6 +1,6 @@
-import { Hero } from "modules/shared/components/Hero";
-import { OneSnippet } from "./components/OneSnippet";
-import { Subnav } from "./components/Subnav";
+import { Hero } from 'modules/shared/components/Hero';
+import { OneSnippet } from './components/OneSnippet';
+import { Subnav } from './components/Subnav';
 
 const SnippetPage = (props) => {
   const { content } = props;
@@ -14,7 +14,7 @@ const SnippetPage = (props) => {
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export { SnippetPage }
+export { SnippetPage };

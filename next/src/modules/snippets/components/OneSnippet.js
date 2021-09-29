@@ -1,9 +1,3 @@
-const OneSnippet = () => {
-  return (
-    <div>
-      One Snippet
-    </div>
-  )
-}
+const OneSnippet = () => <div>One Snippet</div>;
 
-export { OneSnippet }
+export { OneSnippet };

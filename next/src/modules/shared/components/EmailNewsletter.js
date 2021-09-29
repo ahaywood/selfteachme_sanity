@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { ButtonSubmit } from "./ButtonSubmit";
+import { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import kwesforms from 'kwesforms';
+import { ButtonSubmit } from './ButtonSubmit';
 
 const EmailNewsletter = ({ className }) => {
   const { register, handleSubmit, watch, errors } = useForm();
 
   const onSubmit = (data) => {
-    console.log(JSON.stringify(data))
+    console.log(JSON.stringify(data));
   };
 
   useEffect(() => {
@@ -19,17 +19,20 @@ const EmailNewsletter = ({ className }) => {
       <div className="max-w-7xl sm:container mx-auto grid lg:grid-cols-2 lg:gap-14 xl:gap-28">
         <div>
           <h2 className="font-condensed relative text-6xl sm:text-7xl md:text-8xl xl:text-9xl uppercase leading-stacked md:leading-stacked xl:leading-stacked mb-4">
-            This industry moves fast,{" "}
-            <span className="font-handwriting lowercase leading-10">but</span>{" "}
-            you can stay up to date:
+            This industry moves fast, <span className="font-handwriting lowercase leading-10">but</span> you can stay up
+            to date:
           </h2>
           <p className="text-lg lg:text-xl font-serif">
-            Receive a weekly email of the Internet's best from articles, to
-            tutorials, to pro tips.
+            Receive a weekly email of the Internet's best from articles, to tutorials, to pro tips.
           </p>
         </div>
         <div>
-          <form className="kwes-form" action="https://kwes.io/api/foreign/forms/STZ38ateA8uxnhml9xfi" method="POST" onSubmit={handleSubmit(onSubmit)}>
+          <form
+            className="kwes-form"
+            action="https://kwes.io/api/foreign/forms/STZ38ateA8uxnhml9xfi"
+            method="POST"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <div className="flex flex-col sm:flex-row lg:flex-col">
               <div className="sm:mr-4 lg:mr-0">
                 <label htmlFor="emailSignupFirstName">First Name</label>
@@ -55,11 +58,7 @@ const EmailNewsletter = ({ className }) => {
             </div>
 
             <ButtonSubmit className="with-emoji mb-8 mt-8 mx-1 md:mx-0">
-              <span
-                role="img"
-                aria-label="raise hand"
-                className="-left-20 -top-8 text-7xl"
-              >
+              <span role="img" aria-label="raise hand" className="-left-20 -top-8 text-7xl">
                 🙋‍♀️
               </span>
               I want to be in the know.

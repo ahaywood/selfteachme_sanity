@@ -1,20 +1,20 @@
-const plugin = require("tailwindcss/plugin");
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  purge: ["./src/**/*.js"],
+  purge: ['./src/**/*.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Nunito", "Helvetica", "Arial", "sans-serif"],
-      serif: ["ff-tisa-web-pro", "serif"],
-      condensed: ["alternate-gothic-no-1-d", "sans-serif"],
-      modern: ["bodoni-urw", "serif"],
-      handwriting: ["northwell", "sans-serif"],
-      mono: ["ui-monospace", "monospace"],
+      sans: ['Nunito', 'Helvetica', 'Arial', 'sans-serif'],
+      serif: ['ff-tisa-web-pro', 'serif'],
+      condensed: ['alternate-gothic-no-1-d', 'sans-serif'],
+      modern: ['bodoni-urw', 'serif'],
+      handwriting: ['northwell', 'sans-serif'],
+      mono: ['ui-monospace', 'monospace'],
     },
     extend: {
       backgroundSize: {
-        'half': '50%'
+        half: '50%',
       },
       backgroundImage: (theme) => ({
         believe: "url('/img/about__truly-believe.jpg')",
@@ -29,98 +29,100 @@ module.exports = {
         underline: "url('/img/horizontal-line.svg')",
       }),
       borderWidth: {
-        1: "1px",
+        1: '1px',
       },
       colors: {
-        almostWhite: "#efefef",
-        bunting: "#161743",
-        candyAppleRed: "#ee0e01",
-        serenade: "#FFE3D4",
-        baliHai: "#7F98AC",
-        brightPink: "#F40082",
-        gold: "#FFD200",
-        pistachio: "#95CF00",
-        java: "#26C9C3",
-        sapphire: "#3452A5",
-        black: "#000",
-        white: "#fff",
-        brightTurquoise: "#44FACD",
-        peach: "#ffc8ab",
+        almostWhite: '#efefef',
+        bunting: '#161743',
+        candyAppleRed: '#ee0e01',
+        serenade: '#FFE3D4',
+        baliHai: '#7F98AC',
+        brightPink: '#F40082',
+        gold: '#FFD200',
+        pistachio: '#95CF00',
+        java: '#26C9C3',
+        sapphire: '#3452A5',
+        black: '#000',
+        white: '#fff',
+        brightTurquoise: '#44FACD',
+        peach: '#ffc8ab',
       },
       flex: {
-        2: "2 2 0%",
-        2.5: "2.5 2.5 0%",
-        3: "3 3 0%",
+        2: '2 2 0%',
+        2.5: '2.5 2.5 0%',
+        3: '3 3 0%',
       },
       fontSize: {
-        '300xl': ['600px', {
-          letterSpacing: '0',
-          lineHeight: '500px',
-        }],
+        '300xl': [
+          '600px',
+          {
+            letterSpacing: '0',
+            lineHeight: '500px',
+          },
+        ],
       },
       gridColumnEnd: {
-        "-1": "-1",
-        "-2": "-2",
+        '-1': '-1',
+        '-2': '-2',
       },
       inset: {
-        "-screen": "-100vh",
-        15: "3.75rem",
-        20: "5rem",
-        24: "6rem",
-        26: "6.5rem",
-        28: "7rem",
+        '-screen': '-100vh',
+        15: '3.75rem',
+        20: '5rem',
+        24: '6rem',
+        26: '6.5rem',
+        28: '7rem',
       },
       lineHeight: {
-        'stacked': ".75",
-        'handwriting': "0.25",
-        14: "3.5rem",
-        16: "4rem",
-        17: "4.25rem",
-        18: "4.5rem",
-        24: "6rem",
+        stacked: '.75',
+        handwriting: '0.25',
+        14: '3.5rem',
+        16: '4rem',
+        17: '4.25rem',
+        18: '4.5rem',
+        24: '6rem',
       },
       maxWidth: {
-        20: "5rem",
-        48: "12rem",
-        "2/3": "60%"
+        20: '5rem',
+        48: '12rem',
+        '2/3': '60%',
       },
       minHeight: {
-        9: "2.25rem",
-
+        9: '2.25rem',
       },
       padding: {
-        "mobile": "2rem",
-        15: "3.75rem",
-        18: "4.5rem",
+        mobile: '2rem',
+        15: '3.75rem',
+        18: '4.5rem',
       },
       spacing: {
-        102: "25.5rem",
+        102: '25.5rem',
       },
       transitionProperty: {
-        transform: "transform",
+        transform: 'transform',
       },
       width: {
-        26: "6.5rem",
+        26: '6.5rem',
       },
       zIndex: {
-        "-1": -1,
+        '-1': -1,
       },
     },
   },
   variants: {
     extend: {
-      textColor: ["hover"],
-      textDecoration: ["hover"],
+      textColor: ['hover'],
+      textDecoration: ['hover'],
     },
   },
   plugins: [
     plugin(function ({ addUtilities }) {
       const newUtilities = {
-        ".blend-multiply": {
-          "mix-blend-mode": "multiply",
+        '.blend-multiply': {
+          'mix-blend-mode': 'multiply',
         },
-        ".blend-screen": {
-          "mix-blend-mode": "screen",
+        '.blend-screen': {
+          'mix-blend-mode': 'screen',
         },
       };
       addUtilities(newUtilities);

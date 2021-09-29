@@ -1,5 +1,3 @@
-const ReadProgress = () => {
-  return <div></div>;
-};
+const ReadProgress = () => <div />;
 
 export { ReadProgress };

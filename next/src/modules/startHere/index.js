@@ -1,2 +1,3 @@
-import { StartHerePage } from "./StartHerePage";
+import { StartHerePage } from './StartHerePage';
+
 export { StartHerePage };

@@ -1,2 +1,3 @@
-import { AmaPage } from "./AmaPage";
+import { AmaPage } from './AmaPage';
+
 export { AmaPage };

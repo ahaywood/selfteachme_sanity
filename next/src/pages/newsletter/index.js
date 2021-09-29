@@ -1,6 +1,6 @@
-import Head from "next/head";
-import { NewsletterPage } from "modules/newsletter";
-import { Page } from "modules/shared/layout/Page";
+import Head from 'next/head';
+import { NewsletterPage } from 'modules/newsletter';
+import { Page } from 'modules/shared/layout/Page';
 
 const newsletter = () => (
   <>

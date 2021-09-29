@@ -1,14 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const YouTube = ({ className, height = "32", width = "32" }) => (
-  <svg
-    className={className}
-    width={width}
-    height={height}
-    viewBox="0 0 32 32"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+const YouTube = ({ className, height = '32', width = '32' }) => (
+  <svg className={className} width={width} height={height} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -24,9 +18,9 @@ YouTube.propTypes = {
 };
 
 YouTube.defaultProps = {
-  className: "",
-  height: "32",
-  width: "32",
+  className: '',
+  height: '32',
+  width: '32',
 };
 
 export { YouTube };

@@ -1,26 +1,51 @@
-import { useState, Fragment } from "react";
-import { Hero } from "modules/shared/components/Hero";
-import { FullWidthBlogCard } from "modules/shared/components/FullWidthBlogCard";
-import { EmailNewsletter } from "modules/shared/components/EmailNewsletter";
-import { Subnav } from "./components/Subnav";
-import BlockContent from "@sanity/block-content-to-react";
-import { serializers } from "modules/shared/blockContent/Serializers";
+import { useState, Fragment } from 'react';
+import { Hero } from 'modules/shared/components/Hero';
+import { FullWidthBlogCard } from 'modules/shared/components/FullWidthBlogCard';
+import { EmailNewsletter } from 'modules/shared/components/EmailNewsletter';
+import BlockContent from '@sanity/block-content-to-react';
+import { serializers } from 'modules/shared/blockContent/Serializers';
+import { Subnav } from './components/Subnav';
 
 const GlossaryPage = ({ glossary }) => {
-  const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  const alphabet = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+  ];
   const [selectedLetters, setSelectedLetters] = useState(alphabet);
 
   // filter by a specific letter
   // this function gets passed to the subnav component
   const filterByLetter = (letter) => {
     // if all is selected, set the array the entire alphabet
-    if (letter === 'all')
-      setSelectedLetters(alphabet);
+    if (letter === 'all') setSelectedLetters(alphabet);
     // otherwise, stick the individual letter into an array so that map can
     // iterate over it
-    else
-      setSelectedLetters([letter]);
-  }
+    else setSelectedLetters([letter]);
+  };
 
   return (
     <>
@@ -29,7 +54,6 @@ const GlossaryPage = ({ glossary }) => {
 
       {/* content */}
       {selectedLetters.map((item, i) => {
-
         // determine what letter we need to check against
         // if the selected letter array is longer than one letter, we're looking at
         // all the letters. Sent the current letter to the current index of the
@@ -37,14 +61,16 @@ const GlossaryPage = ({ glossary }) => {
         const checkAgainst = selectedLetters.length > 1 ? alphabet[i] : selectedLetters[0];
 
         // filter for terms that start with the current letter
-        const currentGlossaryTerms = glossary.filter(term => {
-          return (term.name.substring(0, 1).toLowerCase() == checkAgainst);
-        });
+        const currentGlossaryTerms = glossary.filter((term) => term.name.substring(0, 1).toLowerCase() == checkAgainst);
 
         // check to see if there are any terms that start with that letter
         // if none exist, display a "not found" error message
         if (currentGlossaryTerms.length < 1)
-          return (<Fragment key={i}><em>It doesn't look like we have any terms that begin with that letter.</em></Fragment>);
+          return (
+            <Fragment key={i}>
+              <em>It doesn't look like we have any terms that begin with that letter.</em>
+            </Fragment>
+          );
 
         // otherwise, display thc content
         return (
@@ -57,7 +83,9 @@ const GlossaryPage = ({ glossary }) => {
                 {currentGlossaryTerms.map((item) => (
                   <Fragment key={item._id}>
                     <dt className="col-span-12 lg:col-span-2 lg:text-right uppercase">
-                      <div className="font-condensed bg-serenade py-1 px-2 text-xl tracking-wider inline-block nowrap">{item.name}</div>
+                      <div className="font-condensed bg-serenade py-1 px-2 text-xl tracking-wider inline-block nowrap">
+                        {item.name}
+                      </div>
                     </dt>
                     <dd className="col-span-12 lg:col-span-6">
                       {item.description && <BlockContent blocks={item.description} serializers={serializers} />}
@@ -67,12 +95,14 @@ const GlossaryPage = ({ glossary }) => {
               </dl>
             </div>
           </div>
-        )
+        );
       })}
 
-      <div><EmailNewsletter /></div>
+      <div>
+        <EmailNewsletter />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export { GlossaryPage }
+export { GlossaryPage };

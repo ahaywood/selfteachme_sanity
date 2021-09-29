@@ -4,7 +4,7 @@
   ],
   "rules": {
     "no-console": 2,
-    "react/destructuring-assignment": false,
+    "react/destructuring-assignment": "warn",
     "prettier/prettier": [
       "error",
       {

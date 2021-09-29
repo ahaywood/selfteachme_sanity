@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const InternalLink = (props) => {
   // destructure 'current' and 'internalSection'
@@ -13,13 +13,10 @@ const InternalLink = (props) => {
   if (current) {
     return (
       <Link href={`/${internalSection.toLowerCase()}/${current}`}>
-        <a className="font-bold text-brightPink underline hover:text-sapphire hover:no-underline">
-          {props.children}
-        </a>
+        <a className="font-bold text-brightPink underline hover:text-sapphire hover:no-underline">{props.children}</a>
       </Link>
     );
-  } else {
-    return props.children;
   }
+  return props.children;
 };
 export { InternalLink };

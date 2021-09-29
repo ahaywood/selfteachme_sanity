@@ -1,9 +1,3 @@
-const IndividualSnippet = () => {
-  return (
-    <div>
-      Individual Snippet
-    </div>
-  )
-}
+const IndividualSnippet = () => <div>Individual Snippet</div>;
 
-export default IndividualSnippet
+export default IndividualSnippet;

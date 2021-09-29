@@ -25,6 +25,8 @@ export default {
     { name: "fullWidth", title: "Full Width?", type: "boolean" },
     { name: "retina", title: "Retina", type: "boolean" },
     { name: "alignment", title: "Alignment", type: "string", options: { list: ['left', 'center', 'right'], layout: "radio", direction: "horizontal" } },
+    { name: "link", title: "Link Image?", type: "url" },
+    { name: "target", title: "New Tab?", type: "boolean" }
   ],
   preview: {
     select: {

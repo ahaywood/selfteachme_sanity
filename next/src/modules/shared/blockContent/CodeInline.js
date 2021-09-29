@@ -1,7 +1,9 @@
-import { Code, dracula } from "react-code-blocks";
+import { Code, dracula } from 'react-code-blocks';
 
 const CodeInline = (props) => (
-  <span className="text-lg"><Code language="text" text={props.children} theme={dracula}></Code></span>
+  <span className="text-lg">
+    <Code language="text" text={props.children} theme={dracula} />
+  </span>
 );
 
 export { CodeInline };

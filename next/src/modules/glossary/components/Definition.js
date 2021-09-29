@@ -1,9 +1,3 @@
-const Definition = () => {
-  return (
-    <div>
-      Definition
-    </div>
-  )
-}
+const Definition = () => <div>Definition</div>;
 
-export { Definition }
+export { Definition };

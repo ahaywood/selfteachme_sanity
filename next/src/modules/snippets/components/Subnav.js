@@ -1,9 +1,3 @@
-const Subnav = () => {
-  return (
-    <div>
-      Subnav
-    </div>
-  )
-}
+const Subnav = () => <div>Subnav</div>;
 
-export { Subnav }
+export { Subnav };

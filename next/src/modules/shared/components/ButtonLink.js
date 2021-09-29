@@ -1,10 +1,8 @@
-const ButtonLink = ({ children, className, href, target }) => {
-  return (
-    <a href={href} className={`button ${className ? className : "primary"}`} target={target ? target : "_self"}>
-      <div className="outline"></div>
-      <div className="content">{children}</div>
-    </a>
-  );
-};
+const ButtonLink = ({ children, className, href, target }) => (
+  <a href={href} className={`button ${className || 'primary'}`} target={target || '_self'}>
+    <div className="outline" />
+    <div className="content">{children}</div>
+  </a>
+);
 
 export { ButtonLink };

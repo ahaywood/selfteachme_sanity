@@ -1,6 +1,7 @@
-import { useEffect } from "react"; import { useForm } from "react-hook-form";
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import kwesforms from 'kwesforms';
-import { ButtonSubmit } from "modules/shared/components/ButtonSubmit";
+import { ButtonSubmit } from 'modules/shared/components/ButtonSubmit';
 
 const AmaForm = () => {
   const { register, handleSubmit, watch, errors } = useForm();
@@ -21,16 +22,12 @@ const AmaForm = () => {
             rules="required"
             ref={register({ required: true })}
           />
-          {errors.firstName && (
-            <div className="form-error">Last Name is required</div>
-          )}
+          {errors.firstName && <div className="form-error">Last Name is required</div>}
         </div>
         <div className="relative col-span-2 md:col-span-1">
           <label htmlFor="">Last Name</label>
           <input type="text" name="lastName" ref={register({ required: true })} />
-          {errors.lastName && (
-            <div className="form-error">Last Name is required</div>
-          )}
+          {errors.lastName && <div className="form-error">Last Name is required</div>}
         </div>
         <div className="relative col-span-full">
           <label htmlFor="">Email Address</label>
@@ -38,15 +35,10 @@ const AmaForm = () => {
           {errors.email && <div className="form-error">Email is required</div>}
         </div>
         <div className="relative col-span-full">
-          <input
-            type="checkbox"
-            name="emailUpdates"
-            id="emailUpdates"
-            defaultChecked="checked"
-          />
+          <input type="checkbox" name="emailUpdates" id="emailUpdates" defaultChecked="checked" />
           <label className="cursor-pointer" htmlFor="emailUpdates">
             I'd like to receive email updates.
-        </label>
+          </label>
         </div>
         <div className="relative col-span-full">
           <label htmlFor="message">Message</label>
@@ -56,29 +48,25 @@ const AmaForm = () => {
             id="message"
             ref={register({ required: true })}
             rules="required"
-          ></textarea>
-          {errors.message && (
-            <div className="form-error">Message is required</div>
-          )}
+          />
+          {errors.message && <div className="form-error">Message is required</div>}
         </div>
         <div className="col-span-full">
           <ButtonSubmit className="with-emoji mt-12 light">
-            <span
-              className="relative -top-4 md:top-2 -left-24 text-8xl"
-              role="img"
-              aria-label="dancing woman"
-            >
+            <span className="relative -top-4 md:top-2 -left-24 text-8xl" role="img" aria-label="dancing woman">
               💃🏻
-          </span>
+            </span>
             <span className="hidden md:block lg:inline font-handwriting normal-case text-8xl font-normal relative -top-0 md:-top-2 lg:top-4 text-black mr-4">
               Submit
-          </span>
-            <span className="relative md:-top-8 lg:top-0"><span className="inline lg:hidden xl:inline">Send this sucker</span> into the inter webs</span>
+            </span>
+            <span className="relative md:-top-8 lg:top-0">
+              <span className="inline lg:hidden xl:inline">Send this sucker</span> into the inter webs
+            </span>
           </ButtonSubmit>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export { AmaForm }
+export { AmaForm };

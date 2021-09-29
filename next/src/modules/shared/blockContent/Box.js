@@ -1,5 +1,6 @@
-const BlockContent = require("@sanity/block-content-to-react");
-import { serializers } from "modules/shared/blockContent/Serializers";
+import { serializers } from 'modules/shared/blockContent/Serializers';
+
+const BlockContent = require('@sanity/block-content-to-react');
 
 const Box = (props) => {
   const { content, emoji, heading } = props.node;
@@ -11,6 +12,6 @@ const Box = (props) => {
         <BlockContent blocks={content} serializers={serializers} />
       </div>
     </div>
-  )
+  );
 };
 export { Box };

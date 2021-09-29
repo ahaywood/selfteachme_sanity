@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import { prettyDate } from "utils/date";
+import Link from 'next/link';
+import Image from 'next/image';
+import { prettyDate } from 'utils/date';
 
 const NextPreviousPosts = ({ blogPagination }) => {
   const { nextPost, previousPost } = blogPagination;
@@ -8,13 +8,13 @@ const NextPreviousPosts = ({ blogPagination }) => {
   // determine which date to show
   const ShowPostDate = (publishedDate, updatedDate) => {
     if (updatedDate) {
-      return (<h4 className="font-condensed text-gold uppercase text-2xl">{prettyDate(updatedDate)}</h4>);
+      return <h4 className="font-condensed text-gold uppercase text-2xl">{prettyDate(updatedDate)}</h4>;
     }
-    else if (publishedDate) {
-      return (<h4 className="font-condensed text-gold uppercase text-2xl">{prettyDate(publishedDate)}</h4>);
+    if (publishedDate) {
+      return <h4 className="font-condensed text-gold uppercase text-2xl">{prettyDate(publishedDate)}</h4>;
     }
     return '';
-  }
+  };
 
   return (
     <div className="bg-pagination cover p-8 col-span-12 md:col-span-5 md:col-start-2 mb-16 md:mb-0">
@@ -23,7 +23,9 @@ const NextPreviousPosts = ({ blogPagination }) => {
         <div className="my-8">
           <Link href={`/blog/${nextPost.slug.current}`}>
             <a>
-              <h4 className="font-condensed text-gold uppercase text-2xl">{ShowPostDate(nextPost.datePublished, nextPost.dateUpdated)}</h4>
+              <h4 className="font-condensed text-gold uppercase text-2xl">
+                {ShowPostDate(nextPost.datePublished, nextPost.dateUpdated)}
+              </h4>
               <h3 className="font-modern text-white text-5xl">{nextPost.title}</h3>
             </a>
           </Link>
@@ -39,14 +41,16 @@ const NextPreviousPosts = ({ blogPagination }) => {
         <div className="my-8">
           <Link href={`/blog/${previousPost.slug.current}`}>
             <a>
-              <h4 className="font-condensed text-gold uppercase text-2xl">{ShowPostDate(previousPost.datePublished, previousPost.dateUpdated)}</h4>
+              <h4 className="font-condensed text-gold uppercase text-2xl">
+                {ShowPostDate(previousPost.datePublished, previousPost.dateUpdated)}
+              </h4>
               <h3 className="font-modern text-white text-5xl">{previousPost.title}</h3>
             </a>
           </Link>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export { NextPreviousPosts }
+export { NextPreviousPosts };

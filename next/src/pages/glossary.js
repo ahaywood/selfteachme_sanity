@@ -1,8 +1,8 @@
-import { GlossaryPage } from "modules/glossary";
-import { Page } from "modules/shared/layout/Page";
-import client from "utils/client";
-import Head from "next/head";
-import groq from "groq";
+import { GlossaryPage } from 'modules/glossary';
+import { Page } from 'modules/shared/layout/Page';
+import client from 'utils/client';
+import Head from 'next/head';
+import groq from 'groq';
 
 /** -------------------------------------------------
 * COMPONENT
@@ -16,8 +16,8 @@ const glossary = (props) => {
       </Head>
       <GlossaryPage glossary={glossary} />
     </Page>
-  )
-}
+  );
+};
 
 /** -------------------------------------------------
 * QUERIES
@@ -32,14 +32,11 @@ export async function getStaticProps() {
   const glossary = await client.fetch(queryGlossary);
 
   // Pass post data to the page via props
-  return { props: { glossary } }
+  return { props: { glossary } };
 
   return {
     props: {}, // will be passed to the page component as props
-  }
+  };
 }
 
-
-
-export default glossary
-
+export default glossary;

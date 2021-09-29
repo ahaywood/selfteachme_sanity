@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { useForm } from "react-hook-form";
-import { Icon } from "../components/icon";
+import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import { useForm } from 'react-hook-form';
+import { Icon } from '../components/icon';
 
 const Search = ({ isSearchOpen, toggleSearch }) => {
   const { register, handleSubmit, watch, errors } = useForm();
@@ -19,12 +19,13 @@ const Search = ({ isSearchOpen, toggleSearch }) => {
   const onSubmit = (data) => {
     // redirect to the homepage, send the key words
     router.push({ pathname: '/search', query: data });
-  }
+  };
 
   return (
     <div
-      className={`bg-gradient-to-b from-black via-brightPink w-screen h-screen fixed left-0 z-40 p-10 transition-inset duration-500 ${isSearchOpen ? "top-0" : "-top-screen"
-        }`}
+      className={`bg-gradient-to-b from-black via-brightPink w-screen h-screen fixed left-0 z-40 p-10 transition-inset duration-500 ${
+        isSearchOpen ? 'top-0' : '-top-screen'
+      }`}
     >
       <div className="text-center w-full absolute left-0 top-8">
         <button onClick={toggleSearch} className="focus:outline-none">
@@ -48,11 +49,11 @@ const Search = ({ isSearchOpen, toggleSearch }) => {
             name="keywords"
             type="text"
             ref={(e) => {
-              searchInput.current = e
-              register(e, { required: true })
+              searchInput.current = e;
+              register(e, { required: true });
             }}
           />
-          <button className="text-white hover:text-gold" role="submit" >
+          <button className="text-white hover:text-gold" role="submit">
             <Icon name="arrow" />
           </button>
         </div>

@@ -10,7 +10,7 @@ const imageTextPreview = ({ value }) => {
         <h2 style={{ color: "#63758f", fontSize: "16px", lineHeight: "20px", textTransform: "uppercase", fontWeight: "normal" }}>Image and Text</h2>
       </div>
       <div style={{ display: "flex", flexDirection: placement === 'imageLeft' ? "row" : "row-reverse" }}>
-        <div style={{ flex: "1" }}><img src={image} style={{ maxWidth: "100%" }} /></div>
+        <div style={{ flex: "1" }}>{image && (<img src={image} style={{ maxWidth: "100%" }} />)}</div>
         <div style={{ padding: "30px", flex: "1" }}>{content}</div>
       </div>
     </div>

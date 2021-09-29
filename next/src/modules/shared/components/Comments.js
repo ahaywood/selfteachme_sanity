@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Hr } from "modules/shared/components/Hr";
+import { useEffect } from 'react';
+import { Hr } from 'modules/shared/components/Hr';
 
 /** -------------------------------------------------
 * HELPERS
@@ -10,7 +10,7 @@ const insertScript = (src, id, parentElement) => {
   script.async = true;
   script.src = src;
   script.id = id;
-  script.setAttribute('data-css-override', "/css/commento.css");
+  script.setAttribute('data-css-override', '/css/commento.css');
   script.setAttribute('data-auto-init', 'true');
   script.setAttribute('data-no-fonts', 'true');
   parentElement.appendChild(script);
@@ -24,18 +24,16 @@ const removeScript = (id, parentElement) => {
   }
 };
 
-
 /** -------------------------------------------------
 * COMPONENT
 ---------------------------------------------------- */
 export const Comments = ({ className, id }) => {
-
   useEffect(() => {
     // If there's no window there's nothing to do for us
     if (!window) {
       return;
     }
-    const document = window.document;
+    const { document } = window;
     // In case our #commento container exists we can add our commento script
     if (document.getElementById('commento')) {
       insertScript(`https://cdn.commento.io/js/commento.js`, `commento-script`, document.body);
@@ -59,4 +57,4 @@ export const Comments = ({ className, id }) => {
       ></script> */}
     </div>
   );
-}
+};

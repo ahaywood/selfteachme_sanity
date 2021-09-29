@@ -1,6 +1,6 @@
-import Head from "next/head";
-import { NewsletterConfirmPage } from "modules/newsletter/NewsletterConfirmPage";
-import { Page } from "modules/shared/layout/Page";
+import Head from 'next/head';
+import { NewsletterConfirmPage } from 'modules/newsletter/NewsletterConfirmPage';
+import { Page } from 'modules/shared/layout/Page';
 
 const confirm = () => (
   <>

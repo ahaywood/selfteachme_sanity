@@ -1,8 +1,8 @@
 /**
  * REFERENCE: https://css-tricks.com/reading-position-indicator/#:~:text=A%20small%20progressbar%20appears%20at,came%20back%20to%20the%20article.
  */
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const ProgressBar = () => {
   const [amount, setAmount] = useState(0);
@@ -10,7 +10,7 @@ const ProgressBar = () => {
 
   // ATTACH A SCROLL EVENT
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -21,8 +21,8 @@ const ProgressBar = () => {
   const getMaxValue = () => {
     const windowHeight = window.innerHeight;
 
-    const body = document.body,
-      html = document.documentElement;
+    const { body } = document;
+    const html = document.documentElement;
 
     // REFERENCE: https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript
     const documentHeight = Math.max(
@@ -38,11 +38,11 @@ const ProgressBar = () => {
 
   // WHEN THE USER SCROLLS
   const handleScroll = () => {
-    var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
+    const scrollBarPosition = window.pageYOffset | document.body.scrollTop;
     setAmount(scrollBarPosition);
   };
 
-  return <progress className="progress-bar" max={maxValue} value={amount}></progress>;
+  return <progress className="progress-bar" max={maxValue} value={amount} />;
 };
 
 export { ProgressBar };

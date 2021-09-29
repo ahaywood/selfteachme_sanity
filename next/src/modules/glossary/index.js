@@ -1,2 +1,3 @@
-import { GlossaryPage } from "./GlossaryPage";
+import { GlossaryPage } from './GlossaryPage';
+
 export { GlossaryPage };

@@ -1,4 +1,4 @@
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, dracula } from 'react-code-blocks';
 
 const CodeBlock = ({ node }) => {
   if (!node || !node.code) {
@@ -17,12 +17,7 @@ const CodeBlock = ({ node }) => {
 
   return (
     <div className="font-mono col-span-12 md:col-start-4 md:col-span-6 mt-8 mb-12">
-      <CopyBlock
-        codeBlock
-        language={codeLang}
-        text={code}
-        theme={dracula}
-      />
+      <CopyBlock codeBlock language={codeLang} text={code} theme={dracula} />
     </div>
   );
 };

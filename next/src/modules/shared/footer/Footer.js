@@ -1,11 +1,10 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { Nav } from "./Nav";
-import { Social } from "./Social";
+import { getCurrentYear } from 'utils/date';
+import { Nav } from './Nav';
+import { Social } from './Social';
 
-import { getCurrentYear } from "utils/date";
-
-const Footer = () => {
+const Footer = ({ social }) => {
   const year = getCurrentYear();
   return (
     <footer>
@@ -14,7 +13,7 @@ const Footer = () => {
       <div className="bg-brightPink h-2 my-2" />
 
       <div className="bg-bunting text-white pb-16 pt-20 px-1 md:px-0">
-        <Social className="pb-8 md:pb-16" />
+        <Social className="pb-8 md:pb-16" social={social} />
         <ul className="font-sans uppercase tracking-widest text-sm flex justify-center pb-14 font-bold flex-col md:flex-row text-center">
           <li className="md:border-r-1 border-white px-6 mb-2 md:leading-5 text-sm md:mb-5">
             <Link href="/legal/privacy-policy">
@@ -34,12 +33,8 @@ const Footer = () => {
         </ul>
 
         <p className="font-sans text-xs tracking-wide uppercase text-center font-bold">
-          Copyright &copy; {year}.{" "}
-          <a
-            href="http://ahhacreative.com"
-            target="_blank"
-            className="hover:underline hover:text-gold block md:inline"
-          >
+          Copyright &copy; {year}.{' '}
+          <a href="http://ahhacreative.com" target="_blank" className="hover:underline hover:text-gold block md:inline">
             Ah Ha Creative, LLC.
           </a>
           &nbsp;All Rights Reserved.
