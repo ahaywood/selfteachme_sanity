@@ -210,8 +210,7 @@ const AboutPage = ({ brands }) => {
             Say Hello <span className="font-handwriting leading-handwriting lowercase">and</span> Introduce Yourself
           </h2>
           <p>
-            Hello, my name is Amy (Haywood) Dutton. It’s nice to “meet” you. I’m the Senior UI/UX Designer and Frontend
-            Developer at{' '}
+            Hello, my name is Amy (Haywood) Dutton. It’s nice to “meet” you. I’m the Creative Director at{' '}
             <a href="http://codingzeal.com" target="_blank">
               Zeal
             </a>
@@ -229,9 +228,9 @@ const AboutPage = ({ brands }) => {
       </div>
       <div className="col-start-1 md:col-start-2 col-span-3 md:col-span-1 px-mobile md:px-0">
         <p>
-          I currently live in Chicagoland with my husband and our three adorable (if I do say so myself) kids: Isaac (
-          {kidsAge('isaac')}), Adele ({kidsAge('adele')}), and Emma ({kidsAge('emma')}). As if things weren’t exciting
-          enough, we also adopted a retired racing greyhound and a King Charles Cavalier Spaniel.
+          I currently live outside of Nashville with my husband and our three adorable (if I do say so myself) kids:
+          Isaac ({kidsAge('isaac')}), Adele ({kidsAge('adele')}), and Emma ({kidsAge('emma')}). As if things weren’t
+          exciting enough, we also adopted a retired racing greyhound and a King Charles Cavalier Spaniel.
         </p>
         <p>
           If I’m not sitting front of my computer, I’m hanging out with friends and family, binging on Netflix / Hulu /
