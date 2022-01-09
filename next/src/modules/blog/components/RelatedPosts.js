@@ -7,7 +7,7 @@ const RelatedPosts = ({ relatedPosts }) => (
       {relatedPosts &&
         relatedPosts.map((item) => (
           <li className="font-modern text-3xl py-4 border-b-1 border-opacity-40 border-baliHai mb-0" key={item._id}>
-            <Link href={item.slug.current}>
+            <Link href={`/blog/${item.slug.current}`}>
               <a>
                 <h3 className="highlight">{item.title}</h3>
               </a>
