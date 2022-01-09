@@ -8,10 +8,10 @@ const NextPreviousPosts = ({ blogPagination }) => {
   // determine which date to show
   const ShowPostDate = (publishedDate, updatedDate) => {
     if (updatedDate) {
-      return <h4 className="font-condensed text-gold uppercase text-2xl">{prettyDate(updatedDate)}</h4>;
+      return prettyDate(updatedDate);
     }
     if (publishedDate) {
-      return <h4 className="font-condensed text-gold uppercase text-2xl">{prettyDate(publishedDate)}</h4>;
+      return prettyDate(publishedDate);
     }
     return '';
   };
