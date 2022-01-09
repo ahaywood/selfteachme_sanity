@@ -1,3 +1,1 @@
-import { FourOFourPage } from './404.js';
-
-export { FourOFourPage };
+export { FourOFourPage } from './404';
