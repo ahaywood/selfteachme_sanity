@@ -103,14 +103,14 @@ export { getPostMonth };
  * getPostMonthAbbrev
  * Returns the month as an abbreviation
  */
-const getPostMonthAbbrev = (dateToFormat: number): string => {
+/* const getPostMonthAbbrev = (dateToFormat: number): string => {
   const abbreviations = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   // const [year, month, date] = formatDate(dateToFormat);
   // TODO: Not Dynamic
   return abbreviations[3];
 };
 
-export { getPostMonthAbbrev };
+export { getPostMonthAbbrev }; */
 
 /**
  * Get the Post Year

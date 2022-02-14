@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@asbjorn/eslint-plugin-groq": "^1.0.0",
+    "@next/eslint-plugin-next": "^12.0.7",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.0.9",
     "@sanity/image-url": "^0.140.19",
