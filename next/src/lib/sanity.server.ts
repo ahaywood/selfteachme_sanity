@@ -17,7 +17,7 @@ export const previewClient = createClient({
 export const getClient = (usePreview?: boolean): any => (usePreview ? previewClient : sanityClient);
 
 // taken from: https://github.com/vercel/next.js/blob/canary/examples/cms-sanity/lib/sanity.server.js
-export function overlayDrafts(docs: []): any {
+export function overlayDrafts(docs: any[]): any {
   const documents = docs || [];
   const overlayed = documents.reduce((map, doc) => {
     if (!doc._id) {
