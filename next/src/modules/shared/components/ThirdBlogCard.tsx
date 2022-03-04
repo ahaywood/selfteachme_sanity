@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { getPostMonth, getPostDate } from 'utils/date';
 import Image from 'next/image';
-import { SelfTeach } from '../../../../@types/SelfTeach';
 
 /** -------------------------------------------------
 * TYPES
