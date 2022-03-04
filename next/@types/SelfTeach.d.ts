@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { TagNames } from 'sitemap';
+// import { TagNames } from 'sitemap';
 
 /* eslint-disable no-use-before-define */
 namespace SelfTeach {
