@@ -162,7 +162,7 @@ namespace SelfTeach {
       };
       introContent: [];
     };
-    postsAndVideos: Blog;
+    postsAndVideos: Blog[];
   }
 
   interface Slug {

@@ -9,7 +9,7 @@ interface Props {
   buttonLabel: JSX.Element;
   children: JSX.Element;
   className: string;
-  heading: string;
+  heading: string | JSX.Element;
 }
 
 /** -------------------------------------------------

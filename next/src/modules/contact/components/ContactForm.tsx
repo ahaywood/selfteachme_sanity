@@ -38,7 +38,7 @@ const ContactForm = () => {
         {errors.email && <div className="form-error">Email is required</div>}
       </div>
       <div className="relative col-span-full">
-        <input type="checkbox" name="emailUpdates" id="emailUpdates" defaultChecked={true} />
+        <input type="checkbox" name="emailUpdates" id="emailUpdates" defaultChecked />
         <label className="cursor-pointer" htmlFor="emailUpdates">
           I'd like to receive email updates.
         </label>
@@ -56,15 +56,17 @@ const ContactForm = () => {
       </div>
       <div className="col-span-full">
         <ButtonSubmit className="with-emoji mt-12 light">
-          <span className="relative -top-4 md:top-2 -left-24 text-8xl" role="img" aria-label="dancing woman">
-            💃🏻
-          </span>
-          <span className="hidden md:block lg:inline font-handwriting normal-case text-8xl font-normal relative -top-0 md:-top-2 lg:top-4 text-black mr-4">
-            Submit
-          </span>
-          <span className="relative md:-top-8 lg:top-0">
-            <span className="inline lg:hidden xl:inline">Send this sucker</span> into the inter webs
-          </span>
+          <>
+            <span className="relative -top-4 md:top-2 -left-24 text-8xl" role="img" aria-label="dancing woman">
+              💃🏻
+            </span>
+            <span className="hidden md:block lg:inline font-handwriting normal-case text-8xl font-normal relative -top-0 md:-top-2 lg:top-4 text-black mr-4">
+              Submit
+            </span>
+            <span className="relative md:-top-8 lg:top-0">
+              <span className="inline lg:hidden xl:inline">Send this sucker</span> into the inter webs
+            </span>
+          </>
         </ButtonSubmit>
       </div>
     </form>

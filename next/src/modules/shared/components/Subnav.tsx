@@ -5,13 +5,13 @@ import { useRouter } from 'next/router';
 * TYPES
 ---------------------------------------------------- */
 interface Props {
-  subnav: SelfTeach.Subnav[];
+  subnavItems?: SelfTeach.Subnav[];
 }
 
 /** -------------------------------------------------
 * COMPONENT
 ---------------------------------------------------- */
-const Subnav = ({ subnav }: Props): JSX.Element => {
+const Subnav = ({ subnavItems }: Props): JSX.Element => {
   const router = useRouter();
 
   return (
@@ -22,8 +22,8 @@ const Subnav = ({ subnav }: Props): JSX.Element => {
             <a className={router.pathname === '/blog' ? 'text-gold' : 'text-white'}>All</a>
           </Link>
         </li>
-        {subnav &&
-          subnav.map((item) => (
+        {subnavItems &&
+          subnavItems.map((item) => (
             <li
               className="font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 whitespace-nowrap relative top-1"
               key={item._id}

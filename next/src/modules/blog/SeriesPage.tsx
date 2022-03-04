@@ -8,9 +8,17 @@ import BlockContent from '@sanity/block-content-to-react';
 import { serializers } from 'modules/shared/blockContent/Serializers';
 import { getYouTubeId } from 'utils/youtube';
 
-const SeriesPage = (props) => {
-  const { content, existingIntroVideo } = props;
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  content: SelfTeach.Series;
+}
 
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const SeriesPage = ({ content }: Props): JSX.Element => {
   const seriesIntro = () => {
     if (content.customIntroVideo.useCustomIntroVideo) {
       return (
@@ -26,7 +34,7 @@ const SeriesPage = (props) => {
         </>
       );
     }
-    if (existingIntroVideo) {
+    if (content.existingIntroVideo) {
       return <div />;
     }
     return <div />;
@@ -41,7 +49,7 @@ const SeriesPage = (props) => {
 
       {/* lead magnet */}
       <LeadMagnet
-        action={content.leadMagnet}
+        action={content.leadMagnet.getForm}
         buttonLabel={
           <>
             <span role="img" aria-label="raise hand" className="-left-20 -top-8 text-7xl">
@@ -58,14 +66,16 @@ const SeriesPage = (props) => {
           </>
         }
       >
-        <p>
-          Since we're friends (right?!) I made you a FREE git cheat sheet. –-Just let me know what email address I need
-          to send it to.
-        </p>
-        <p>
-          I'll also send you a weekly email of the internet's best on web design and development chalked full of
-          articles, tutorials, and pro tips to help you stay up to date.
-        </p>
+        <>
+          <p>
+            Since we're friends (right?!) I made you a FREE git cheat sheet. –-Just let me know what email address I
+            need to send it to.
+          </p>
+          <p>
+            I'll also send you a weekly email of the internet's best on web design and development chalked full of
+            articles, tutorials, and pro tips to help you stay up to date.
+          </p>
+        </>
       </LeadMagnet>
 
       {/* content */}
