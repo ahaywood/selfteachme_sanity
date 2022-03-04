@@ -2,7 +2,7 @@
 * TYPES
 ---------------------------------------------------- */
 interface Props {
-  className: string;
+  className?: string;
   height?: string;
   width?: string;
 }

@@ -26,7 +26,7 @@ import { YouTube } from './YouTube';
 * TYPES
 ---------------------------------------------------- */
 interface Props {
-  className: string;
+  className?: string;
   height?: string;
   name: string;
   width?: string;
