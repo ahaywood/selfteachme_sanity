@@ -61,10 +61,10 @@ export { prettyDate };
  * Get the Post Date
  * Returns the date as a number
  */
-const getPostDate = (dateToFormat: string): number => {
+const getPostDate = (dateToFormat: string | Date): number => {
   if (!dateToFormat) return;
-  // eslint-disable-next-line no-unused-vars
-  const [year, month, date] = formatDate(dateToFormat);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [year, month, date] = formatDate(dateToFormat.toString());
   return Number(date);
 };
 
@@ -74,7 +74,7 @@ export { getPostDate };
  * Get the Post Month
  * Returns the month (expanded string)
  */
-const getPostMonth = (dateToFormat: string): string => {
+const getPostMonth = (dateToFormat: string | Date): string => {
   if (!dateToFormat) return;
 
   const months = [
@@ -93,7 +93,7 @@ const getPostMonth = (dateToFormat: string): string => {
   ];
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [year, month, date] = formatDate(dateToFormat);
+  const [year, month, date] = formatDate(dateToFormat.toString());
   return months[Number(month) - 1];
 };
 
@@ -116,10 +116,10 @@ export { getPostMonthAbbrev }; */
  * Get the Post Year
  * Returns the date as the full year (2021)
  */
-const getPostYear = (dateToFormat: string): string => {
+const getPostYear = (dateToFormat: string | Date): string => {
   if (!dateToFormat) return;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [year, month, date] = formatDate(dateToFormat);
+  const [year, month, date] = formatDate(dateToFormat.toString());
   return year;
 };
 

@@ -11,7 +11,7 @@ import { GetServerSideProps } from 'next/types';
 ---------------------------------------------------- */
 interface Props {
   content: SelfTeach.Blog[];
-  subnav: SelfTeach.Subnav;
+  subnav?: SelfTeach.Subnav;
 }
 
 const BlogPage = ({ content, subnav }: Props): JSX.Element => (
@@ -19,7 +19,7 @@ const BlogPage = ({ content, subnav }: Props): JSX.Element => (
     <div className="content-grid">
       <Hero title="Blog" src="/img/bg__contact.jpg" className="hero" />
 
-      <Subnav subnav={subnav} />
+      {subnav && <Subnav subnav={subnav} />}
 
       {/* content */}
       <div className="full-width blog-index ping-pong pt-8">

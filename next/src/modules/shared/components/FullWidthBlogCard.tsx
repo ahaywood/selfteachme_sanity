@@ -9,30 +9,24 @@ import { ButtonLink } from './ButtonLink';
 * TYPES
 ---------------------------------------------------- */
 interface Props {
-  content: {
-    category: string;
-    categorySlug: SelfTeach.Slug;
-    hero: string;
-    postDetails: {
-      datePublished: string;
-      video: string;
-      excerpt: string;
-    };
-    slug: SelfTeach.Slug;
-    title: string;
-    subtitle: string;
-  };
-  buttonStyle: '';
+  content: SelfTeach.Blog;
+  buttonStyle?: string;
 }
 
 const FullWidthBlogCard = ({ content, buttonStyle = '' }: Props): JSX.Element => (
   <div className="full-width-card grid md:grid-cols-12 md:gap-8 xl:gap-28 mb-12">
     <div className="image">
       {/* blog category */}
-      {content.category && (
-        <div className={`blog-category block py-4 px-5 absolute w-32 xl:w-auto ${slugify(content.category)}`}>
-          <Link href={`/blog/c/${content?.categorySlug?.current}`}>
-            <a className="font-condensed uppercase text-brightPink text-lg md:text-2xl">{content.category}</a>
+      {content?.postDetails?.category && (
+        <div
+          className={`blog-category block py-4 px-5 absolute w-32 xl:w-auto ${slugify(
+            content.postDetails.category.slug.current
+          )}`}
+        >
+          <Link href={`/blog/c/${content?.postDetails.category?.slug.current}`}>
+            <a className="font-condensed uppercase text-brightPink text-lg md:text-2xl">
+              {content.postDetails.category}
+            </a>
           </Link>
         </div>
       )}
@@ -42,7 +36,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = '' }: Props): JSX.Element =>
         src={content.hero}
         className="h-60 sm:h-48 md:h-full w-full md:absolute inset-0 object-cover"
         loading="lazy"
-        alt={content.category}
+        alt={content.postDetails.category.name}
       />
 
       {/* date */}
@@ -57,7 +51,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = '' }: Props): JSX.Element =>
     <div className="content">
       {/* type of post */}
       <div className="font-condensed text-lg md:text-2xl uppercase text-baliHai mb-2">
-        {content.postDetails.video ? (
+        {content.video ? (
           <>
             <Icon className="float-left mr-4" name="video" /> Video
           </>

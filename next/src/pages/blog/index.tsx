@@ -53,9 +53,13 @@ const query = groq`*[_type == "post" && postDetails.published == true] | order(p
     slug,
     "hero": hero.asset->url,
     titleWithinHero,
-    postDetails,
-    "category": postDetails.category->name,
-    "categorySlug": postDetails.category->slug
+    postDetails {
+      ...,
+      category->{
+        name,
+        slug
+      }
+    }
   }`;
 
 export const getServerSideProps: GetServerSideProps = async () => {
