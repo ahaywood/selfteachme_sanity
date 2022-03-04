@@ -1,7 +1,19 @@
 // Pagination for the blog index
 import Link from 'next/link';
 
-const Pagination = ({ section, previousPageNumber, nextPageNumber }) => (
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  section: string;
+  previousPageNumber?: string;
+  nextPageNumber?: string;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const Pagination = ({ section, previousPageNumber, nextPageNumber }: Props): JSX.Element => (
   <div>
     <div>
       {nextPageNumber && (

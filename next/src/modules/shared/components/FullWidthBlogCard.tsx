@@ -19,13 +19,11 @@ const FullWidthBlogCard = ({ content, buttonStyle = '' }: Props): JSX.Element =>
       {/* blog category */}
       {content?.postDetails?.category && (
         <div
-          className={`blog-category block py-4 px-5 absolute w-32 xl:w-auto ${slugify(
-            content.postDetails.category.slug.current
-          )}`}
+          className={`blog-category block py-4 px-5 absolute w-32 xl:w-auto ${content.postDetails.category.slug.current}`}
         >
-          <Link href={`/blog/c/${content?.postDetails.category?.slug.current}`}>
+          <Link href={`/blog/c/${content?.postDetails.category?.slug?.current}`}>
             <a className="font-condensed uppercase text-brightPink text-lg md:text-2xl">
-              {content.postDetails.category}
+              {content.postDetails.category.name}
             </a>
           </Link>
         </div>
@@ -36,7 +34,7 @@ const FullWidthBlogCard = ({ content, buttonStyle = '' }: Props): JSX.Element =>
         src={content.hero}
         className="h-60 sm:h-48 md:h-full w-full md:absolute inset-0 object-cover"
         loading="lazy"
-        alt={content.postDetails.category.name}
+        alt={content.title}
       />
 
       {/* date */}

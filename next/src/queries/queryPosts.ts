@@ -11,9 +11,13 @@ const queryLatestPosts = groq`*[_type == "post" && postDetails.published == true
   slug,
   "hero": hero.asset->url,
   video,
-  postDetails,
-  "category": postDetails.category->name,
-  "categorySlug": postDetails.category->slug
+  postDetails {
+    ...,
+    category->{
+      name,
+      slug
+    }
+  }
 }[]`;
 
 /**

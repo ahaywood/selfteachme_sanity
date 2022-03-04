@@ -2,7 +2,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { prettyDate } from 'utils/date';
 
-const NextPreviousPosts = ({ nextPost, previousPost }) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  nextPost?: SelfTeach.Blog;
+  previousPost?: SelfTeach.Blog;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const NextPreviousPosts = ({ nextPost, previousPost }: Props): JSX.Element => {
   // determine which date to show
   const ShowPostDate = (publishedDate, updatedDate) => {
     if (updatedDate) {
@@ -22,7 +33,7 @@ const NextPreviousPosts = ({ nextPost, previousPost }) => {
           <Link href={`/blog/${nextPost.slug.current}`}>
             <a>
               <h4 className="font-condensed text-gold uppercase text-2xl">
-                {ShowPostDate(nextPost.datePublished, nextPost.dateUpdated)}
+                {ShowPostDate(nextPost.postDetails.datePublished, nextPost.postDetails.dateUpdated)}
               </h4>
               <h3 className="font-modern text-white text-5xl">{nextPost.title}</h3>
             </a>
@@ -40,7 +51,7 @@ const NextPreviousPosts = ({ nextPost, previousPost }) => {
           <Link href={`/blog/${previousPost.slug.current}`}>
             <a>
               <h4 className="font-condensed text-gold uppercase text-2xl">
-                {ShowPostDate(previousPost.datePublished, previousPost.dateUpdated)}
+                {ShowPostDate(previousPost.postDetails.datePublished, previousPost.postDetails.dateUpdated)}
               </h4>
               <h3 className="font-modern text-white text-5xl">{previousPost.title}</h3>
             </a>

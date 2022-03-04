@@ -14,34 +14,30 @@ interface Props {
   subnavItems?: SelfTeach.Subnav;
 }
 
-const BlogPage = ({ content, subnavItems }: Props): JSX.Element => {
-  console.log(subnavItems);
+const BlogPage = ({ content, subnavItems }: Props): JSX.Element => (
+  <>
+    <div className="content-grid">
+      <Hero title="Blog" src="/img/bg__contact.jpg" className="hero" />
 
-  return (
-    <>
-      <div className="content-grid">
-        <Hero title="Blog" src="/img/bg__contact.jpg" className="hero" />
+      {/* {subnavItems && <Subnav subnavItems={subnavItems} />} */}
 
-        {/* {subnavItems && <Subnav subnavItems={subnavItems} />} */}
-
-        {/* content */}
-        <div className="full-width blog-index ping-pong pt-8">
-          {content?.map((post) => (
-            <div className="stripe" key={post._id}>
-              <FullWidthBlogCard buttonStyle="tertiary" content={post} />
-              <hr className="my-20 bg-horizontalPluses bg-no-repeat h-4 bg-center mx-auto max-w-6xl border-none" />
-            </div>
-          ))}
-        </div>
-
-        {/* pagination */}
+      {/* content */}
+      <div className="full-width blog-index ping-pong pt-8">
+        {content?.map((post) => (
+          <div className="stripe" key={post._id}>
+            <FullWidthBlogCard buttonStyle="tertiary" content={post} />
+            <hr className="my-20 bg-horizontalPluses bg-no-repeat h-4 bg-center mx-auto max-w-6xl border-none" />
+          </div>
+        ))}
       </div>
-      <div>
-        <EmailNewsletter />
-      </div>
-    </>
-  );
-};
+
+      {/* pagination */}
+    </div>
+    <div>
+      <EmailNewsletter />
+    </div>
+  </>
+);
 
 export { BlogPage };
 
