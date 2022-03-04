@@ -2,6 +2,7 @@
 // TODO: add legal pages, series, and snippets
 
 // import functions from the package
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { getClient } from 'lib/sanity.server';
 import groq from 'groq';
@@ -35,7 +36,7 @@ const getPosts = async function () {
 };
 
 // build the sitemap
-export default async (req: unknown, res: unknown): void => {
+export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   const pages = await getPages();
   const posts = await getPosts();
 

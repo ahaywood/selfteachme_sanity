@@ -1,6 +1,4 @@
-import React from 'react';
 import Head from 'next/head';
-import client from 'utils/client';
 import groq from 'groq';
 import { Page } from 'modules/shared/layout/Page';
 import { SeriesPage } from 'modules/blog/SeriesPage';

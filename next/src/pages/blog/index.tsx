@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import client from 'utils/client';
 import groq from 'groq';
 import { Page } from 'modules/shared/layout/Page';
 import { BlogPage } from 'modules/blog/';

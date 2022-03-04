@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import groq from 'groq';
-import { GetStaticPaths, GetStaticProps } from 'next/types';
+import { GetServerSideProps } from 'next/types';
 
 // components
 import { Page } from 'modules/shared/layout/Page';
@@ -8,7 +8,6 @@ import { CategoryPage } from 'modules/blog/CategoryPage';
 
 // queries
 import { querySocial } from 'queries/querySocial';
-import { queryAllCategories } from 'queries/queryCategories';
 import { getClient } from 'lib/sanity.server';
 
 /** -------------------------------------------------
@@ -53,29 +52,7 @@ const querySingleCategory = groq`*[_type == "category" && slug.current == $slug]
   name
 }[0]`;
 
-type CategoryT = {
-  slug: {
-    current: string;
-  };
-};
-
-// This function gets called at build time
-export const getStaticPaths: GetStaticPaths = async () => {
-  // Call an external API endpoint to get posts
-  const allCategories = await getClient().fetch(queryAllCategories);
-
-  // Get the paths we want to pre-render based on posts
-  const paths = allCategories.map((category: CategoryT) => ({
-    params: { slug: category.slug.current },
-  }));
-
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false };
-};
-
-// This also gets called at build time
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   // params contains the post `slug`.
   // If the route is like /c/marketing, then params.slug is marketing
   const content = await getClient().fetch(queryPostsInCategory, {

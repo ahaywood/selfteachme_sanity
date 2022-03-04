@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { getClient } from 'lib/sanity.server';
-import { GetStaticProps } from 'next/types';
+import { GetServerSideProps } from 'next/types';
 
 // components
 import { HomePage } from 'modules/home';
@@ -38,7 +38,7 @@ const Home = ({ latestPosts, social }: Props): JSX.Element => (
 ---------------------------------------------------- */
 // latest posts
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const latestPosts = await getClient().fetch(queryLatestPosts);
   const social = await getClient().fetch(querySocial);
 
