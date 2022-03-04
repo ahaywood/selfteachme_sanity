@@ -4,7 +4,17 @@ import { LatestPosts } from 'modules/shared/components/LatestPosts';
 import { ButtonLink } from 'modules/shared/components/ButtonLink';
 import { ThreeUp } from './components/ThreeUp';
 
-const HomePage = ({ latestPosts }) => (
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  latestPosts: SelfTeach.Blog[];
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const HomePage = ({ latestPosts }: Props): JSX.Element => (
   <>
     {/* hero */}
     <section className="text-center min-h-9 md:min-h-screen bg-hero bg-no-repeat bg-cover bg-top flex justify-center">
@@ -47,7 +57,9 @@ const HomePage = ({ latestPosts }) => (
       <h5 className="font-sans font-bold uppercase text-brightPink mt-3 mb-8 text-xl">I can help!</h5>
 
       <ButtonLink href="https://selfteachme.ck.page/621ac7c092" target="_blank">
-        Not sure where to begin? <span className="ml-1 underline block sm:inline">Start Here!</span>
+        <>
+          Not sure where to begin? <span className="ml-1 underline block sm:inline">Start Here!</span>
+        </>
       </ButtonLink>
     </section>
     {/* past websites */}
