@@ -2,9 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { prettyDate } from 'utils/date';
 
-const NextPreviousPosts = ({ blogPagination }) => {
-  const { nextPost, previousPost } = blogPagination;
-
+const NextPreviousPosts = ({ nextPost, previousPost }) => {
   // determine which date to show
   const ShowPostDate = (publishedDate, updatedDate) => {
     if (updatedDate) {
