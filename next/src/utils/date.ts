@@ -53,7 +53,8 @@ const formatDate = (date: string): string[] => {
  * prettyDate
  * Formats the date as "Month Date, Year"
  */
-const prettyDate = (date: string): string => `${getPostMonth(date)} ${getPostDate(date)}, ${getPostYear(date)}`;
+const prettyDate = (date: string | Date): string =>
+  `${getPostMonth(date.toString())} ${getPostDate(date.toString())}, ${getPostYear(date.toString())}`;
 
 export { prettyDate };
 

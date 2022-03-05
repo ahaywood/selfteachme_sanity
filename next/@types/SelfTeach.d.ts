@@ -17,6 +17,7 @@ namespace SelfTeach {
       postLocation: string;
     };
     hero?: string;
+    titleWithinHero?: string;
     excerpt?: string;
     published?: boolean;
     category?: BlogCategory;
