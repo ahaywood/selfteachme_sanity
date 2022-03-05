@@ -3,7 +3,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import cx from 'classnames';
 import { serializers } from 'modules/shared/blockContent/Serializers';
 import { YouTubeVideo } from 'modules/shared/components/YouTubeVideo';
-import { prettyDate } from 'utils/date';
+import { prettyDate, showPostDate } from 'utils/date';
 import { getYouTubeId } from 'utils/youtube';
 import { Comments } from 'modules/shared/components/Comments';
 import { NextPreviousPosts } from 'modules/blog/components/NextPreviousPosts';
@@ -37,21 +37,15 @@ const IndividualBlog = ({ post }: Props): JSX.Element => {
   const { nextPost, previousPost } = blogPagination;
 
   // determine date to show
-  const ShowPostDate = () => {
-    if (postDetails.dateUpdated) {
-      return (
-        <h3 className="uppercase text-baliHai font-condensed tracking-wider text-2xl text-center mb-12">
-          Last Updated: {prettyDate(postDetails.dateUpdated)}
-        </h3>
-      );
-    }
-    if (postDetails.datePublished) {
-      return (
-        <h3 className="uppercase text-baliHai font-condensed tracking-wider text-2xl text-center mb-12">
-          Published: {prettyDate(postDetails.datePublished)}
-        </h3>
-      );
-    }
+  const PostDate = () => {
+    const dateUpdated = postDetails?.dateUpdated ? postDetails.dateUpdated : '';
+    const datePublished = postDetails?.datePublished ? postDetails.datePublished : '';
+
+    return (
+      <h3 className="uppercase text-baliHai font-condensed tracking-wider text-2xl text-center mb-12">
+        {showPostDate(dateUpdated, datePublished)}
+      </h3>
+    );
   };
 
   return (
@@ -67,7 +61,7 @@ const IndividualBlog = ({ post }: Props): JSX.Element => {
             <h1 className="font-condensed text-6xl md:text-8xl uppercase text-center leading-stacked">{title}</h1>
             {subtitle && <h2 className="font-condensed text-4xl uppercase text-center text-baliHai">{subtitle}</h2>}
             <hr className="border-t-4 border-black my-8 max-w-md mx-auto" />
-            {ShowPostDate()}
+            {PostDate()}
           </div>
         </div>
       </div>

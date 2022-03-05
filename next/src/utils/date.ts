@@ -19,17 +19,6 @@ const formatISO = (date: string): string => {
 
 export { formatISO };
 
-/*
-// TODO: HARD CODED DATE IN
-const formatSitemapDate = (date: string): string => {
-  if (!date) return;
-  // return parseISO(date);
-  return '2021-01-08';
-};
-
-export { formatSitemapDate };
-*/
-
 /**
  * gets the current year
  * @returns {number}
@@ -101,19 +90,6 @@ const getPostMonth = (dateToFormat: string | Date): string => {
 export { getPostMonth };
 
 /**
- * getPostMonthAbbrev
- * Returns the month as an abbreviation
- */
-/* const getPostMonthAbbrev = (dateToFormat: number): string => {
-  const abbreviations = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  // const [year, month, date] = formatDate(dateToFormat);
-  // TODO: Not Dynamic
-  return abbreviations[3];
-};
-
-export { getPostMonthAbbrev }; */
-
-/**
  * Get the Post Year
  * Returns the date as the full year (2021)
  */
@@ -148,3 +124,23 @@ const getAge = (birthday: string, compareDate = ''): number => {
 };
 
 export { getAge };
+
+/**
+ * Show Post Date
+ * Takes the publish date and the updated date and determines which date to show
+ * @param dateUpdated - string or date that the post was updated
+ * @param datePublished - string or date that the post was Published
+ * @param withString - boolean that determines whether to include a label
+ * @return string containing the published or updated date
+ */
+const showPostDate = (dateUpdated: string | Date, datePublished: string | Date, withString = true): string => {
+  if (dateUpdated) {
+    return withString ? `Last Updated ${prettyDate(dateUpdated.toString())}` : prettyDate(dateUpdated.toString());
+  }
+  if (datePublished) {
+    return withString ? `Published: ${prettyDate(datePublished.toString())}` : prettyDate(datePublished.toString());
+  }
+  return '';
+};
+
+export { showPostDate };
