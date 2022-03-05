@@ -34,7 +34,7 @@ const IndividualBlog = ({ post }: Props): JSX.Element => {
     video,
   } = post;
 
-  const { nextPost, previousPost } = blogPagination;
+  const { nextPost, previousPost } = blogPagination || {};
 
   // determine date to show
   const PostDate = () => {
