@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { getPostMonth, getPostDate, getPostYear } from 'utils/date';
-import { slugify } from 'utils/slugify';
 import { Icon } from './icon';
 import { ButtonLink } from './ButtonLink';
 

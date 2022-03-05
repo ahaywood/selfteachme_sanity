@@ -2,10 +2,6 @@ import { Hero } from 'modules/shared/components/Hero';
 import { FullWidthBlogCard } from 'modules/shared/components/FullWidthBlogCard';
 import { EmailNewsletter } from 'modules/shared/components/EmailNewsletter';
 import { Subnav } from 'modules/shared/components/Subnav';
-import groq from 'groq';
-import { getClient } from 'lib/sanity.server';
-import { GetServerSideProps } from 'next/types';
-
 /** -------------------------------------------------
 * TYPES
 ---------------------------------------------------- */
@@ -40,13 +36,3 @@ const BlogPage = ({ content, subnavItems }: Props): JSX.Element => (
 );
 
 export { BlogPage };
-
-/** -------------------------------------------------
-* QUERIES
----------------------------------------------------- */
-const querySubnav = groq`*[_type == "category" && published == true]{name, slug, _id}`;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const subnavItems = await getClient().fetch(querySubnav);
-  return { props: { subnavItems } };
-};

@@ -13,12 +13,13 @@ import { GetServerSideProps } from 'next/types';
 interface Props {
   content: SelfTeach.Blog[];
   social: SelfTeach.Social;
+  subnavItems: SelfTeach.Subnav;
 }
 
 /** -------------------------------------------------
 * COMPONENT
 ---------------------------------------------------- */
-const Blog = ({ content, social }: Props): JSX.Element => {
+const Blog = ({ content, social, subnavItems }: Props): JSX.Element => {
   const meta = {
     // "seoDescription" : ,
     ogTitle: 'SelfTeach.me Blog',
@@ -36,7 +37,7 @@ const Blog = ({ content, social }: Props): JSX.Element => {
         <Meta meta={meta} slug="blog" />
       </Head>
       <Page social={social}>
-        <BlogPage content={content} />
+        <BlogPage content={content} subnavItems={subnavItems} />
       </Page>
     </>
   );
@@ -61,13 +62,18 @@ const query = groq`*[_type == "post" && postDetails.published == true] | order(p
     }
   }`;
 
+const querySubnav = groq`*[_type == "category" && published == true]{name, slug, _id}`;
+
 export const getServerSideProps: GetServerSideProps = async () => {
   // content
   const content = await getClient().fetch(query);
 
+  // subnav
+  const subnavItems = await getClient().fetch(querySubnav);
+
   // social
   const social = await getClient().fetch(querySocial);
-  return { props: { content, social } };
+  return { props: { content, social, subnavItems } };
 };
 
 export default Blog;
