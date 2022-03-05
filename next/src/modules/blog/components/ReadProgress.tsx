@@ -1,3 +1,3 @@
-const ReadProgress = () => <div />;
+const ReadProgress = (): JSX.Element => <div />;
 
 export { ReadProgress };

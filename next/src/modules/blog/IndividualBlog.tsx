@@ -3,7 +3,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import cx from 'classnames';
 import { serializers } from 'modules/shared/blockContent/Serializers';
 import { YouTubeVideo } from 'modules/shared/components/YouTubeVideo';
-import { prettyDate, showPostDate } from 'utils/date';
+import { showPostDate } from 'utils/date';
 import { getYouTubeId } from 'utils/youtube';
 import { Comments } from 'modules/shared/components/Comments';
 import { NextPreviousPosts } from 'modules/blog/components/NextPreviousPosts';

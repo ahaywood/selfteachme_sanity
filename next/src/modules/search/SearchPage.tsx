@@ -3,7 +3,17 @@ import { SearchBar } from 'modules/shared/components/SearchBar';
 import { FullWidthBlogCard } from 'modules/shared/components/FullWidthBlogCard';
 import { useRouter } from 'next/router';
 
-const SearchPage = ({ content }) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  content: SelfTeach.Blog[];
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const SearchPage = ({ content }: Props): JSX.Element => {
   const router = useRouter();
 
   const displayResults = (length) => {

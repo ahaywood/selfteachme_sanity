@@ -4,7 +4,17 @@ import { getCurrentYear } from 'utils/date';
 import { Nav } from './Nav';
 import { Social } from './Social';
 
-const Footer = ({ social }) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  social: SelfTeach.Social;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const Footer = ({ social }: Props): JSX.Element => {
   const year = getCurrentYear();
   return (
     <footer>
@@ -34,7 +44,12 @@ const Footer = ({ social }) => {
 
         <p className="font-sans text-xs tracking-wide uppercase text-center font-bold">
           Copyright &copy; {year}.{' '}
-          <a href="http://ahhacreative.com" target="_blank" className="hover:underline hover:text-gold block md:inline">
+          <a
+            href="http://ahhacreative.com"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline hover:text-gold block md:inline"
+          >
             Ah Ha Creative, LLC.
           </a>
           &nbsp;All Rights Reserved.

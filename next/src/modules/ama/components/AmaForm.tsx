@@ -10,8 +10,8 @@ declare module 'react' {
   }
 }
 
-const AmaForm = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+const AmaForm = (): JSX.Element => {
+  const { register, errors } = useForm();
 
   useEffect(() => {
     kwesforms.init();
@@ -21,7 +21,7 @@ const AmaForm = () => {
     <div>
       <form className="kwes-form" method="POST" action="https://kwes.io/api/foreign/forms/1093DoTp8HOIjWPLW11v">
         <div className="relative col-span-2 md:col-span-1">
-          <label htmlFor="">First Name</label>
+          <label htmlFor="firstName">First Name</label>
           <input
             className={errors.firstName && `error`}
             type="text"
@@ -32,12 +32,12 @@ const AmaForm = () => {
           {errors.firstName && <div className="form-error">Last Name is required</div>}
         </div>
         <div className="relative col-span-2 md:col-span-1">
-          <label htmlFor="">Last Name</label>
+          <label htmlFor="lastName">Last Name</label>
           <input type="text" name="lastName" ref={register({ required: true })} />
           {errors.lastName && <div className="form-error">Last Name is required</div>}
         </div>
         <div className="relative col-span-full">
-          <label htmlFor="">Email Address</label>
+          <label htmlFor="email">Email Address</label>
           <input type="email" name="email" ref={register({ required: true })} rules="required" />
           {errors.email && <div className="form-error">Email is required</div>}
         </div>

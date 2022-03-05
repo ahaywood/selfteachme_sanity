@@ -1,22 +1,35 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-const InternalLink = (props) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  children: JSX.Element;
+  mark: {
+    slug: {
+      current: string;
+    };
+    internalSection: string;
+  };
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const InternalLink = ({ children, mark }: Props): JSX.Element => {
   // destructure 'current' and 'internalSection'
   const {
-    mark: {
-      slug: { current },
-      internalSection,
-    },
-  } = props;
+    slug: { current },
+    internalSection,
+  } = mark;
 
   if (current) {
     return (
       <Link href={`/${internalSection.toLowerCase()}/${current}`}>
-        <a className="font-bold text-brightPink underline hover:text-sapphire hover:no-underline">{props.children}</a>
+        <a className="font-bold text-brightPink underline hover:text-sapphire hover:no-underline">{children}</a>
       </Link>
     );
   }
-  return props.children;
+  return children;
 };
 export { InternalLink };

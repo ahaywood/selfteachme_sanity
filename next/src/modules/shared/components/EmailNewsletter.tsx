@@ -17,6 +17,7 @@ const EmailNewsletter = ({ className }: Props): JSX.Element => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
+    // eslint-disable-next-line no-console
     console.log(JSON.stringify(data));
   };
 

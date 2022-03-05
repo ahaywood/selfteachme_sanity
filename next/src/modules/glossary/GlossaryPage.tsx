@@ -1,12 +1,21 @@
 import { useState, Fragment } from 'react';
 import { Hero } from 'modules/shared/components/Hero';
-import { FullWidthBlogCard } from 'modules/shared/components/FullWidthBlogCard';
 import { EmailNewsletter } from 'modules/shared/components/EmailNewsletter';
 import BlockContent from '@sanity/block-content-to-react';
 import { serializers } from 'modules/shared/blockContent/Serializers';
 import { Subnav } from './components/Subnav';
 
-const GlossaryPage = ({ glossary }) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  glossary: SelfTeach.Glossary[];
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const GlossaryPage = ({ glossary }: Props): JSX.Element => {
   const alphabet = [
     'a',
     'b',
@@ -61,7 +70,9 @@ const GlossaryPage = ({ glossary }) => {
         const checkAgainst = selectedLetters.length > 1 ? alphabet[i] : selectedLetters[0];
 
         // filter for terms that start with the current letter
-        const currentGlossaryTerms = glossary.filter((term) => term.name.substring(0, 1).toLowerCase() == checkAgainst);
+        const currentGlossaryTerms = glossary.filter(
+          (term) => term.name.substring(0, 1).toLowerCase() === checkAgainst
+        );
 
         // check to see if there are any terms that start with that letter
         // if none exist, display a "not found" error message
@@ -80,15 +91,17 @@ const GlossaryPage = ({ glossary }) => {
             </div>
             <div className="col-span-12 col-start-1 lg:col-span-8 lg:col-start-3 px-mobile lg:px-0 row-start-1">
               <dl className="grid grid-cols-8 gap-8 z-10 relative">
-                {currentGlossaryTerms.map((item) => (
-                  <Fragment key={item._id}>
+                {currentGlossaryTerms.map((glossaryItem) => (
+                  <Fragment key={glossaryItem._id}>
                     <dt className="col-span-12 lg:col-span-2 lg:text-right uppercase">
                       <div className="font-condensed bg-serenade py-1 px-2 text-xl tracking-wider inline-block nowrap">
-                        {item.name}
+                        {glossaryItem.name}
                       </div>
                     </dt>
                     <dd className="col-span-12 lg:col-span-6">
-                      {item.description && <BlockContent blocks={item.description} serializers={serializers} />}
+                      {glossaryItem.description && (
+                        <BlockContent blocks={glossaryItem.description} serializers={serializers} />
+                      )}
                     </dd>
                   </Fragment>
                 ))}

@@ -1,9 +1,14 @@
-const Blockquote = (props) => {
-  const {
-    node: { type },
-  } = props;
-  console.log(type);
-  // console.log(props.node.type);
-  return <blockquote className="font-modern text-2xl text-center" />;
-};
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  children: JSX.Element;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const Blockquote = ({ children }: Props): JSX.Element => (
+  <blockquote className="font-modern text-2xl text-center">{children}</blockquote>
+);
 export { Blockquote };

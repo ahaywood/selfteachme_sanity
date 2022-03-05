@@ -1,6 +1,19 @@
 import { CopyBlock, dracula } from 'react-code-blocks';
 
-const CodeBlock = ({ node }) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  node: {
+    language: string;
+    code: string;
+  };
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const CodeBlock = ({ node }: Props): JSX.Element => {
   if (!node || !node.code) {
     return null;
   }

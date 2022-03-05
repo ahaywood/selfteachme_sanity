@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { ButtonSubmit } from 'modules/shared/components/ButtonSubmit';
 import kwesforms from 'kwesforms';
 
-const ContactForm = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+const ContactForm = (): JSX.Element => {
+  const { register, errors } = useForm();
 
   useEffect(() => {
     kwesforms.init();
@@ -17,7 +17,7 @@ const ContactForm = () => {
       className="kwes-form grid grid-cols-2 gap-x-8 mb-16 md:mb-0"
     >
       <div className="relative col-span-2 md:col-span-1">
-        <label htmlFor="">First Name</label>
+        <label htmlFor="firstName">First Name</label>
         <input
           className={errors.firstName && `error`}
           type="text"
@@ -28,12 +28,12 @@ const ContactForm = () => {
         {errors.firstName && <div className="form-error">Last Name is required</div>}
       </div>
       <div className="relative col-span-2 md:col-span-1">
-        <label htmlFor="">Last Name</label>
+        <label htmlFor="lastName">Last Name</label>
         <input type="text" name="lastName" ref={register({ required: true })} />
         {errors.lastName && <div className="form-error">Last Name is required</div>}
       </div>
       <div className="relative col-span-full">
-        <label htmlFor="">Email Address</label>
+        <label htmlFor="email">Email Address</label>
         <input type="email" name="email" ref={register({ required: true })} rules="required" />
         {errors.email && <div className="form-error">Email is required</div>}
       </div>

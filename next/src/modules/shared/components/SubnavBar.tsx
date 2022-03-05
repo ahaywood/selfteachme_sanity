@@ -11,7 +11,7 @@ interface Props {
 /** -------------------------------------------------
 * COMPONENT
 ---------------------------------------------------- */
-const Subnav = ({ subnavItems }: Props): JSX.Element => {
+const SubnavBar = ({ subnavItems }: Props): JSX.Element => {
   const router = useRouter();
 
   return (
@@ -38,4 +38,4 @@ const Subnav = ({ subnavItems }: Props): JSX.Element => {
   );
 };
 
-export { Subnav };
+export { SubnavBar };

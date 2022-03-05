@@ -1,7 +1,10 @@
 import { Hero } from 'modules/shared/components/Hero';
 import { AmaForm } from './components/AmaForm';
 
-const AmaPage = () => (
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const AmaPage = (): JSX.Element => (
   <>
     <div className="content-grid move-content-up">
       <Hero title="Ask Me Anything" src="/img/bg__contact.jpg" className="hero" subtitle="" />

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import BlockContent from '@sanity/block-content-to-react';
 
 import { Highlight as highlight } from './Highlight';
@@ -22,9 +23,33 @@ import { HorizontalDivider } from './HorizontalDivider';
 import { CodePen } from './CodePen';
 import { ImageText } from './ImageText';
 
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface containerProps {
+  children: JSX.Element;
+}
+
+interface externalLinkProps {
+  mark: {
+    slug: {
+      current: string;
+    };
+  };
+  children: JSX.Element;
+}
+
+interface BlockProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any;
+  node: {
+    style: string;
+  };
+}
+
 const serializers = {
   types: {
-    block: (props) => {
+    block: (props: BlockProps): JSX.Element => {
       const { style = 'normal' } = props.node;
 
       if (style === 'normal') {
@@ -48,7 +73,8 @@ const serializers = {
       }
 
       if (style === 'blockquote') {
-        return <Blockquote {...props} />;
+        const { children } = props;
+        return <Blockquote>{children}</Blockquote>;
       }
 
       if (style === 'subtitle') {
@@ -72,8 +98,8 @@ const serializers = {
     code: CodeInline,
     highlight,
     keyboard,
-    externalLink: ({ mark, children }) => {
-      const { slug = {} } = mark;
+    externalLink: ({ mark, children }: externalLinkProps): JSX.Element => {
+      const { slug } = mark || {};
       const href = slug.current;
       return (
         <a href={href} className="text-7xl">
@@ -84,6 +110,7 @@ const serializers = {
     link,
     internalLink,
   },
-  container: ({ children }) => <>{children}</> /* removes the wrapping div */,
+  // eslint-disable-next-line react/display-name
+  container: ({ children }: containerProps): JSX.Element => <>{children}</> /* removes the wrapping div */,
 };
 export { serializers };

@@ -1,13 +1,23 @@
 import { Hero } from 'modules/shared/components/Hero';
 import { FullWidthBlogCard } from 'modules/shared/components/FullWidthBlogCard';
 import { EmailNewsletter } from 'modules/shared/components/EmailNewsletter';
-import { Subnav } from 'modules/shared/components/Subnav';
+import { SubnavBar } from 'modules/shared/components/SubnavBar';
 
-const CategoryPage = ({ content }) => (
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  content: SelfTeach.Blog[];
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const CategoryPage = ({ content }: Props): JSX.Element => (
   <>
     <div className="content-grid">
       <Hero title="Blog" src="/img/bg__contact.jpg" className="hero" />
-      <Subnav />
+      <SubnavBar />
       {/* content */}
       <div className="full-width blog-index ping-pong pt-8">
         {content?.map((post) => (

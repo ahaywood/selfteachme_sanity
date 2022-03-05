@@ -1,6 +1,16 @@
 import Link from 'next/link';
 
-const RelatedPosts = ({ relatedPosts }) => (
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  relatedPosts: SelfTeach.Blog[];
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const RelatedPosts = ({ relatedPosts }: Props): JSX.Element => (
   <div className="col-span-12 md:col-span-5 px-mobile md:pl-12">
     <h2 className="font-handwriting text-7xl">Related Posts</h2>
     <ul>

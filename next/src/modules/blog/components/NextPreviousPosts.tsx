@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { prettyDate, showPostDate } from 'utils/date';
+import { showPostDate } from 'utils/date';
 
 /** -------------------------------------------------
 * TYPES

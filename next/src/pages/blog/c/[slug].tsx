@@ -17,7 +17,7 @@ interface Props {
   category: {
     name: string;
   };
-  content: SelfTeach.BlogCategory;
+  content: SelfTeach.Blog[];
   social: SelfTeach.Social;
 }
 

@@ -3,7 +3,17 @@ import { ContactForm } from './components/ContactForm';
 import { ElsewhereOnline } from './components/ElsewhereOnline';
 import { Map } from './components/Map';
 
-const ContactPage = ({ social }) => (
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  social: SelfTeach.Social;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const ContactPage = ({ social }: Props): JSX.Element => (
   <>
     <div className="content-grid move-content-up">
       <Hero title="Contact" src="/img/bg__contact.jpg" className="hero" />

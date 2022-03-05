@@ -1,12 +1,22 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { useState } from 'react';
 import concat from 'lodash/concat';
 
-const Subnav = ({ content, handleClick }) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  content: SelfTeach.Subnav[];
+  handleClick: (item: string) => void;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const Subnav = ({ content, handleClick }: Props): JSX.Element => {
   const [selectedSubnav, setSelectedSubnav] = useState('all');
   const subNav = concat('all', content);
 
-  const filterByLetter = (item, e) => {
+  const filterByLetter = (item: string, e: React.MouseEvent) => {
     e.preventDefault();
     setSelectedSubnav(item); // set the state for the subnav display
     handleClick(item); // run the handleClick function as passed in
@@ -20,17 +30,18 @@ const Subnav = ({ content, handleClick }) => {
             <li
               key={i}
               className={`font-condensed uppercase mx-4 text-2xl tracking-wide mb-0 leading-stacked py-2 relative top-1 ${
-                selectedSubnav == item && 'text-brightPink'
+                selectedSubnav === item && 'text-brightPink'
               }`}
             >
-              <a
-                className="cursor-pointer"
+              <button
+                className="cursor-pointer bg-none border-0"
                 onClick={(e) => {
                   filterByLetter(item, e);
                 }}
+                type="button"
               >
                 {item}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

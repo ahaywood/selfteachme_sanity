@@ -1,6 +1,9 @@
 import { Hero } from 'modules/shared/components/Hero';
 
-const NewsletterConfirmPage = () => (
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const NewsletterConfirmPage = (): JSX.Element => (
   <div className="content-grid">
     <Hero title="COMPRESSED" subtitle="Weekly Newsletter" src="/img/bg__about.jpg" />
     <div className="md:p-12 px-8 sm:px-0 text-center col-start-2">

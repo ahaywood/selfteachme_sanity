@@ -22,8 +22,10 @@ interface Props {
 ---------------------------------------------------- */
 const TableOfContents = ({ node }: Props): JSX.Element => {
   const { table } = node;
+  // eslint-disable-next-line no-console
   console.log(table);
   return (
+    // TODO: Fix Table of Contents Component
     <div />
     // <div className="col-span-12 md:col-start-4 md:col-span-6 bg-almostWhite p-8 mb-8">
     //   <h3 className="font-mono font-bold mb-2">This post is part of a larger series:</h3>

@@ -16,6 +16,9 @@ const ProgressBar = (): JSX.Element => {
   // ATTACH A SCROLL EVENT
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // cleaning things up
+    };
   }, []);
 
   // DETERMINE MAX VALUE

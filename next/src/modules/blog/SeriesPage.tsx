@@ -1,6 +1,5 @@
 import { Hero } from 'modules/shared/components/Hero';
 import { FullWidthBlogCard } from 'modules/shared/components/FullWidthBlogCard';
-import { Subnav } from 'modules/shared/components/Subnav';
 import { EmailNewsletter } from 'modules/shared/components/EmailNewsletter';
 import { YouTubeVideo } from 'modules/shared/components/YouTubeVideo';
 import { LeadMagnet } from 'modules/shared/components/LeadMagnet';

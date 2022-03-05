@@ -1,7 +1,7 @@
 import { Hero } from 'modules/shared/components/Hero';
 import { FullWidthBlogCard } from 'modules/shared/components/FullWidthBlogCard';
 import { EmailNewsletter } from 'modules/shared/components/EmailNewsletter';
-import { Subnav } from 'modules/shared/components/Subnav';
+import { SubnavBar } from 'modules/shared/components/SubnavBar';
 /** -------------------------------------------------
 * TYPES
 ---------------------------------------------------- */
@@ -15,7 +15,7 @@ const BlogPage = ({ content, subnavItems }: Props): JSX.Element => (
     <div className="content-grid">
       <Hero title="Blog" src="/img/bg__contact.jpg" className="hero" />
 
-      {/* {subnavItems && <Subnav subnavItems={subnavItems} />} */}
+      {subnavItems && <SubnavBar subnavItems={subnavItems} />}
 
       {/* content */}
       <div className="full-width blog-index ping-pong pt-8">

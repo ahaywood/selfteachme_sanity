@@ -1,9 +1,22 @@
-const ListItem = (props) => {
-  if (props.node.listItem === 'number') {
-    return <li>{props.children}</li>;
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  children: JSX.Element;
+  node: {
+    listItem: string;
+  };
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const ListItem = ({ children, node }: Props): JSX.Element => {
+  if (node.listItem === 'number') {
+    return <li>{children}</li>;
   }
-  if (props.node.listItem === 'bullet') {
-    return <li>{props.children}</li>;
+  if (node.listItem === 'bullet') {
+    return <li>{children}</li>;
   }
 };
 

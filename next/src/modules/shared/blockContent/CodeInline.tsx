@@ -1,8 +1,18 @@
 import { Code, dracula } from 'react-code-blocks';
 
-const CodeInline = (props) => (
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  children: string;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const CodeInline = ({ children }: Props): JSX.Element => (
   <span className="text-lg">
-    <Code language="text" text={props.children} theme={dracula} />
+    <Code language="text" text={children} theme={dracula} />
   </span>
 );
 

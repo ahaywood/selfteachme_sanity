@@ -1,4 +1,24 @@
-const Meta = ({ meta, slug }) => {
+/** -------------------------------------------------
+* TYPES
+---------------------------------------------------- */
+interface Props {
+  meta: {
+    seoDescription: string;
+    ogTitle: string;
+    ogDescription: string;
+    ogImage: string;
+    twitterTitle: string;
+    twitterDescription: string;
+    twitterImage: string;
+    twitterImageAlt: string;
+  };
+  slug: SelfTeach.Slug;
+}
+
+/** -------------------------------------------------
+* COMPONENT
+---------------------------------------------------- */
+const Meta = ({ meta, slug }: Props): JSX.Element => {
   const {
     seoDescription,
     ogTitle,

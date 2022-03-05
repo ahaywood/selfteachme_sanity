@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
@@ -17,6 +18,7 @@ module.exports = {
       backgroundSize: {
         half: '50%',
       },
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       backgroundImage: (theme) => ({
         believe: "url('/img/about__truly-believe.jpg')",
         checkbox: "url('/img/checkbox.svg')",
