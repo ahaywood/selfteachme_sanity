@@ -48,7 +48,7 @@ export const Comments = ({ className, id }: Props): JSX.Element => {
       insertScript(`https://cdn.commento.io/js/commento.js`, `commento-script`, document.body);
     }
     // Cleanup; remove the script from the page
-    return () => removeScript(`commento-script`, document.body);
+    // return () => removeScript(`commento-script`, document.body);
   }, [id]);
 
   return (
